@@ -1,6 +1,33 @@
+/* =========================
+   KERVAQ CARD INTERACTIONS
+========================= */
+
 const cards = document.querySelectorAll(".feature-card");
 
+
 cards.forEach(card => {
+
+    const button = card.querySelector(".learn-more");
+
+
+    /* AUSKLAPPEN */
+
+    button.addEventListener("click", () => {
+
+        cards.forEach(otherCard => {
+
+            if (otherCard !== card) {
+                otherCard.classList.remove("active");
+            }
+
+        });
+
+        card.classList.toggle("active");
+
+    });
+
+
+    /* 3D HOVER EFFEKT */
 
     card.addEventListener("mousemove", event => {
 
@@ -14,12 +41,17 @@ cards.forEach(card => {
 
         card.style.transform =
             `perspective(600px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+
     });
+
+
+    /* HOVER ZURÜCKSETZEN */
 
     card.addEventListener("mouseleave", () => {
 
         card.style.transform =
             "perspective(600px) rotateX(0) rotateY(0) translateY(0)";
+
     });
 
 });

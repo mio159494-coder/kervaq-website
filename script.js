@@ -1,25 +1,27 @@
 /* =========================
-   KERVAQ CARD INTERACTIONS
+   KERVAQ
+   CARD INTERACTIONS
 ========================= */
 
 
-const cards = document.querySelectorAll(".feature-card");
+const cards =
+    document.querySelectorAll(".feature-card");
 
 
-cards.forEach(card => {
+/* =========================
+   MEHR ERFAHREN
+========================= */
+
+cards.forEach(function(card) {
+
+    const button =
+        card.querySelector(".learn-more");
 
 
-    const button = card.querySelector(".learn-more");
+    button.addEventListener("click", function() {
 
 
-    /* =========================
-       MEHR ERFAHREN
-    ========================== */
-
-    button.addEventListener("click", () => {
-
-
-        cards.forEach(otherCard => {
+        cards.forEach(function(otherCard) {
 
             if (otherCard !== card) {
 
@@ -32,100 +34,128 @@ cards.forEach(card => {
 
         card.classList.toggle("active");
 
-
     });
-
-
-
-    /* =========================
-       3D HOVER
-    ========================== */
-
-    card.addEventListener("mousemove", event => {
-
-
-        const rect = card.getBoundingClientRect();
-
-
-        const x =
-            event.clientX - rect.left;
-
-        const y =
-            event.clientY - rect.top;
-
-
-        const rotateX =
-            (y / rect.height - 0.5) * -6;
-
-
-        const rotateY =
-            (x / rect.width - 0.5) * 6;
-
-
-        card.style.transform =
-            `perspective(700px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
-
-
-    });
-
-
-
-    /* =========================
-       HOVER ZURÜCKSETZEN
-    ========================== */
-
-    card.addEventListener("mouseleave", () => {
-
-
-        card.style.transform =
-            "perspective(700px) rotateX(0deg) rotateY(0deg) translateY(0px)";
-
-
-    });
-
 
 });
 
 
 
 /* =========================
-   SCROLL REVEAL
+   3D CARD EFFECT
 ========================= */
 
-
-const revealElements =
-    document.querySelectorAll(".reveal");
+cards.forEach(function(card) {
 
 
-const revealObserver =
-    new IntersectionObserver(
-        entries => {
+    card.addEventListener("mousemove", function(event) {
 
-            entries.forEach(entry => {
 
-                if (entry.isIntersecting) {
+        const rect =
+            card.getBoundingClientRect();
 
-                    entry.target.classList.add("visible");
 
-                    revealObserver.unobserve(
-                        entry.target
-                    );
+        const x =
+            event.clientX - rect.left;
 
-                }
 
-            });
+        const y =
+            event.clientY - rect.top;
 
-        },
 
-        {
-            threshold: 0.12
+        const rotateX =
+            (y / rect.height - 0.5) * -5;
+
+
+        const rotateY =
+            (x / rect.width - 0.5) * 5;
+
+
+        card.style.transform =
+            "perspective(700px) " +
+            "rotateX(" + rotateX + "deg) " +
+            "rotateY(" + rotateY + "deg) " +
+            "translateY(-5px)";
+
+    });
+
+
+    card.addEventListener("mouseleave", function() {
+
+
+        card.style.transform =
+            "perspective(700px) " +
+            "rotateX(0deg) " +
+            "rotateY(0deg) " +
+            "translateY(0px)";
+
+    });
+
+});
+
+
+
+/* =========================
+   MOUSE PARALLAX FÜR CORE
+========================= */
+
+const heroVisual =
+    document.querySelector(".hero-visual");
+
+
+const orb =
+    document.querySelector(".orb");
+
+
+if (heroVisual && orb) {
+
+
+    heroVisual.addEventListener(
+        "mousemove",
+        function(event) {
+
+
+            const rect =
+                heroVisual.getBoundingClientRect();
+
+
+            const x =
+                event.clientX - rect.left;
+
+
+            const y =
+                event.clientY - rect.top;
+
+
+            const moveX =
+                (x / rect.width - 0.5) * 14;
+
+
+            const moveY =
+                (y / rect.height - 0.5) * 14;
+
+
+            orb.style.transform =
+                "translate(" +
+                "calc(-50% + " +
+                moveX +
+                "px), " +
+                "calc(-50% + " +
+                moveY +
+                "px))";
+
         }
-
     );
 
 
-revealElements.forEach(element => {
+    heroVisual.addEventListener(
+        "mouseleave",
+        function() {
 
-    revealObserver.observe(element);
 
-});
+            orb.style.transform =
+                "translate(-50%, -50%)";
+
+        }
+    );
+
+}

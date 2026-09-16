@@ -1,1473 +1,572 @@
-/* =====================================================
-   KERVAQ
-   MAIN JAVASCRIPT
-===================================================== */
-
-
-/* =====================================================
-   LANGUAGE SYSTEM
-===================================================== */
-
-const translations = {
-
-    de: {
-
-        navSolutions: "Lösungen",
-        navAbout: "Über uns",
-        navContact: "Kontakt",
-        navStart: "Starten",
-
-        heroBadge:
-            "Intelligente Technologie für moderne Unternehmen",
-
-        heroTitleOne:
-            "Bringen Sie Ihr",
-
-        heroTitleTwo:
-            "Unternehmen voran.",
-
-        heroText:
-            "KERVAQ entwickelt intelligente Software, automatisiert Prozesse und reduziert unnötige Arbeit – damit Unternehmen mehr Zeit für Wachstum haben.",
-
-        heroButtonOne:
-            "Lösungen entdecken",
-
-        heroButtonTwo:
-            "KERVAQ entdecken",
-
-        statOne:
-            "Intelligente Systeme",
-
-        statTwo:
-            "Automatisierte Prozesse",
-
-        statThree:
-            "Wachstum ermöglichen",
-
-        introLabel:
-            "UNSERE MISSION",
-
-        introTitle:
-            "Unternehmen sollen vorankommen.",
-
-        introText:
-            "Zu viel Zeit geht in Unternehmen durch wiederkehrende Aufgaben, komplizierte Abläufe und unnötige manuelle Arbeit verloren. KERVAQ setzt genau dort an.",
-
-        solutionsLabel:
-            "WAS WIR TUN",
-
-        solutionsTitle:
-            "Technologie, die Probleme löst.",
-
-        solutionsText:
-            "Wir verbinden Automatisierung, intelligente Systeme und moderne Software, um Unternehmen einfacher und effizienter zu machen.",
-
-        cardOneTitle:
-            "Automatisierung",
-
-        cardOneText:
-            "Wiederkehrende Arbeit wird zu intelligenten, automatisierten Prozessen.",
-
-        cardOneDetails:
-            "KERVAQ hilft dabei, manuelle Abläufe zu reduzieren und Prozesse effizienter zu gestalten.",
-
-        cardOnePointOne:
-            "Wiederkehrende Aufgaben automatisieren",
-
-        cardOnePointTwo:
-            "Manuelle Arbeit reduzieren",
-
-        cardOnePointThree:
-            "Prozesse beschleunigen",
-
-        cardOnePointFour:
-            "Fehlerquellen reduzieren",
-
-        cardTwoTitle:
-            "Intelligenz",
-
-        cardTwoText:
-            "Intelligente Technologien helfen Unternehmen, Informationen besser zu nutzen und Prozesse neu zu denken.",
-
-        cardTwoDetails:
-            "Moderne KI-Systeme können Informationen analysieren, Aufgaben unterstützen und neue Möglichkeiten schaffen.",
-
-        cardTwoPointOne:
-            "Informationen intelligenter nutzen",
-
-        cardTwoPointTwo:
-            "Daten automatisch verarbeiten",
-
-        cardTwoPointThree:
-            "Arbeitsabläufe unterstützen",
-
-        cardTwoPointFour:
-            "Neue digitale Möglichkeiten schaffen",
-
-        cardThreeTitle:
-            "Software",
-
-        cardThreeText:
-            "Digitale Lösungen, die genau zu den Herausforderungen eines Unternehmens passen.",
-
-        cardThreeDetails:
-            "Wenn Standardlösungen nicht ausreichen, entwickelt KERVAQ individuelle digitale Systeme.",
-
-        cardThreePointOne:
-            "Individuelle Softwarelösungen",
-
-        cardThreePointTwo:
-            "Digitale Prozesse vereinfachen",
-
-        cardThreePointThree:
-            "Systeme miteinander verbinden",
-
-        cardThreePointFour:
-            "Lösungen für reales Wachstum",
-
-        learnMore:
-            "Mehr erfahren",
-
-        processLabel:
-            "DER KERVAQ-PROZESS",
-
-        processTitle:
-            "Vom Problem zur Lösung.",
-
-        processOneTitle:
-            "Verstehen",
-
-        processOneText:
-            "Wir verstehen zuerst das Problem, bevor wir über Technologie sprechen.",
-
-        processTwoTitle:
-            "Entwickeln",
-
-        processTwoText:
-            "Wir entwickeln eine Lösung, die zum Unternehmen und seinen Abläufen passt.",
-
-        processThreeTitle:
-            "Vereinfachen",
-
-        processThreeText:
-            "Unnötige Schritte werden reduziert und Prozesse werden intelligenter.",
-
-        processFourTitle:
-            "Vorankommen",
-
-        processFourText:
-            "Weniger Arbeit. Mehr Zeit. Mehr Möglichkeiten für Wachstum.",
-
-        aboutLabel:
-            "DER KERVAQ-ANSATZ",
-
-        aboutTitleOne:
-            "Einfacher.",
-
-        aboutTitleTwo:
-            "Schneller.",
-
-        aboutTitleThree:
-            "Weiter.",
-
-        aboutTextOne:
-            "Wir glauben, dass Technologie kein Selbstzweck sein sollte. Sie soll Menschen Arbeit abnehmen, Prozesse vereinfachen und Unternehmen dabei helfen, ihre Ziele schneller zu erreichen.",
-
-        aboutTextTwo:
-            "KERVAQ entwickelt Lösungen mit einem klaren Ziel: Unternehmen sollen mehr Zeit für das haben, was wirklich wichtig ist.",
-
-        benefitsLabel:
-            "WAS DABEI ENTSTEHT",
-
-        benefitsTitle:
-            "Mehr von dem, was zählt.",
-
-        benefitOneTitle:
-            "Weniger Arbeit",
-
-        benefitOneText:
-            "Weniger manuelle und wiederkehrende Aufgaben.",
-
-        benefitTwoTitle:
-            "Weniger Kosten",
-
-        benefitTwoText:
-            "Effizientere Abläufe schaffen neue Spielräume.",
-
-        benefitThreeTitle:
-            "Mehr Zeit",
-
-        benefitThreeText:
-            "Mehr Zeit für Kunden, Strategie und Wachstum.",
-
-        benefitFourTitle:
-            "Mehr Wachstum",
-
-        benefitFourText:
-            "Technologie schafft Raum für den nächsten Schritt.",
-
-        contactLabel:
-            "BEREIT FÜR DEN NÄCHSTEN SCHRITT?",
-
-        contactTitle:
-            "Lassen Sie uns etwas bewegen.",
-
-        contactText:
-            "Sie haben einen Prozess, der zu viel Zeit kostet? Erzählen Sie uns davon.",
-
-        formName:
-            "Name",
-
-        formCompany:
-            "Unternehmen",
-
-        formEmail:
-            "E-Mail",
-
-        formMessage:
-            "Wie können wir helfen?",
-
-        formButton:
-            "Anfrage senden",
-
-        privacyLabel:
-            "DATENSCHUTZ",
-
-        privacyTitle:
-            "Datenschutzerklärung",
-
-        privacyText:
-            "Diese Datenschutzerklärung ist derzeit als Platzhalter hinterlegt. Vor dem öffentlichen Betrieb von KERVAQ muss sie an die tatsächliche technische Umsetzung, die verwendeten Dienste, den Sitz des Unternehmens und die konkreten Datenverarbeitungen angepasst werden.",
-
-        imprintLabel:
-            "RECHTLICHES",
-
-        imprintTitle:
-            "Impressum",
-
-        imprintText:
-            "Das Impressum wird ergänzt, sobald die Unternehmensdaten von KERVAQ feststehen. Benötigt werden unter anderem Unternehmensname, Anschrift, vertretungsberechtigte Person und gegebenenfalls weitere Pflichtangaben.",
-
-        privacyLink:
-            "Datenschutz",
-
-        imprintLink:
-            "Impressum",
-
-        footerText:
-            "Technologie für den nächsten Schritt.",
-
-        footerRights:
-            "Alle Rechte vorbehalten."
-
-    },
-
-
-    en: {
-
-        navSolutions:
-            "Solutions",
-
-        navAbout:
-            "About",
-
-        navContact:
-            "Contact",
-
-        navStart:
-            "Get started",
-
-        heroBadge:
-            "Intelligent technology for modern businesses",
-
-        heroTitleOne:
-            "Move your",
-
-        heroTitleTwo:
-            "business forward.",
-
-        heroText:
-            "KERVAQ develops intelligent software, automates processes and reduces unnecessary work — giving businesses more time to grow.",
-
-        heroButtonOne:
-            "Explore solutions",
-
-        heroButtonTwo:
-            "Discover KERVAQ",
-
-        statOne:
-            "Intelligent systems",
-
-        statTwo:
-            "Automated processes",
-
-        statThree:
-            "Enabling growth",
-
-        introLabel:
-            "OUR MISSION",
-
-        introTitle:
-            "Businesses should move forward.",
-
-        introText:
-            "Too much time is lost to repetitive tasks, complicated workflows and unnecessary manual work. KERVAQ focuses exactly where those problems begin.",
-
-        solutionsLabel:
-            "WHAT WE DO",
-
-        solutionsTitle:
-            "Technology that solves problems.",
-
-        solutionsText:
-            "We combine automation, intelligent systems and modern software to make businesses simpler and more efficient.",
-
-        cardOneTitle:
-            "Automation",
-
-        cardOneText:
-            "Turn repetitive work into intelligent, automated processes.",
-
-        cardOneDetails:
-            "KERVAQ helps reduce manual workflows and make processes more efficient.",
-
-        cardOnePointOne:
-            "Automate repetitive tasks",
-
-        cardOnePointTwo:
-            "Reduce manual work",
-
-        cardOnePointThree:
-            "Accelerate processes",
-
-        cardOnePointFour:
-            "Reduce sources of error",
-
-        cardTwoTitle:
-            "Intelligence",
-
-        cardTwoText:
-            "Intelligent technologies help businesses use information better and rethink their processes.",
-
-        cardTwoDetails:
-            "Modern AI systems can analyze information, support tasks and create new possibilities.",
-
-        cardTwoPointOne:
-            "Use information more intelligently",
-
-        cardTwoPointTwo:
-            "Process data automatically",
-
-        cardTwoPointThree:
-            "Support workflows",
-
-        cardTwoPointFour:
-            "Create new digital possibilities",
-
-        cardThreeTitle:
-            "Software",
-
-        cardThreeText:
-            "Digital solutions designed around the real challenges of a business.",
-
-        cardThreeDetails:
-            "When standard solutions are not enough, KERVAQ develops custom digital systems.",
-
-        cardThreePointOne:
-            "Custom software solutions",
-
-        cardThreePointTwo:
-            "Simplify digital processes",
-
-        cardThreePointThree:
-            "Connect systems",
-
-        cardThreePointFour:
-            "Build solutions for real growth",
-
-        learnMore:
-            "Learn more",
-
-        processLabel:
-            "THE KERVAQ PROCESS",
-
-        processTitle:
-            "From problem to solution.",
-
-        processOneTitle:
-            "Understand",
-
-        processOneText:
-            "We understand the problem first, before talking about technology.",
-
-        processTwoTitle:
-            "Develop",
-
-        processTwoText:
-            "We develop a solution that fits the business and its workflows.",
-
-        processThreeTitle:
-            "Simplify",
-
-        processThreeText:
-            "Unnecessary steps are reduced and processes become smarter.",
-
-        processFourTitle:
-            "Move forward",
-
-        processFourText:
-            "Less work. More time. More opportunities for growth.",
-
-        aboutLabel:
-            "THE KERVAQ APPROACH",
-
-        aboutTitleOne:
-            "Simpler.",
-
-        aboutTitleTwo:
-            "Faster.",
-
-        aboutTitleThree:
-            "Forward.",
-
-        aboutTextOne:
-            "We believe technology should not exist for its own sake. It should take work away from people, simplify processes and help businesses reach their goals faster.",
-
-        aboutTextTwo:
-            "KERVAQ builds solutions with one clear goal: giving businesses more time for what really matters.",
-
-        benefitsLabel:
-            "WHAT IT CREATES",
-
-        benefitsTitle:
-            "More of what matters.",
-
-        benefitOneTitle:
-            "Less work",
-
-        benefitOneText:
-            "Fewer manual and repetitive tasks.",
-
-        benefitTwoTitle:
-            "Lower costs",
-
-        benefitTwoText:
-            "More efficient workflows create new opportunities.",
-
-        benefitThreeTitle:
-            "More time",
-
-        benefitThreeText:
-            "More time for customers, strategy and growth.",
-
-        benefitFourTitle:
-            "More growth",
-
-        benefitFourText:
-            "Technology creates room for the next step.",
-
-        contactLabel:
-            "READY FOR THE NEXT STEP?",
-
-        contactTitle:
-            "Let's move something forward.",
-
-        contactText:
-            "Have a process that takes too much time? Tell us about it.",
-
-        formName:
-            "Name",
-
-        formCompany:
-            "Company",
-
-        formEmail:
-            "Email",
-
-        formMessage:
-            "How can we help?",
-
-        formButton:
-            "Send request",
-
-        privacyLabel:
-            "PRIVACY",
-
-        privacyTitle:
-            "Privacy Policy",
-
-        privacyText:
-            "This privacy policy is currently a placeholder. Before KERVAQ is publicly operated, it must be adapted to the actual technical implementation, services used, company location and specific data processing activities.",
-
-        imprintLabel:
-            "LEGAL",
-
-        imprintTitle:
-            "Legal Notice",
-
-        imprintText:
-            "The legal notice will be completed once KERVAQ's company details are established. This includes the company name, address, authorized representative and any other legally required information.",
-
-        privacyLink:
-            "Privacy",
-
-        imprintLink:
-            "Legal notice",
-
-        footerText:
-            "Technology for the next step.",
-
-        footerRights:
-            "All rights reserved."
-
-    },
-
-
-    fr: {
-
-        navSolutions:
-            "Solutions",
-
-        navAbout:
-            "À propos",
-
-        navContact:
-            "Contact",
-
-        navStart:
-            "Commencer",
-
-        heroBadge:
-            "Technologie intelligente pour les entreprises modernes",
-
-        heroTitleOne:
-            "Faites avancer",
-
-        heroTitleTwo:
-            "votre entreprise.",
-
-        heroText:
-            "KERVAQ développe des logiciels intelligents, automatise les processus et réduit le travail inutile — pour donner aux entreprises plus de temps pour grandir.",
-
-        heroButtonOne:
-            "Découvrir les solutions",
-
-        heroButtonTwo:
-            "Découvrir KERVAQ",
-
-        statOne:
-            "Systèmes intelligents",
-
-        statTwo:
-            "Processus automatisés",
-
-        statThree:
-            "Favoriser la croissance",
-
-        introLabel:
-            "NOTRE MISSION",
-
-        introTitle:
-            "Les entreprises doivent aller de l'avant.",
-
-        introText:
-            "Trop de temps est perdu à cause des tâches répétitives, des processus complexes et du travail manuel inutile. KERVAQ intervient précisément à ce niveau.",
-
-        solutionsLabel:
-            "CE QUE NOUS FAISONS",
-
-        solutionsTitle:
-            "La technologie qui résout les problèmes.",
-
-        solutionsText:
-            "Nous combinons automatisation, systèmes intelligents et logiciels modernes pour rendre les entreprises plus simples et plus efficaces.",
-
-        cardOneTitle:
-            "Automatisation",
-
-        cardOneText:
-            "Transformez le travail répétitif en processus intelligents et automatisés.",
-
-        cardOneDetails:
-            "KERVAQ aide à réduire les tâches manuelles et à rendre les processus plus efficaces.",
-
-        cardOnePointOne:
-            "Automatiser les tâches répétitives",
-
-        cardOnePointTwo:
-            "Réduire le travail manuel",
-
-        cardOnePointThree:
-            "Accélérer les processus",
-
-        cardOnePointFour:
-            "Réduire les sources d'erreur",
-
-        cardTwoTitle:
-            "Intelligence",
-
-        cardTwoText:
-            "Les technologies intelligentes permettent aux entreprises de mieux utiliser leurs informations et de repenser leurs processus.",
-
-        cardTwoDetails:
-            "Les systèmes d'IA modernes peuvent analyser les informations, assister certaines tâches et créer de nouvelles possibilités.",
-
-        cardTwoPointOne:
-            "Utiliser les informations intelligemment",
-
-        cardTwoPointTwo:
-            "Traiter automatiquement les données",
-
-        cardTwoPointThree:
-            "Améliorer les flux de travail",
-
-        cardTwoPointFour:
-            "Créer de nouvelles possibilités numériques",
-
-        cardThreeTitle:
-            "Logiciels",
-
-        cardThreeText:
-            "Des solutions numériques conçues pour répondre aux véritables défis d'une entreprise.",
-
-        cardThreeDetails:
-            "Lorsque les solutions standards ne suffisent pas, KERVAQ développe des systèmes numériques personnalisés.",
-
-        cardThreePointOne:
-            "Solutions logicielles personnalisées",
-
-        cardThreePointTwo:
-            "Simplifier les processus numériques",
-
-        cardThreePointThree:
-            "Connecter les systèmes",
-
-        cardThreePointFour:
-            "Créer des solutions pour la croissance",
-
-        learnMore:
-            "En savoir plus",
-
-        processLabel:
-            "LE PROCESSUS KERVAQ",
-
-        processTitle:
-            "Du problème à la solution.",
-
-        processOneTitle:
-            "Comprendre",
-
-        processOneText:
-            "Nous comprenons d'abord le problème avant de parler de technologie.",
-
-        processTwoTitle:
-            "Développer",
-
-        processTwoText:
-            "Nous développons une solution adaptée à l'entreprise et à ses processus.",
-
-        processThreeTitle:
-            "Simplifier",
-
-        processThreeText:
-            "Les étapes inutiles sont réduites et les processus deviennent plus intelligents.",
-
-        processFourTitle:
-            "Avancer",
-
-        processFourText:
-            "Moins de travail. Plus de temps. Plus de possibilités de croissance.",
-
-        aboutLabel:
-            "L'APPROCHE KERVAQ",
-
-        aboutTitleOne:
-            "Plus simple.",
-
-        aboutTitleTwo:
-            "Plus rapide.",
-
-        aboutTitleThree:
-            "Plus loin.",
-
-        aboutTextOne:
-            "Nous pensons que la technologie ne doit pas exister pour elle-même. Elle doit réduire le travail, simplifier les processus et aider les entreprises à atteindre leurs objectifs plus rapidement.",
-
-        aboutTextTwo:
-            "KERVAQ développe des solutions avec un objectif clair : donner aux entreprises plus de temps pour ce qui compte vraiment.",
-
-        benefitsLabel:
-            "CE QUE CELA CRÉE",
-
-        benefitsTitle:
-            "Plus de ce qui compte.",
-
-        benefitOneTitle:
-            "Moins de travail",
-
-        benefitOneText:
-            "Moins de tâches manuelles et répétitives.",
-
-        benefitTwoTitle:
-            "Moins de coûts",
-
-        benefitTwoText:
-            "Des processus plus efficaces créent de nouvelles possibilités.",
-
-        benefitThreeTitle:
-            "Plus de temps",
-
-        benefitThreeText:
-            "Plus de temps pour les clients, la stratégie et la croissance.",
-
-        benefitFourTitle:
-            "Plus de croissance",
-
-        benefitFourText:
-            "La technologie crée de l'espace pour la prochaine étape.",
-
-        contactLabel:
-            "PRÊT POUR LA PROCHAINE ÉTAPE ?",
-
-        contactTitle:
-            "Faisons avancer les choses.",
-
-        contactText:
-            "Vous avez un processus qui prend trop de temps ? Parlez-nous-en.",
-
-        formName:
-            "Nom",
-
-        formCompany:
-            "Entreprise",
-
-        formEmail:
-            "E-mail",
-
-        formMessage:
-            "Comment pouvons-nous vous aider ?",
-
-        formButton:
-            "Envoyer la demande",
-
-        privacyLabel:
-            "CONFIDENTIALITÉ",
-
-        privacyTitle:
-            "Politique de confidentialité",
-
-        privacyText:
-            "Cette politique de confidentialité est actuellement un texte provisoire. Avant le lancement public de KERVAQ, elle devra être adaptée à la mise en œuvre technique réelle, aux services utilisés, au siège de l'entreprise et aux traitements de données concernés.",
-
-        imprintLabel:
-            "MENTIONS LÉGALES",
-
-        imprintTitle:
-            "Mentions légales",
-
-        imprintText:
-            "Les mentions légales seront complétées dès que les informations de l'entreprise KERVAQ seront établies. Cela comprend notamment le nom de l'entreprise, l'adresse, le représentant légal et les autres informations obligatoires.",
-
-        privacyLink:
-            "Confidentialité",
-
-        imprintLink:
-            "Mentions légales",
-
-        footerText:
-            "La technologie pour la prochaine étape.",
-
-        footerRights:
-            "Tous droits réservés."
-
-    }
-
-};
-
-
-
-/* =====================================================
-   LANGUAGE SWITCHER
-===================================================== */
-
-const languageButton =
-    document.getElementById("languageButton");
-
-const languageSelector =
-    document.querySelector(".language-selector");
-
-const languageMenu =
-    document.getElementById("languageMenu");
-
-const currentFlag =
-    document.getElementById("currentFlag");
-
-
-const flags = {
-
-    de: "🇩🇪",
-    en: "🇬🇧",
-    fr: "🇫🇷"
-
-};
-
-
-function setLanguage(language) {
-
-    const texts =
-        translations[language];
-
-    if (!texts) {
-        return;
-    }
-
-
-    document.documentElement.lang =
-        language;
-
-
-    document
-        .querySelectorAll("[data-i18n]")
-        .forEach(function(element) {
-
-            const key =
-                element.getAttribute("data-i18n");
-
-            if (texts[key]) {
-
-                element.textContent =
-                    texts[key];
-
+document.addEventListener("DOMContentLoaded", () => {
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+    const mobileButton = document.querySelector(".mobile-menu");
+    const navLinks = document.querySelector(".nav-links");
+
+    if (mobileButton && navLinks) {
+        mobileButton.addEventListener("click", () => {
+            navLinks.classList.toggle("mobile-open");
+
+            if (navLinks.classList.contains("mobile-open")) {
+                navLinks.style.display = "flex";
+                navLinks.style.position = "absolute";
+                navLinks.style.top = "72px";
+                navLinks.style.left = "14px";
+                navLinks.style.right = "14px";
+                navLinks.style.padding = "20px";
+                navLinks.style.flexDirection = "column";
+                navLinks.style.background = "#080b10";
+                navLinks.style.border = "1px solid rgba(255,255,255,0.08)";
+                navLinks.style.borderRadius = "14px";
+            } else {
+                navLinks.removeAttribute("style");
             }
+        });
+    }
 
+
+    /* =========================
+       SOLUTION CARDS
+    ========================= */
+
+    document.querySelectorAll(".learn-more").forEach(button => {
+        button.addEventListener("click", () => {
+
+            const card = button.closest(".card");
+
+            if (!card) return;
+
+            card.classList.toggle("open");
+
+            if (card.classList.contains("open")) {
+                button.textContent = button.dataset.closeText || "Weniger anzeigen";
+            } else {
+                button.textContent = button.dataset.openText || "Mehr erfahren";
+            }
+        });
+    });
+
+
+    /* =========================
+       LANGUAGE SWITCHER
+    ========================= */
+
+    const translations = {
+
+        de: {
+            navSolutions: "Lösungen",
+            navAbout: "Über uns",
+            navContact: "Kontakt",
+            navLogin: "Login",
+            navStart: "Starten",
+
+            heroBadge: "Software für Unternehmen",
+            heroTitle: "Bringen Sie Ihr Unternehmen voran.",
+            heroText: "KERVAQ entwickelt intelligente Software, die Unternehmen Arbeit abnimmt, Prozesse vereinfacht und neue Zeit für Wachstum schafft.",
+            heroPrimary: "Lösungen entdecken",
+            heroSecondary: "Kontakt aufnehmen",
+
+            technology: "KERVAQ TECHNOLOGY CORE",
+
+            solutionsEyebrow: "Unsere Lösungen",
+            solutionsTitle: "Weniger Arbeit. Mehr Wirkung.",
+            solutionsText: "Wir verbinden Automatisierung, intelligente Software und effiziente Prozesse zu Lösungen, die Unternehmen spürbar entlasten.",
+
+            automationTitle: "Automatisierung",
+            automationText: "Wiederkehrende Aufgaben werden automatisiert, damit Ihr Team sich auf wichtigere Dinge konzentrieren kann.",
+            automationDetails: "KERVAQ analysiert Prozesse und entwickelt digitale Abläufe, die manuelle Arbeit reduzieren und Zeit sparen.",
+
+            intelligenceTitle: "Intelligenz",
+            intelligenceText: "Daten und Prozesse werden intelligent miteinander verbunden, um bessere Entscheidungen zu ermöglichen.",
+            intelligenceDetails: "Unsere Systeme können Informationen strukturieren, Zusammenhänge erkennen und Prozesse intelligenter machen.",
+
+            efficiencyTitle: "Effizienz",
+            efficiencyText: "Weniger Aufwand, weniger Kosten und mehr Zeit für die Dinge, die Ihr Unternehmen wirklich voranbringen.",
+            efficiencyDetails: "Das Ziel ist ein effizienteres Unternehmen mit klareren Abläufen, weniger Reibungsverlusten und mehr Kapazität.",
+
+            more: "Mehr erfahren",
+
+            aboutEyebrow: "KERVAQ",
+            aboutTitle: "Software, die Arbeit abnimmt.",
+            aboutText: "Wir glauben, dass Technologie nicht komplizierter werden sollte als das Problem, das sie löst. KERVAQ entwickelt Software mit einem klaren Ziel: Unternehmen schneller, einfacher und effizienter zu machen.",
+
+            ctaTitle: "Bereit für den nächsten Schritt?",
+            ctaText: "Lassen Sie uns herausfinden, welche Prozesse in Ihrem Unternehmen automatisiert und verbessert werden können.",
+            ctaButton: "Kontakt aufnehmen",
+
+            footerSlogan: "Move Business Forward.",
+            privacy: "Datenschutz",
+            imprint: "Impressum",
+
+            aiTitle: "KERVAQ AI",
+            aiPlaceholder: "Frage zu KERVAQ...",
+            aiWelcome: "Hallo! Ich bin die KERVAQ AI. Ich kann dir Fragen zu KERVAQ, unseren Lösungen und unserem Ansatz beantworten.",
+            aiDemo: "Die öffentliche KERVAQ AI ist momentan als Demo eingebaut. Die echte KI-Anbindung folgt.",
+
+            pageSolutionsTitle: "Technologie, die Unternehmen voranbringt.",
+            pageSolutionsText: "KERVAQ entwickelt digitale Lösungen, die repetitive Arbeit reduzieren, Prozesse vereinfachen und Unternehmen effizienter machen.",
+
+            pageAboutTitle: "Wir bauen Software mit einem klaren Ziel.",
+            pageAboutText: "KERVAQ steht für intelligente, moderne und praktische Softwarelösungen.",
+
+            pageContactTitle: "Lassen Sie uns sprechen.",
+            pageContactText: "Sie haben einen Prozess, der unnötig Zeit kostet? Erzählen Sie uns davon.",
+
+            formName: "Name",
+            formEmail: "E-Mail",
+            formCompany: "Unternehmen",
+            formMessage: "Nachricht",
+            formSend: "Nachricht senden",
+
+            loginTitle: "Willkommen zurück.",
+            loginText: "Melden Sie sich bei Ihrem KERVAQ Bereich an.",
+            loginEmail: "E-Mail-Adresse",
+            loginPassword: "Passwort",
+            loginButton: "Einloggen",
+            loginNote: "Demo-Login: Die Authentifizierung ist momentan nur für die Frontend-Demo aktiv.",
+
+            dashboardTitle: "Dashboard",
+            dashboardWelcome: "Willkommen bei KERVAQ.",
+            dashboardSubtitle: "Hier entsteht Ihre zentrale Übersicht.",
+            statProcesses: "Automatisierte Prozesse",
+            statTime: "Gesparte Stunden",
+            statEfficiency: "Effizienz",
+            statTasks: "Offene Aufgaben",
+            recent: "Letzte Aktivitäten",
+            aiDashboard: "KERVAQ AI",
+            aiDashboardText: "Ihre intelligente Assistenz für Prozesse, Daten und Automatisierung.",
+            comingSoon: "Coming next",
+            logout: "Abmelden",
+
+            legalNotice: "Hinweis: Diese rechtlichen Texte sind zunächst Platzhalter und müssen vor einer kommerziellen Veröffentlichung an Ihre tatsächlichen Unternehmensdaten angepasst und rechtlich geprüft werden."
+        },
+
+        en: {
+            navSolutions: "Solutions",
+            navAbout: "About us",
+            navContact: "Contact",
+            navLogin: "Login",
+            navStart: "Get started",
+
+            heroBadge: "Software for businesses",
+            heroTitle: "Move your business forward.",
+            heroText: "KERVAQ builds intelligent software that removes manual work, simplifies processes and creates more time for growth.",
+            heroPrimary: "Explore solutions",
+            heroSecondary: "Get in touch",
+
+            technology: "KERVAQ TECHNOLOGY CORE",
+
+            solutionsEyebrow: "Our solutions",
+            solutionsTitle: "Less work. More impact.",
+            solutionsText: "We combine automation, intelligent software and efficient processes to create solutions that make businesses more effective.",
+
+            automationTitle: "Automation",
+            automationText: "Recurring tasks are automated so your team can focus on what matters most.",
+            automationDetails: "KERVAQ analyzes processes and develops digital workflows that reduce manual work and save time.",
+
+            intelligenceTitle: "Intelligence",
+            intelligenceText: "Data and processes are connected intelligently to support better decisions.",
+            intelligenceDetails: "Our systems can structure information, identify connections and make processes more intelligent.",
+
+            efficiencyTitle: "Efficiency",
+            efficiencyText: "Less effort, lower costs and more time for the things that truly move your business forward.",
+            efficiencyDetails: "The goal is a more efficient business with clearer processes and more capacity.",
+
+            more: "Learn more",
+
+            aboutEyebrow: "KERVAQ",
+            aboutTitle: "Software that takes work off your hands.",
+            aboutText: "We believe technology should not become more complicated than the problem it solves. KERVAQ builds software with one clear goal: making businesses faster, simpler and more efficient.",
+
+            ctaTitle: "Ready for the next step?",
+            ctaText: "Let's find out which processes in your business can be automated and improved.",
+            ctaButton: "Get in touch",
+
+            footerSlogan: "Move Business Forward.",
+            privacy: "Privacy",
+            imprint: "Imprint",
+
+            aiTitle: "KERVAQ AI",
+            aiPlaceholder: "Ask about KERVAQ...",
+            aiWelcome: "Hello! I'm KERVAQ AI. I can answer questions about KERVAQ, our solutions and our approach.",
+            aiDemo: "The public KERVAQ AI is currently a demo. The real AI connection will follow.",
+
+            pageSolutionsTitle: "Technology that moves businesses forward.",
+            pageSolutionsText: "KERVAQ builds digital solutions that reduce repetitive work, simplify processes and make businesses more efficient.",
+
+            pageAboutTitle: "We build software with a clear purpose.",
+            pageAboutText: "KERVAQ stands for intelligent, modern and practical software solutions.",
+
+            pageContactTitle: "Let's talk.",
+            pageContactText: "Have a process that takes too much time? Tell us about it.",
+
+            formName: "Name",
+            formEmail: "Email",
+            formCompany: "Company",
+            formMessage: "Message",
+            formSend: "Send message",
+
+            loginTitle: "Welcome back.",
+            loginText: "Sign in to your KERVAQ area.",
+            loginEmail: "Email address",
+            loginPassword: "Password",
+            loginButton: "Sign in",
+            loginNote: "Demo login: Authentication is currently only active for the frontend demo.",
+
+            dashboardTitle: "Dashboard",
+            dashboardWelcome: "Welcome to KERVAQ.",
+            dashboardSubtitle: "Your central overview is being built here.",
+            statProcesses: "Automated processes",
+            statTime: "Hours saved",
+            statEfficiency: "Efficiency",
+            statTasks: "Open tasks",
+            recent: "Recent activity",
+            aiDashboard: "KERVAQ AI",
+            aiDashboardText: "Your intelligent assistant for processes, data and automation.",
+            comingSoon: "Coming next",
+            logout: "Log out",
+
+            legalNotice: "Notice: These legal texts are currently placeholders and must be adapted to your actual company details and legally reviewed before commercial publication."
+        },
+
+        fr: {
+            navSolutions: "Solutions",
+            navAbout: "À propos",
+            navContact: "Contact",
+            navLogin: "Connexion",
+            navStart: "Commencer",
+
+            heroBadge: "Logiciels pour entreprises",
+            heroTitle: "Faites avancer votre entreprise.",
+            heroText: "KERVAQ développe des logiciels intelligents qui réduisent le travail manuel, simplifient les processus et créent plus de temps pour la croissance.",
+            heroPrimary: "Découvrir les solutions",
+            heroSecondary: "Nous contacter",
+
+            technology: "KERVAQ TECHNOLOGY CORE",
+
+            solutionsEyebrow: "Nos solutions",
+            solutionsTitle: "Moins de travail. Plus d'impact.",
+            solutionsText: "Nous combinons automatisation, logiciels intelligents et processus efficaces pour rendre les entreprises plus performantes.",
+
+            automationTitle: "Automatisation",
+            automationText: "Les tâches répétitives sont automatisées afin que vos équipes puissent se concentrer sur l'essentiel.",
+            automationDetails: "KERVAQ analyse les processus et développe des flux numériques qui réduisent le travail manuel et font gagner du temps.",
+
+            intelligenceTitle: "Intelligence",
+            intelligenceText: "Les données et les processus sont connectés intelligemment afin de faciliter les décisions.",
+            intelligenceDetails: "Nos systèmes peuvent structurer les informations, identifier les connexions et rendre les processus plus intelligents.",
+
+            efficiencyTitle: "Efficacité",
+            efficiencyText: "Moins d'efforts, moins de coûts et plus de temps pour ce qui fait réellement avancer votre entreprise.",
+            efficiencyDetails: "L'objectif est une entreprise plus efficace avec des processus plus clairs et davantage de capacité.",
+
+            more: "En savoir plus",
+
+            aboutEyebrow: "KERVAQ",
+            aboutTitle: "Des logiciels qui vous déchargent du travail.",
+            aboutText: "Nous pensons que la technologie ne devrait pas être plus complexe que le problème qu'elle résout. KERVAQ crée des logiciels avec un objectif clair : rendre les entreprises plus rapides, simples et efficaces.",
+
+            ctaTitle: "Prêt pour la prochaine étape ?",
+            ctaText: "Découvrons quels processus de votre entreprise peuvent être automatisés et améliorés.",
+            ctaButton: "Nous contacter",
+
+            footerSlogan: "Move Business Forward.",
+            privacy: "Confidentialité",
+            imprint: "Mentions légales",
+
+            aiTitle: "KERVAQ AI",
+            aiPlaceholder: "Question sur KERVAQ...",
+            aiWelcome: "Bonjour ! Je suis KERVAQ AI. Je peux répondre aux questions sur KERVAQ, nos solutions et notre approche.",
+            aiDemo: "La KERVAQ AI publique est actuellement une démo. La véritable connexion IA suivra.",
+
+            pageSolutionsTitle: "Une technologie qui fait avancer les entreprises.",
+            pageSolutionsText: "KERVAQ développe des solutions numériques qui réduisent le travail répétitif, simplifient les processus et rendent les entreprises plus efficaces.",
+
+            pageAboutTitle: "Nous créons des logiciels avec un objectif clair.",
+            pageAboutText: "KERVAQ représente des solutions logicielles intelligentes, modernes et pratiques.",
+
+            pageContactTitle: "Parlons-en.",
+            pageContactText: "Vous avez un processus qui prend trop de temps ? Parlez-nous-en.",
+
+            formName: "Nom",
+            formEmail: "E-mail",
+            formCompany: "Entreprise",
+            formMessage: "Message",
+            formSend: "Envoyer",
+
+            loginTitle: "Bon retour.",
+            loginText: "Connectez-vous à votre espace KERVAQ.",
+            loginEmail: "Adresse e-mail",
+            loginPassword: "Mot de passe",
+            loginButton: "Connexion",
+            loginNote: "Connexion démo : l'authentification est actuellement active uniquement pour la démo frontend.",
+
+            dashboardTitle: "Dashboard",
+            dashboardWelcome: "Bienvenue chez KERVAQ.",
+            dashboardSubtitle: "Votre aperçu central est en cours de création.",
+            statProcesses: "Processus automatisés",
+            statTime: "Heures économisées",
+            statEfficiency: "Efficacité",
+            statTasks: "Tâches ouvertes",
+            recent: "Activité récente",
+            aiDashboard: "KERVAQ AI",
+            aiDashboardText: "Votre assistant intelligent pour les processus, les données et l'automatisation.",
+            comingSoon: "Bientôt disponible",
+            logout: "Déconnexion",
+
+            legalNotice: "Remarque : Ces textes juridiques sont actuellement des modèles et doivent être adaptés aux informations réelles de votre entreprise et vérifiés juridiquement avant publication commerciale."
+        }
+    };
+
+
+    function applyLanguage(lang) {
+
+        if (!translations[lang]) {
+            lang = "de";
+        }
+
+        const dictionary = translations[lang];
+
+        document.documentElement.lang = lang;
+
+        document.querySelectorAll("[data-i18n]").forEach(element => {
+            const key = element.dataset.i18n;
+
+            if (dictionary[key]) {
+                element.textContent = dictionary[key];
+            }
         });
 
+        document.querySelectorAll("[data-i18n-placeholder]").forEach(element => {
+            const key = element.dataset.i18nPlaceholder;
 
-    currentFlag.textContent =
-        flags[language];
-
-
-    localStorage.setItem(
-        "kervaq-language",
-        language
-    );
-
-
-    languageSelector.classList.remove(
-        "open"
-    );
-
-}
-
-
-languageButton.addEventListener(
-    "click",
-    function(event) {
-
-        event.stopPropagation();
-
-        languageSelector.classList.toggle(
-            "open"
-        );
-
-    }
-);
-
-
-languageMenu
-    .querySelectorAll("button")
-    .forEach(function(button) {
-
-        button.addEventListener(
-            "click",
-            function() {
-
-                const language =
-                    button.getAttribute(
-                        "data-language"
-                    );
-
-                setLanguage(language);
-
+            if (dictionary[key]) {
+                element.placeholder = dictionary[key];
             }
-        );
+        });
 
+        document.querySelectorAll(".lang-btn").forEach(button => {
+            button.classList.toggle(
+                "active",
+                button.dataset.lang === lang
+            );
+        });
+
+        localStorage.setItem("kervaq-language", lang);
+
+        updateAIWelcome(lang);
+    }
+
+
+    document.querySelectorAll(".lang-btn").forEach(button => {
+        button.addEventListener("click", () => {
+            applyLanguage(button.dataset.lang);
+        });
     });
 
 
-document.addEventListener(
-    "click",
-    function() {
-
-        languageSelector.classList.remove(
-            "open"
-        );
-
-    }
-);
+    const savedLanguage = localStorage.getItem("kervaq-language") || "de";
+    applyLanguage(savedLanguage);
 
 
-const savedLanguage =
-    localStorage.getItem(
-        "kervaq-language"
-    );
+    /* =========================
+       AI CHAT
+    ========================= */
 
+    const aiOpen = document.querySelector(".ai-open");
+    const aiChat = document.querySelector(".ai-chat");
+    const aiClose = document.querySelector(".ai-close");
+    const aiForm = document.querySelector(".ai-form");
+    const aiInput = document.querySelector(".ai-form input");
+    const aiMessages = document.querySelector(".ai-messages");
 
-if (
-    savedLanguage &&
-    translations[savedLanguage]
-) {
+    function updateAIWelcome(lang) {
 
-    setLanguage(savedLanguage);
+        if (!aiMessages) return;
 
-}
+        const dictionary = translations[lang];
 
+        const welcome = aiMessages.querySelector(".ai-welcome");
 
-
-/* =====================================================
-   NAVBAR SCROLL
-===================================================== */
-
-const navbar =
-    document.getElementById("navbar");
-
-
-window.addEventListener(
-    "scroll",
-    function() {
-
-        if (window.scrollY > 30) {
-
-            navbar.classList.add(
-                "scrolled"
-            );
-
-        } else {
-
-            navbar.classList.remove(
-                "scrolled"
-            );
-
+        if (welcome) {
+            welcome.textContent = dictionary.aiWelcome;
         }
-
     }
-);
 
 
+    if (aiOpen && aiChat) {
 
-/* =====================================================
-   MOBILE MENU
-===================================================== */
+        aiOpen.addEventListener("click", () => {
+            aiChat.classList.add("open");
+            aiOpen.classList.add("hidden");
 
-const mobileMenuButton =
-    document.getElementById(
-        "mobileMenuButton"
-    );
-
-const mobileMenu =
-    document.getElementById(
-        "mobileMenu"
-    );
-
-
-mobileMenuButton.addEventListener(
-    "click",
-    function() {
-
-        mobileMenu.classList.toggle(
-            "open"
-        );
-
-    }
-);
-
-
-mobileMenu
-    .querySelectorAll("a")
-    .forEach(function(link) {
-
-        link.addEventListener(
-            "click",
-            function() {
-
-                mobileMenu.classList.remove(
-                    "open"
-                );
-
+            if (aiInput) {
+                setTimeout(() => aiInput.focus(), 150);
             }
-        );
-
-    });
-
+        });
+    }
 
 
-/* =====================================================
-   CARD "MEHR ERFAHREN"
-===================================================== */
+    if (aiClose && aiChat && aiOpen) {
 
-const cards =
-    document.querySelectorAll(
-        ".feature-card"
-    );
-
-
-cards.forEach(function(card) {
-
-    const button =
-        card.querySelector(
-            ".learn-more"
-        );
+        aiClose.addEventListener("click", () => {
+            aiChat.classList.remove("open");
+            aiOpen.classList.remove("hidden");
+        });
+    }
 
 
-    button.addEventListener(
-        "click",
-        function() {
+    if (aiForm && aiInput && aiMessages) {
+
+        aiForm.addEventListener("submit", event => {
+
+            event.preventDefault();
+
+            const question = aiInput.value.trim();
+
+            if (!question) return;
+
+            const userMessage = document.createElement("div");
+
+            userMessage.className = "ai-message user";
+            userMessage.textContent = question;
+
+            aiMessages.appendChild(userMessage);
+
+            aiInput.value = "";
+
+            setTimeout(() => {
+
+                const lang = localStorage.getItem("kervaq-language") || "de";
+                const dictionary = translations[lang];
+
+                const botMessage = document.createElement("div");
+
+                botMessage.className = "ai-message bot";
+                botMessage.textContent = dictionary.aiDemo;
+
+                aiMessages.appendChild(botMessage);
+
+                aiMessages.scrollTop = aiMessages.scrollHeight;
+
+            }, 600);
+
+            aiMessages.scrollTop = aiMessages.scrollHeight;
+        });
+    }
 
 
-            cards.forEach(
-                function(otherCard) {
+    /* =========================
+       CONTACT FORM
+    ========================= */
 
-                    if (
-                        otherCard !== card
-                    ) {
+    const contactForm = document.querySelector("#contactForm");
 
-                        otherCard.classList.remove(
-                            "active"
-                        );
+    if (contactForm) {
 
-                    }
+        contactForm.addEventListener("submit", event => {
 
+            event.preventDefault();
+
+            alert(
+                "Danke für Ihre Nachricht! Das Formular ist aktuell eine Demo. Die echte Übermittlung wird später angebunden."
+            );
+
+            contactForm.reset();
+        });
+    }
+
+
+    /* =========================
+       LOGIN
+    ========================= */
+
+    const loginForm = document.querySelector("#loginForm");
+
+    if (loginForm) {
+
+        loginForm.addEventListener("submit", event => {
+
+            event.preventDefault();
+
+            const email = document.querySelector("#loginEmail");
+            const password = document.querySelector("#loginPassword");
+            const error = document.querySelector(".login-error");
+
+            if (!email || !password) return;
+
+            if (!email.value.trim() || password.value.length < 4) {
+
+                if (error) {
+                    error.style.display = "block";
+                    error.textContent =
+                        "Bitte E-Mail und ein Passwort mit mindestens 4 Zeichen eingeben.";
                 }
+
+                return;
+            }
+
+            sessionStorage.setItem(
+                "kervaq-demo-user",
+                email.value.trim()
             );
 
+            window.location.href = "dashboard.html";
+        });
+    }
 
-            card.classList.toggle(
-                "active"
-            );
 
+    /* =========================
+       DASHBOARD PROTECTION
+    ========================= */
+
+    const isDashboard =
+        document.body.classList.contains("dashboard-page");
+
+    if (isDashboard) {
+
+        const user = sessionStorage.getItem("kervaq-demo-user");
+
+        if (!user) {
+            window.location.href = "login.html";
+            return;
         }
-    );
+
+        const emailElement =
+            document.querySelector("[data-user-email]");
+
+        if (emailElement) {
+            emailElement.textContent = user;
+        }
+
+        const avatar =
+            document.querySelector("[data-user-avatar]");
+
+        if (avatar) {
+            avatar.textContent =
+                user.charAt(0).toUpperCase();
+        }
+    }
+
+
+    /* =========================
+       LOGOUT
+    ========================= */
+
+    const logoutButton = document.querySelector(".logout-btn");
+
+    if (logoutButton) {
+
+        logoutButton.addEventListener("click", () => {
+
+            sessionStorage.removeItem("kervaq-demo-user");
+
+            window.location.href = "login.html";
+        });
+    }
 
 });
-
-
-
-/* =====================================================
-   CARD 3D MOUSE EFFECT
-===================================================== */
-
-cards.forEach(function(card) {
-
-
-    card.addEventListener(
-        "mousemove",
-        function(event) {
-
-
-            const rect =
-                card.getBoundingClientRect();
-
-
-            const x =
-                event.clientX -
-                rect.left;
-
-
-            const y =
-                event.clientY -
-                rect.top;
-
-
-            const rotateX =
-                (y / rect.height - 0.5) *
-                -5;
-
-
-            const rotateY =
-                (x / rect.width - 0.5) *
-                5;
-
-
-            card.style.transform =
-                "perspective(800px) " +
-                "rotateX(" +
-                rotateX +
-                "deg) " +
-                "rotateY(" +
-                rotateY +
-                "deg) " +
-                "translateY(-5px)";
-
-
-            card.style.setProperty(
-                "--mouse-x",
-                x + "px"
-            );
-
-
-            card.style.setProperty(
-                "--mouse-y",
-                y + "px"
-            );
-
-        }
-    );
-
-
-    card.addEventListener(
-        "mouseleave",
-        function() {
-
-            card.style.transform =
-                "perspective(800px) " +
-                "rotateX(0deg) " +
-                "rotateY(0deg) " +
-                "translateY(0)";
-
-        }
-    );
-
-});
-
-
-
-/* =====================================================
-   HERO CORE MOUSE EFFECT
-===================================================== */
-
-const heroVisual =
-    document.querySelector(
-        ".hero-visual"
-    );
-
-const orb =
-    document.querySelector(
-        ".orb"
-    );
-
-
-if (
-    heroVisual &&
-    orb
-) {
-
-
-    heroVisual.addEventListener(
-        "mousemove",
-        function(event) {
-
-
-            const rect =
-                heroVisual.getBoundingClientRect();
-
-
-            const x =
-                event.clientX -
-                rect.left;
-
-
-            const y =
-                event.clientY -
-                rect.top;
-
-
-            const moveX =
-                (x / rect.width - 0.5) *
-                12;
-
-
-            const moveY =
-                (y / rect.height - 0.5) *
-                12;
-
-
-            orb.style.transform =
-                "translate(" +
-                "calc(-50% + " +
-                moveX +
-                "px), " +
-                "calc(-50% + " +
-                moveY +
-                "px))";
-
-        }
-    );
-
-
-    heroVisual.addEventListener(
-        "mouseleave",
-        function() {
-
-            orb.style.transform =
-                "translate(-50%,-50%)";
-
-        }
-    );
-
-}
-
-
-
-/* =====================================================
-   CONTACT FORM
-===================================================== */
-
-const contactForm =
-    document.getElementById(
-        "contactForm"
-    );
-
-const formMessage =
-    document.getElementById(
-        "formMessage"
-    );
-
-
-contactForm.addEventListener(
-    "submit",
-    function(event) {
-
-        event.preventDefault();
-
-
-        const language =
-            document.documentElement.lang;
-
-
-        const messages = {
-
-            de:
-                "Vielen Dank. Das Formular ist vorbereitet – sobald die KERVAQ-E-Mail-Adresse hinterlegt ist, kann die Anfrage direkt versendet werden.",
-
-            en:
-                "Thank you. The form is ready — once the KERVAQ email address is connected, requests can be sent directly.",
-
-            fr:
-                "Merci. Le formulaire est prêt — dès que l'adresse e-mail de KERVAQ sera connectée, les demandes pourront être envoyées directement."
-
-        };
-
-
-        formMessage.textContent =
-            messages[language];
-
-
-        contactForm.reset();
-
-    }
-);
-
-
-
-/* =====================================================
-   LEGAL MODALS
-===================================================== */
-
-const openModalButtons =
-    document.querySelectorAll(
-        "[data-open-modal]"
-    );
-
-
-const closeModalButtons =
-    document.querySelectorAll(
-        "[data-close-modal]"
-    );
-
-
-openModalButtons.forEach(
-    function(button) {
-
-        button.addEventListener(
-            "click",
-            function() {
-
-                const modalId =
-                    button.getAttribute(
-                        "data-open-modal"
-                    );
-
-
-                const modal =
-                    document.getElementById(
-                        modalId
-                    );
-
-
-                modal.classList.add(
-                    "open"
-                );
-
-            }
-        );
-
-    }
-);
-
-
-closeModalButtons.forEach(
-    function(button) {
-
-        button.addEventListener(
-            "click",
-            function() {
-
-                button
-                    .closest(".legal-modal")
-                    .classList.remove(
-                        "open"
-                    );
-
-            }
-        );
-
-    }
-);
-
-
-document
-    .querySelectorAll(".legal-modal")
-    .forEach(function(modal) {
-
-        modal.addEventListener(
-            "click",
-            function(event) {
-
-                if (
-                    event.target === modal
-                ) {
-
-                    modal.classList.remove(
-                        "open"
-                    );
-
-                }
-
-            }
-        );
-
-    });
-
-
-document.addEventListener(
-    "keydown",
-    function(event) {
-
-        if (
-            event.key === "Escape"
-        ) {
-
-            document
-                .querySelectorAll(".legal-modal.open")
-                .forEach(function(modal) {
-
-                    modal.classList.remove(
-                        "open"
-                    );
-
-                });
-
-        }
-
-    }
-);
-
-
-
-/* =====================================================
-   SCROLL REVEAL
-===================================================== */
-
-const revealElements =
-    document.querySelectorAll(
-        ".reveal"
-    );
-
-
-const revealObserver =
-    new IntersectionObserver(
-        function(entries) {
-
-            entries.forEach(
-                function(entry) {
-
-                    if (
-                        entry.isIntersecting
-                    ) {
-
-                        entry.target.classList.add(
-                            "visible"
-                        );
-
-                    }
-
-                }
-            );
-
-        },
-        {
-            threshold: 0.12
-        }
-    );
-
-
-revealElements.forEach(
-    function(element) {
-
-        revealObserver.observe(
-            element
-        );
-
-    }
-);
-
-
-
-/* =====================================================
-   SMOOTH SCROLL
-===================================================== */
-
-document
-    .querySelectorAll(
-        'a[href^="#"]'
-    )
-    .forEach(function(link) {
-
-        link.addEventListener(
-            "click",
-            function(event) {
-
-                const targetId =
-                    link.getAttribute(
-                        "href"
-                    );
-
-
-                if (
-                    targetId === "#"
-                ) {
-                    return;
-                }
-
-
-                const target =
-                    document.querySelector(
-                        targetId
-                    );
-
-
-                if (target) {
-
-                    event.preventDefault();
-
-
-                    target.scrollIntoView({
-                        behavior: "smooth"
-                    });
-
-                }
-
-            }
-        );
-
-    });

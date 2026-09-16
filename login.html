@@ -3,121 +3,473 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="KERVAQ Kundenbereich">
-    <title>Login — KERVAQ</title>
+
+    <meta
+        name="description"
+        content="KERVAQ Login — Zugang zu Ihrem KERVAQ Bereich."
+    >
+
+    <title>KERVAQ — Login</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="login-page">
+<body>
 
-<header class="navbar">
-    <div class="nav-container">
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+    <header class="navbar">
+        <div class="container nav-container">
 
-        <a href="index.html" class="logo">
-            <span class="logo-mark">K</span>
-            <span class="logo-text">
-                KERVAQ
-                <small>Move Business Forward.</small>
-            </span>
-        </a>
+            <a href="index.html" class="brand">
 
-        <nav class="nav-links">
-            <a href="loesungen.html" data-i18n="navSolutions">Lösungen</a>
-            <a href="ueber-uns.html" data-i18n="navAbout">Über uns</a>
-            <a href="kontakt.html" data-i18n="navContact">Kontakt</a>
-            <a href="login.html" class="active" data-i18n="navLogin">Login</a>
-        </nav>
+                <div class="brand-mark">
+                    K
+                </div>
 
-        <div class="language-switcher">
-            <button class="lang-btn active" data-lang="de">🇩🇪</button>
-            <button class="lang-btn" data-lang="en">🇬🇧</button>
-            <button class="lang-btn" data-lang="fr">🇫🇷</button>
-        </div>
+                <div class="brand-text">
 
-    </div>
-</header>
+                    <span class="brand-name">
+                        KERVAQ
+                    </span>
 
+                    <span class="brand-tagline">
+                        Move Business Forward.
+                    </span>
 
-<main class="login-main">
+                </div>
 
-    <div class="login-card">
-
-        <div class="login-logo">
-            <span class="logo-mark">K</span>
-        </div>
-
-        <span class="eyebrow">
-            KERVAQ
-        </span>
-
-        <h1 data-i18n="loginTitle">
-            Willkommen zurück.
-        </h1>
-
-        <p data-i18n="loginText">
-            Melden Sie sich an, um Ihren KERVAQ Bereich zu öffnen.
-        </p>
+            </a>
 
 
-        <form class="login-form">
+            <nav class="nav-links">
 
-            <div class="form-group">
-
-                <label for="login-email" data-i18n="loginEmail">
-                    E-Mail
-                </label>
-
-                <input
-                    type="email"
-                    id="login-email"
-                    name="email"
-                    required
+                <a
+                    href="loesungen.html"
+                    data-i18n="solutions"
                 >
+                    Lösungen
+                </a>
+
+                <a
+                    href="ueber-uns.html"
+                    data-i18n="about"
+                >
+                    Über uns
+                </a>
+
+                <a
+                    href="kontakt.html"
+                    data-i18n="contact"
+                >
+                    Kontakt
+                </a>
+
+            </nav>
+
+
+            <div class="nav-right">
+
+                <a
+                    href="login.html"
+                    class="login-link"
+                    data-i18n="login"
+                >
+                    Login
+                </a>
+
+
+                <div class="language-switcher">
+
+                    <button
+                        type="button"
+                        class="lang-btn active"
+                        data-lang="de"
+                        aria-label="Deutsch"
+                    >
+                        🇩🇪
+                    </button>
+
+                    <button
+                        type="button"
+                        class="lang-btn"
+                        data-lang="en"
+                        aria-label="English"
+                    >
+                        🇬🇧
+                    </button>
+
+                    <button
+                        type="button"
+                        class="lang-btn"
+                        data-lang="fr"
+                        aria-label="Français"
+                    >
+                        🇫🇷
+                    </button>
+
+                </div>
+
+
+                <a
+                    href="kontakt.html"
+                    class="nav-cta"
+                    data-i18n="start"
+                >
+                    Starten
+                </a>
+
+
+                <button
+                    type="button"
+                    class="mobile-menu"
+                    aria-label="Menü öffnen"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
 
             </div>
 
+        </div>
+    </header>
 
-            <div class="form-group">
 
-                <label for="login-password" data-i18n="loginPassword">
-                    Passwort
-                </label>
+    <main>
 
-                <input
-                    type="password"
-                    id="login-password"
-                    name="password"
-                    required
+        <!-- =========================
+             LOGIN
+        ========================== -->
+        <section class="login-page">
+
+            <div class="login-background-grid"></div>
+
+            <div class="login-container">
+
+                <div class="login-card">
+
+                    <div class="login-logo">
+                        K
+                    </div>
+
+
+                    <div class="login-heading">
+
+                        <span class="eyebrow">
+                            KERVAQ / ACCESS
+                        </span>
+
+                        <h1 data-i18n="loginTitle">
+                            Willkommen zurück.
+                        </h1>
+
+                        <p data-i18n="loginText">
+                            Melden Sie sich an, um Ihren
+                            KERVAQ Bereich zu öffnen.
+                        </p>
+
+                    </div>
+
+
+                    <form class="login-form">
+
+                        <div class="form-group">
+
+                            <label
+                                for="login-email"
+                                data-i18n="loginEmail"
+                            >
+                                E-Mail
+                            </label>
+
+                            <input
+                                type="email"
+                                id="login-email"
+                                name="email"
+                                placeholder="ihre@email.de"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label
+                                for="login-password"
+                                data-i18n="loginPassword"
+                            >
+                                Passwort
+                            </label>
+
+                            <input
+                                type="password"
+                                id="login-password"
+                                name="password"
+                                placeholder="••••••••"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary login-submit"
+                            data-i18n="loginButton"
+                        >
+                            Anmelden
+                        </button>
+
+
+                        <p
+                            class="login-error"
+                            data-i18n="loginError"
+                        ></p>
+
+                    </form>
+
+
+                    <div class="login-note">
+
+                        <span class="login-note-icon">
+                            ◇
+                        </span>
+
+                        <p data-i18n="loginNote">
+                            Der Login befindet sich aktuell im
+                            Demo-Modus. Ein echtes Kundenportal
+                            wird später angebunden.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="index.html"
+                    class="back-link"
                 >
+                    <span>←</span>
+                    <span>
+                        Zurück zu KERVAQ
+                    </span>
+                </a>
 
             </div>
 
+        </section>
 
-            <button type="submit" class="btn btn-primary">
-                <span data-i18n="loginButton">
-                    Einloggen
+    </main>
+
+
+    <!-- =========================
+         AI CHAT
+    ========================== -->
+    <button
+        type="button"
+        class="ai-open"
+        aria-label="KERVAQ AI öffnen"
+    >
+        <span class="ai-pulse"></span>
+        K
+    </button>
+
+
+    <div class="ai-chat">
+
+        <div class="ai-chat-header">
+
+            <div>
+
+                <strong data-i18n="aiTitle">
+                    KERVAQ AI
+                </strong>
+
+                <span>
+                    Online
                 </span>
-                <span>→</span>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="ai-close"
+                aria-label="Chat schließen"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="ai-messages">
+
+            <div
+                class="ai-welcome"
+                data-i18n="aiWelcome"
+            >
+                Hallo! Ich bin die KERVAQ AI.
+                Wie kann ich Ihnen helfen?
+            </div>
+
+        </div>
+
+
+        <form class="ai-form">
+
+            <input
+                type="text"
+                data-i18n-placeholder="aiPlaceholder"
+                placeholder="Frage über KERVAQ..."
+                autocomplete="off"
+            >
+
+            <button
+                type="submit"
+                aria-label="Nachricht senden"
+            >
+                →
             </button>
 
         </form>
 
-
-        <p class="login-note" data-i18n="loginNote">
-            Demo-Login: Die Verbindung zu einem echten Benutzerkonto wird später integriert.
-        </p>
-
-
-        <a href="index.html" class="text-link">
-            ← Zurück zur Startseite
-        </a>
-
     </div>
 
-</main>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+
+                    <a href="index.html" class="brand">
+
+                        <div class="brand-mark">
+                            K
+                        </div>
+
+                        <div class="brand-text">
+
+                            <span class="brand-name">
+                                KERVAQ
+                            </span>
+
+                            <span class="brand-tagline">
+                                Move Business Forward.
+                            </span>
+
+                        </div>
+
+                    </a>
+
+                    <p>
+                        Software. Automation. Intelligence.
+                    </p>
+
+                </div>
 
 
-<script src="script.js"></script>
+                <div class="footer-column">
+
+                    <h4 data-i18n="footerSolutions">
+                        Lösungen
+                    </h4>
+
+                    <a
+                        href="loesungen.html"
+                        data-i18n="solutions"
+                    >
+                        Lösungen
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4 data-i18n="footerAbout">
+                        Unternehmen
+                    </h4>
+
+                    <a
+                        href="ueber-uns.html"
+                        data-i18n="about"
+                    >
+                        Über uns
+                    </a>
+
+                    <a
+                        href="kontakt.html"
+                        data-i18n="contact"
+                    >
+                        Kontakt
+                    </a>
+
+                    <a
+                        href="login.html"
+                        data-i18n="login"
+                    >
+                        Login
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4 data-i18n="footerContact">
+                        Rechtliches
+                    </h4>
+
+                    <a
+                        href="datenschutz.html"
+                        data-i18n="footerPrivacy"
+                    >
+                        Datenschutz
+                    </a>
+
+                    <a
+                        href="impressum.html"
+                        data-i18n="footerImprint"
+                    >
+                        Impressum
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 KERVAQ
+                </span>
+
+                <span>
+                    Move Business Forward.
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
 </html>

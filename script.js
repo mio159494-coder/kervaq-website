@@ -1,153 +1,150 @@
-/* =========================================================
-   KERVAQ — GLOBAL SCRIPT
-========================================================= */
-
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* =====================================================
+    /* =========================================
        TRANSLATIONS
-    ===================================================== */
+    ========================================= */
 
     const translations = {
 
         de: {
 
-            /* NAVIGATION */
+            /* Navigation */
             solutions: "Lösungen",
             about: "Über uns",
             contact: "Kontakt",
             login: "Login",
             start: "Starten",
 
-            /* HERO */
-            heroBadge: "Software für die Zukunft",
+            /* Hero */
+            heroBadge: "SOFTWARE / AUTOMATION / INTELLIGENCE",
             heroTitle: "Bringen Sie Ihr Unternehmen voran.",
             heroText:
-                "Wir entwickeln intelligente Softwarelösungen, die Prozesse vereinfachen, Arbeit reduzieren und Unternehmen effizienter machen.",
-            heroPrimary: "Lösungen entdecken",
-            heroSecondary: "Kontakt aufnehmen",
+                "KERVAQ entwickelt intelligente Software, die Unternehmen automatisiert, Prozesse vereinfacht und wertvolle Zeit zurückgibt.",
+            heroPrimary: "Kontakt aufnehmen",
+            heroSecondary: "Mehr erfahren",
 
-            /* SOLUTIONS */
-            solutionsEyebrow: "Unsere Lösungen",
-            solutionsTitle: "Weniger Aufwand.<br>Mehr Fortschritt.",
+            /* Solutions */
+            solutionsEyebrow: "UNSERE LÖSUNGEN",
+            solutionsTitle: "Weniger Arbeit. Mehr Fortschritt.",
             solutionsText:
-                "KERVAQ verbindet Automatisierung, intelligente Software und effiziente Prozesse zu Lösungen, die Unternehmen im Alltag wirklich entlasten.",
+                "Wir verbinden Automation, intelligente Systeme und effiziente Prozesse zu einer Technologieplattform für moderne Unternehmen.",
 
-            automationTitle: "Automatisierung",
+            automationTitle: "Automation",
             automationText:
-                "Wiederkehrende Aufgaben automatisieren und wertvolle Arbeitszeit zurückgewinnen.",
+                "Automatisieren Sie wiederkehrende Aufgaben und schaffen Sie Freiraum für die wirklich wichtigen Dinge.",
             automationDetails:
-                "Automatisieren Sie wiederkehrende Abläufe, reduzieren Sie manuelle Arbeit und schaffen Sie mehr Zeit für Aufgaben, die wirklich wichtig sind.",
+                "KERVAQ hilft dabei, manuelle Prozesse zu erkennen, zu automatisieren und dauerhaft effizienter zu gestalten.",
 
-            intelligenceTitle: "Intelligente Software",
+            intelligenceTitle: "Intelligence",
             intelligenceText:
-                "Moderne Software, die Informationen verbindet und Prozesse intelligenter macht.",
+                "Nutzen Sie intelligente Systeme, um Informationen schneller zu verstehen und bessere Entscheidungen zu treffen.",
             intelligenceDetails:
-                "KERVAQ verbindet Informationen und Prozesse, damit Entscheidungen schneller getroffen und Arbeitsabläufe übersichtlicher gestaltet werden können.",
+                "Daten, Prozesse und Informationen werden intelligent miteinander verbunden, damit Ihr Unternehmen schneller reagieren kann.",
 
-            efficiencyTitle: "Effizienz",
+            efficiencyTitle: "Efficiency",
             efficiencyText:
-                "Klarere Abläufe, weniger Fehler und mehr Zeit für die wirklich wichtigen Aufgaben.",
+                "Weniger Aufwand, weniger Kosten und mehr Zeit für Ihr Unternehmen.",
             efficiencyDetails:
-                "Durch optimierte Prozesse können unnötige Arbeitsschritte reduziert, Fehlerquellen verringert und Ressourcen gezielter eingesetzt werden.",
+                "Durch optimierte Abläufe können Unternehmen Ressourcen sparen und gleichzeitig ihre Produktivität erhöhen.",
 
             more: "Mehr erfahren",
+            moreClose: "Weniger anzeigen",
 
-            /* ABOUT */
-            aboutEyebrow: "KERVAQ",
+            /* About */
+            aboutEyebrow: "ÜBER KERVAQ",
             aboutTitle: "Technologie soll Arbeit abnehmen.",
             aboutText:
-                "Wir entwickeln Software mit einem klaren Ziel: Unternehmen sollen schneller, einfacher und effizienter arbeiten können.",
+                "Wir entwickeln Software mit einem klaren Ziel: Unternehmen sollen weniger Zeit mit manuellen Aufgaben verbringen und mehr Zeit für Wachstum haben.",
             aboutText2:
-                "Routineaufgaben werden reduziert, Prozesse verbessert und wertvolle Zeit zurückgewonnen.",
+                "KERVAQ verbindet moderne Technologie mit einfachen, verständlichen Lösungen.",
             aboutLink: "Mehr über KERVAQ",
 
-            /* FEATURES */
-            whyEyebrow: "Warum KERVAQ",
-            whyTitle: "Mehr Zeit für das,<br>was wirklich zählt.",
+            /* Features */
+            whyEyebrow: "WARUM KERVAQ",
+            whyTitle: "Technologie mit einem klaren Zweck.",
 
             feature1Title: "Weniger Arbeit",
             feature1Text:
-                "Wiederkehrende und zeitaufwendige Aufgaben können automatisiert werden.",
+                "Automatisieren Sie Aufgaben, die täglich Zeit kosten.",
 
             feature2Title: "Weniger Kosten",
             feature2Text:
-                "Effizientere Prozesse können unnötigen Aufwand und vermeidbare Kosten reduzieren.",
+                "Effizientere Prozesse reduzieren unnötigen Aufwand.",
 
             feature3Title: "Mehr Zeit",
             feature3Text:
-                "Gute Software gibt Menschen Zeit zurück, die für wichtigere Aufgaben genutzt werden kann.",
+                "Gewinnen Sie Zeit für Wachstum, Kunden und Ihr Unternehmen.",
 
             /* CTA */
-            ctaEyebrow: "KERVAQ",
-            ctaTitle: "Bereit für den nächsten Schritt?",
+            ctaEyebrow: "BEREIT FÜR DEN NÄCHSTEN SCHRITT?",
+            ctaTitle: "Bringen Sie Ihr Unternehmen voran.",
             ctaText:
-                "Lassen Sie uns herausfinden, wie Software Ihr Unternehmen voranbringen kann.",
-            ctaButton: "Gespräch starten",
+                "Lassen Sie uns gemeinsam herausfinden, welche Prozesse in Ihrem Unternehmen automatisiert und verbessert werden können.",
+            ctaButton: "Kontakt aufnehmen",
 
             /* AI */
             aiTitle: "KERVAQ AI",
-            aiPlaceholder: "Frage über KERVAQ...",
+            aiPlaceholder: "Frag etwas über KERVAQ...",
             aiWelcome:
-                "Hallo! Ich bin die KERVAQ AI. Wie kann ich dir etwas über KERVAQ erklären?",
+                "Hallo! Ich bin die KERVAQ AI. Wie kann ich dir helfen?",
 
-            /* FOOTER */
+            /* Footer */
             footerSolutions: "Lösungen",
-            footerAbout: "Über uns",
-            footerContact: "Kontakt",
+            footerAbout: "Unternehmen",
+            footerContact: "Rechtliches",
             footerPrivacy: "Datenschutz",
             footerImprint: "Impressum",
 
-            /* LOGIN */
+            /* Login */
             loginTitle: "Willkommen zurück.",
             loginText:
-                "Melden Sie sich an, um auf Ihr KERVAQ Dashboard zuzugreifen.",
-            loginEmail: "E-Mail",
+                "Melden Sie sich an, um auf Ihren KERVAQ-Bereich zuzugreifen.",
+            loginEmail: "E-Mail-Adresse",
             loginPassword: "Passwort",
-            loginButton: "Einloggen",
+            loginButton: "Anmelden",
             loginNote:
-                "Demo-Version — noch keine echte Benutzerverwaltung.",
+                "Demo-Login: beliebige E-Mail-Adresse und Passwort verwenden.",
             loginError:
-                "Bitte geben Sie E-Mail und Passwort ein.",
+                "Bitte geben Sie eine E-Mail-Adresse und ein Passwort ein.",
 
-            /* DASHBOARD */
+            /* Dashboard */
             dashboardTitle: "Dashboard",
-            dashboardWelcome: "Willkommen zurück.",
+            dashboardWelcome: "Willkommen bei KERVAQ.",
             dashboardWelcomeText:
-                "Hier sehen Sie einen Überblick über Ihre KERVAQ Umgebung.",
+                "Hier entsteht Ihre zentrale Übersicht über Automationen, Prozesse und Unternehmensdaten.",
             statProjects: "Projekte",
-            statAutomation: "Automatisierungen",
+            statAutomation: "Automationen",
             statTime: "Zeit gespart",
             statEfficiency: "Effizienz",
-            activityTitle: "Letzte Aktivitäten",
+            activityTitle: "Aktivität",
             activityToday: "Heute",
             dashboardAI: "KERVAQ AI",
             dashboardAIText:
-                "Ihr intelligenter Assistent für Prozesse, Daten und Automatisierung.",
-            comingSoon: "Demnächst verfügbar",
+                "Ihre intelligente Assistenz für Fragen rund um KERVAQ.",
+            comingSoon: "Coming Soon",
             logout: "Abmelden",
 
-            /* PAGE HERO */
-            solutionsPageTitle: "Software, die Arbeit abnimmt.",
+            /* Page Heroes */
+            solutionsPageTitle: "Unsere Lösungen",
             solutionsPageText:
-                "KERVAQ entwickelt digitale Lösungen für automatisierte, effiziente und moderne Unternehmen.",
+                "Software, die Prozesse vereinfacht, Aufgaben automatisiert und Unternehmen effizienter macht.",
 
-            aboutPageTitle: "Wir entwickeln Technologie mit einem Ziel.",
+            aboutPageTitle: "Über KERVAQ",
             aboutPageText:
-                "Weniger Aufwand. Mehr Zeit. Mehr Möglichkeiten.",
+                "Wir entwickeln Technologie, die Unternehmen hilft, schneller, einfacher und effizienter zu arbeiten.",
 
-            contactPageTitle: "Lassen Sie uns sprechen.",
+            contactPageTitle: "Kontakt",
             contactPageText:
-                "Erzählen Sie uns, wo Ihr Unternehmen heute steht und wo Sie hin möchten.",
+                "Sprechen wir darüber, wie KERVAQ Ihr Unternehmen voranbringen kann.",
 
-            /* CONTACT */
+            /* Contact */
             contactEmail: "E-Mail",
             contactMessage: "Nachricht",
             contactName: "Name",
             contactCompany: "Unternehmen",
             contactSend: "Nachricht senden",
 
-            /* LEGAL */
+            /* Legal */
             privacyTitle: "Datenschutz",
             imprintTitle: "Impressum"
         },
@@ -155,285 +152,287 @@ document.addEventListener("DOMContentLoaded", () => {
 
         en: {
 
-            /* NAVIGATION */
+            /* Navigation */
             solutions: "Solutions",
             about: "About us",
             contact: "Contact",
             login: "Login",
             start: "Get started",
 
-            /* HERO */
-            heroBadge: "Software for the future",
+            /* Hero */
+            heroBadge: "SOFTWARE / AUTOMATION / INTELLIGENCE",
             heroTitle: "Move your business forward.",
             heroText:
-                "We develop intelligent software solutions that simplify processes, reduce workload and make businesses more efficient.",
-            heroPrimary: "Explore solutions",
-            heroSecondary: "Contact us",
+                "KERVAQ develops intelligent software that automates businesses, simplifies processes and gives valuable time back.",
+            heroPrimary: "Get in touch",
+            heroSecondary: "Learn more",
 
-            /* SOLUTIONS */
-            solutionsEyebrow: "Our solutions",
-            solutionsTitle: "Less effort.<br>More progress.",
+            /* Solutions */
+            solutionsEyebrow: "OUR SOLUTIONS",
+            solutionsTitle: "Less work. More progress.",
             solutionsText:
-                "KERVAQ combines automation, intelligent software and efficient processes to create solutions that genuinely relieve businesses in their daily work.",
+                "We combine automation, intelligent systems and efficient processes into a technology platform for modern businesses.",
 
             automationTitle: "Automation",
             automationText:
-                "Automate repetitive tasks and regain valuable working time.",
+                "Automate repetitive tasks and create more space for what really matters.",
             automationDetails:
-                "Automate repetitive workflows, reduce manual work and create more time for the tasks that actually matter.",
+                "KERVAQ helps identify manual processes, automate them and make them permanently more efficient.",
 
-            intelligenceTitle: "Intelligent software",
+            intelligenceTitle: "Intelligence",
             intelligenceText:
-                "Modern software that connects information and makes processes smarter.",
+                "Use intelligent systems to understand information faster and make better decisions.",
             intelligenceDetails:
-                "KERVAQ connects information and processes so decisions can be made faster and workflows can become clearer.",
+                "Data, processes and information are intelligently connected so your business can react faster.",
 
             efficiencyTitle: "Efficiency",
             efficiencyText:
-                "Clearer workflows, fewer errors and more time for important tasks.",
+                "Less effort, lower costs and more time for your business.",
             efficiencyDetails:
-                "Optimized processes can reduce unnecessary steps, minimize sources of error and help resources be used more effectively.",
+                "Optimized workflows help businesses save resources while increasing productivity.",
 
             more: "Learn more",
+            moreClose: "Show less",
 
-            /* ABOUT */
-            aboutEyebrow: "KERVAQ",
-            aboutTitle: "Technology should take work away.",
+            /* About */
+            aboutEyebrow: "ABOUT KERVAQ",
+            aboutTitle: "Technology should take work off your hands.",
             aboutText:
-                "We develop software with one clear goal: helping businesses work faster, easier and more efficiently.",
+                "We develop software with one clear goal: businesses should spend less time on manual tasks and more time growing.",
             aboutText2:
-                "Routine tasks are reduced, processes improved and valuable time given back.",
+                "KERVAQ combines modern technology with simple, understandable solutions.",
             aboutLink: "More about KERVAQ",
 
-            /* FEATURES */
-            whyEyebrow: "Why KERVAQ",
-            whyTitle: "More time for what<br>really matters.",
+            /* Features */
+            whyEyebrow: "WHY KERVAQ",
+            whyTitle: "Technology with a clear purpose.",
 
             feature1Title: "Less work",
             feature1Text:
-                "Repetitive and time-consuming tasks can be automated.",
+                "Automate tasks that consume valuable time every day.",
 
             feature2Title: "Lower costs",
             feature2Text:
-                "More efficient processes can reduce unnecessary work and avoidable costs.",
+                "More efficient processes reduce unnecessary effort.",
 
             feature3Title: "More time",
             feature3Text:
-                "Good software gives people time back for more important tasks.",
+                "Gain time for growth, customers and your business.",
 
             /* CTA */
-            ctaEyebrow: "KERVAQ",
-            ctaTitle: "Ready for the next step?",
+            ctaEyebrow: "READY FOR THE NEXT STEP?",
+            ctaTitle: "Move your business forward.",
             ctaText:
-                "Let us explore how software can move your business forward.",
-            ctaButton: "Start a conversation",
+                "Let's find out together which processes in your business can be automated and improved.",
+            ctaButton: "Get in touch",
 
             /* AI */
             aiTitle: "KERVAQ AI",
-            aiPlaceholder: "Ask about KERVAQ...",
+            aiPlaceholder: "Ask something about KERVAQ...",
             aiWelcome:
-                "Hello! I am KERVAQ AI. How can I explain something about KERVAQ?",
+                "Hello! I'm KERVAQ AI. How can I help you?",
 
-            /* FOOTER */
+            /* Footer */
             footerSolutions: "Solutions",
-            footerAbout: "About us",
-            footerContact: "Contact",
+            footerAbout: "Company",
+            footerContact: "Legal",
             footerPrivacy: "Privacy",
-            footerImprint: "Legal notice",
+            footerImprint: "Imprint",
 
-            /* LOGIN */
+            /* Login */
             loginTitle: "Welcome back.",
             loginText:
-                "Sign in to access your KERVAQ dashboard.",
-            loginEmail: "Email",
+                "Log in to access your KERVAQ area.",
+            loginEmail: "Email address",
             loginPassword: "Password",
-            loginButton: "Sign in",
+            loginButton: "Log in",
             loginNote:
-                "Demo version — no real user management yet.",
+                "Demo login: use any email address and password.",
             loginError:
-                "Please enter an email and password.",
+                "Please enter an email address and password.",
 
-            /* DASHBOARD */
+            /* Dashboard */
             dashboardTitle: "Dashboard",
-            dashboardWelcome: "Welcome back.",
+            dashboardWelcome: "Welcome to KERVAQ.",
             dashboardWelcomeText:
-                "Here is an overview of your KERVAQ environment.",
+                "Your central overview of automations, processes and business data will live here.",
             statProjects: "Projects",
             statAutomation: "Automations",
             statTime: "Time saved",
             statEfficiency: "Efficiency",
-            activityTitle: "Recent activity",
+            activityTitle: "Activity",
             activityToday: "Today",
             dashboardAI: "KERVAQ AI",
             dashboardAIText:
-                "Your intelligent assistant for processes, data and automation.",
-            comingSoon: "Coming soon",
+                "Your intelligent assistant for questions about KERVAQ.",
+            comingSoon: "Coming Soon",
             logout: "Log out",
 
-            /* PAGE HERO */
-            solutionsPageTitle: "Software that takes work away.",
+            /* Page Heroes */
+            solutionsPageTitle: "Our solutions",
             solutionsPageText:
-                "KERVAQ develops digital solutions for automated, efficient and modern businesses.",
+                "Software that simplifies processes, automates tasks and makes businesses more efficient.",
 
-            aboutPageTitle: "We build technology with one goal.",
+            aboutPageTitle: "About KERVAQ",
             aboutPageText:
-                "Less effort. More time. More possibilities.",
+                "We build technology that helps businesses work faster, simpler and more efficiently.",
 
-            contactPageTitle: "Let's talk.",
+            contactPageTitle: "Contact",
             contactPageText:
-                "Tell us where your business is today and where you want to go.",
+                "Let's talk about how KERVAQ can move your business forward.",
 
-            /* CONTACT */
+            /* Contact */
             contactEmail: "Email",
             contactMessage: "Message",
             contactName: "Name",
             contactCompany: "Company",
             contactSend: "Send message",
 
-            /* LEGAL */
-            privacyTitle: "Privacy",
-            imprintTitle: "Legal notice"
+            /* Legal */
+            privacyTitle: "Privacy Policy",
+            imprintTitle: "Imprint"
         },
 
 
         fr: {
 
-            /* NAVIGATION */
+            /* Navigation */
             solutions: "Solutions",
             about: "À propos",
             contact: "Contact",
             login: "Connexion",
             start: "Commencer",
 
-            /* HERO */
-            heroBadge: "Logiciels pour l'avenir",
+            /* Hero */
+            heroBadge: "LOGICIEL / AUTOMATISATION / INTELLIGENCE",
             heroTitle: "Faites avancer votre entreprise.",
             heroText:
-                "Nous développons des solutions logicielles intelligentes qui simplifient les processus, réduisent le travail et rendent les entreprises plus efficaces.",
-            heroPrimary: "Découvrir les solutions",
-            heroSecondary: "Nous contacter",
+                "KERVAQ développe des logiciels intelligents qui automatisent les entreprises, simplifient les processus et rendent du temps précieux.",
+            heroPrimary: "Nous contacter",
+            heroSecondary: "En savoir plus",
 
-            /* SOLUTIONS */
-            solutionsEyebrow: "Nos solutions",
-            solutionsTitle: "Moins d'efforts.<br>Plus de progrès.",
+            /* Solutions */
+            solutionsEyebrow: "NOS SOLUTIONS",
+            solutionsTitle: "Moins de travail. Plus de progrès.",
             solutionsText:
-                "KERVAQ combine automatisation, logiciels intelligents et processus efficaces pour créer des solutions qui simplifient réellement le travail quotidien des entreprises.",
+                "Nous combinons automatisation, systèmes intelligents et processus efficaces dans une plateforme technologique pour les entreprises modernes.",
 
             automationTitle: "Automatisation",
             automationText:
-                "Automatisez les tâches répétitives et récupérez un temps de travail précieux.",
+                "Automatisez les tâches répétitives et libérez du temps pour ce qui compte vraiment.",
             automationDetails:
-                "Automatisez les processus répétitifs, réduisez le travail manuel et libérez du temps pour les tâches qui comptent vraiment.",
+                "KERVAQ aide à identifier les processus manuels, à les automatiser et à les rendre durablement plus efficaces.",
 
-            intelligenceTitle: "Logiciels intelligents",
+            intelligenceTitle: "Intelligence",
             intelligenceText:
-                "Des logiciels modernes qui connectent les informations et rendent les processus plus intelligents.",
+                "Utilisez des systèmes intelligents pour comprendre plus rapidement les informations et prendre de meilleures décisions.",
             intelligenceDetails:
-                "KERVAQ connecte les informations et les processus afin de faciliter les décisions et de rendre les flux de travail plus clairs.",
+                "Les données, processus et informations sont connectés intelligemment afin que votre entreprise puisse réagir plus rapidement.",
 
             efficiencyTitle: "Efficacité",
             efficiencyText:
-                "Des processus plus clairs, moins d'erreurs et plus de temps pour les tâches importantes.",
+                "Moins d'efforts, moins de coûts et plus de temps pour votre entreprise.",
             efficiencyDetails:
-                "Des processus optimisés permettent de réduire les étapes inutiles, de limiter les erreurs et d'utiliser les ressources plus efficacement.",
+                "Des processus optimisés permettent d'économiser des ressources tout en augmentant la productivité.",
 
             more: "En savoir plus",
+            moreClose: "Afficher moins",
 
-            /* ABOUT */
-            aboutEyebrow: "KERVAQ",
-            aboutTitle: "La technologie doit réduire le travail.",
+            /* About */
+            aboutEyebrow: "À PROPOS DE KERVAQ",
+            aboutTitle: "La technologie doit vous faciliter le travail.",
             aboutText:
-                "Nous développons des logiciels avec un objectif clair : permettre aux entreprises de travailler plus rapidement, plus simplement et plus efficacement.",
+                "Nous développons des logiciels avec un objectif clair : permettre aux entreprises de consacrer moins de temps aux tâches manuelles et davantage à leur croissance.",
             aboutText2:
-                "Les tâches répétitives sont réduites, les processus améliorés et du temps précieux est libéré.",
+                "KERVAQ combine technologie moderne et solutions simples et compréhensibles.",
             aboutLink: "En savoir plus sur KERVAQ",
 
-            /* FEATURES */
-            whyEyebrow: "Pourquoi KERVAQ",
-            whyTitle: "Plus de temps pour ce<br>qui compte vraiment.",
+            /* Features */
+            whyEyebrow: "POURQUOI KERVAQ",
+            whyTitle: "Une technologie avec un objectif clair.",
 
             feature1Title: "Moins de travail",
             feature1Text:
-                "Les tâches répétitives et chronophages peuvent être automatisées.",
+                "Automatisez les tâches qui prennent du temps chaque jour.",
 
             feature2Title: "Moins de coûts",
             feature2Text:
-                "Des processus plus efficaces peuvent réduire le travail inutile et les coûts évitables.",
+                "Des processus plus efficaces réduisent les efforts inutiles.",
 
             feature3Title: "Plus de temps",
             feature3Text:
-                "Un bon logiciel permet de récupérer du temps pour les tâches importantes.",
+                "Gagnez du temps pour la croissance, vos clients et votre entreprise.",
 
             /* CTA */
-            ctaEyebrow: "KERVAQ",
-            ctaTitle: "Prêt pour la prochaine étape ?",
+            ctaEyebrow: "PRÊT POUR LA PROCHAINE ÉTAPE ?",
+            ctaTitle: "Faites avancer votre entreprise.",
             ctaText:
-                "Découvrons ensemble comment les logiciels peuvent faire avancer votre entreprise.",
-            ctaButton: "Démarrer une conversation",
+                "Découvrons ensemble quels processus de votre entreprise peuvent être automatisés et améliorés.",
+            ctaButton: "Nous contacter",
 
             /* AI */
             aiTitle: "KERVAQ AI",
             aiPlaceholder: "Posez une question sur KERVAQ...",
             aiWelcome:
-                "Bonjour ! Je suis KERVAQ AI. Comment puis-je vous expliquer KERVAQ ?",
+                "Bonjour ! Je suis KERVAQ AI. Comment puis-je vous aider ?",
 
-            /* FOOTER */
+            /* Footer */
             footerSolutions: "Solutions",
-            footerAbout: "À propos",
-            footerContact: "Contact",
+            footerAbout: "Entreprise",
+            footerContact: "Mentions légales",
             footerPrivacy: "Confidentialité",
             footerImprint: "Mentions légales",
 
-            /* LOGIN */
+            /* Login */
             loginTitle: "Bon retour.",
             loginText:
-                "Connectez-vous pour accéder à votre tableau de bord KERVAQ.",
-            loginEmail: "E-mail",
+                "Connectez-vous pour accéder à votre espace KERVAQ.",
+            loginEmail: "Adresse e-mail",
             loginPassword: "Mot de passe",
             loginButton: "Se connecter",
             loginNote:
-                "Version démo — aucune gestion réelle des utilisateurs.",
+                "Connexion de démonstration : utilisez n'importe quelle adresse e-mail et mot de passe.",
             loginError:
-                "Veuillez saisir un e-mail et un mot de passe.",
+                "Veuillez saisir une adresse e-mail et un mot de passe.",
 
-            /* DASHBOARD */
+            /* Dashboard */
             dashboardTitle: "Tableau de bord",
-            dashboardWelcome: "Bon retour.",
+            dashboardWelcome: "Bienvenue chez KERVAQ.",
             dashboardWelcomeText:
-                "Voici un aperçu de votre environnement KERVAQ.",
+                "Votre aperçu central des automatisations, processus et données d'entreprise se trouvera ici.",
             statProjects: "Projets",
             statAutomation: "Automatisations",
-            statTime: "Temps gagné",
+            statTime: "Temps économisé",
             statEfficiency: "Efficacité",
-            activityTitle: "Activité récente",
+            activityTitle: "Activité",
             activityToday: "Aujourd'hui",
             dashboardAI: "KERVAQ AI",
             dashboardAIText:
-                "Votre assistant intelligent pour les processus, les données et l'automatisation.",
+                "Votre assistant intelligent pour les questions concernant KERVAQ.",
             comingSoon: "Bientôt disponible",
             logout: "Déconnexion",
 
-            /* PAGE HERO */
-            solutionsPageTitle: "Des logiciels qui réduisent le travail.",
+            /* Page Heroes */
+            solutionsPageTitle: "Nos solutions",
             solutionsPageText:
-                "KERVAQ développe des solutions numériques pour des entreprises automatisées, efficaces et modernes.",
+                "Des logiciels qui simplifient les processus, automatisent les tâches et rendent les entreprises plus efficaces.",
 
-            aboutPageTitle: "Nous créons une technologie avec un objectif.",
+            aboutPageTitle: "À propos de KERVAQ",
             aboutPageText:
-                "Moins d'efforts. Plus de temps. Plus de possibilités.",
+                "Nous développons une technologie qui aide les entreprises à travailler plus rapidement, simplement et efficacement.",
 
-            contactPageTitle: "Parlons-en.",
+            contactPageTitle: "Contact",
             contactPageText:
-                "Expliquez-nous où se trouve votre entreprise aujourd'hui et où vous souhaitez aller.",
+                "Parlons de la manière dont KERVAQ peut faire avancer votre entreprise.",
 
-            /* CONTACT */
+            /* Contact */
             contactEmail: "E-mail",
             contactMessage: "Message",
             contactName: "Nom",
             contactCompany: "Entreprise",
             contactSend: "Envoyer le message",
 
-            /* LEGAL */
+            /* Legal */
             privacyTitle: "Confidentialité",
             imprintTitle: "Mentions légales"
         }
@@ -441,59 +440,39 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
 
-    /* =====================================================
+    /* =========================================
        LANGUAGE
-    ===================================================== */
+    ========================================= */
 
-    const defaultLanguage = "de";
+    const savedLanguage =
+        localStorage.getItem("kervaq-language") || "de";
 
     let currentLanguage =
-        localStorage.getItem("kervaq-language") ||
-        defaultLanguage;
-
-    if (!translations[currentLanguage]) {
-        currentLanguage = defaultLanguage;
-    }
+        translations[savedLanguage]
+            ? savedLanguage
+            : "de";
 
 
-    function applyLanguage(language) {
+    function applyTranslations() {
 
-        if (!translations[language]) {
-            return;
-        }
+        const language = translations[currentLanguage];
 
-        currentLanguage = language;
+        document.documentElement.lang = currentLanguage;
 
-        localStorage.setItem(
-            "kervaq-language",
-            language
-        );
+        /* Text translations */
 
-        document.documentElement.lang =
-            language;
+        document.querySelectorAll("[data-i18n]").forEach(element => {
 
+            const key = element.dataset.i18n;
 
-        /* normal text */
+            if (language[key] !== undefined) {
+                element.innerHTML = language[key];
+            }
 
-        document
-            .querySelectorAll("[data-i18n]")
-            .forEach(element => {
-
-                const key =
-                    element.dataset.i18n;
-
-                if (
-                    translations[language][key] !==
-                    undefined
-                ) {
-
-                    element.innerHTML =
-                        translations[language][key];
-                }
-            });
+        });
 
 
-        /* placeholders */
+        /* Placeholder translations */
 
         document
             .querySelectorAll("[data-i18n-placeholder]")
@@ -502,18 +481,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 const key =
                     element.dataset.i18nPlaceholder;
 
-                if (
-                    translations[language][key] !==
-                    undefined
-                ) {
-
-                    element.placeholder =
-                        translations[language][key];
+                if (language[key] !== undefined) {
+                    element.placeholder = language[key];
                 }
+
             });
 
 
-        /* language buttons */
+        /* Language buttons */
 
         document
             .querySelectorAll(".lang-btn")
@@ -521,26 +496,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 button.classList.toggle(
                     "active",
-                    button.dataset.lang === language
+                    button.dataset.lang === currentLanguage
                 );
+
             });
 
 
-        /* update expandable card text */
-
         updateOpenCardTexts();
 
-
-        /* AI welcome */
-
-        const welcome =
-            document.querySelector(".ai-welcome");
-
-        if (welcome) {
-
-            welcome.textContent =
-                translations[language].aiWelcome;
-        }
     }
 
 
@@ -548,71 +511,55 @@ document.addEventListener("DOMContentLoaded", () => {
         .querySelectorAll(".lang-btn")
         .forEach(button => {
 
-            button.addEventListener(
-                "click",
-                () => {
+            button.addEventListener("click", () => {
 
-                    const language =
-                        button.dataset.lang;
+                const language =
+                    button.dataset.lang;
 
-                    applyLanguage(language);
+                if (!translations[language]) {
+                    return;
                 }
-            );
+
+                currentLanguage = language;
+
+                localStorage.setItem(
+                    "kervaq-language",
+                    currentLanguage
+                );
+
+                applyTranslations();
+
+            });
+
         });
 
 
-    /* =====================================================
-       EXPANDABLE SOLUTION CARDS
-    ===================================================== */
-
-    const cardButtons =
-        document.querySelectorAll(
-            ".card .learn-more"
-        );
-
+    /* =========================================
+       EXPANDABLE CARDS
+    ========================================= */
 
     function updateOpenCardTexts() {
 
-        cardButtons.forEach(button => {
+        document
+            .querySelectorAll(".card.open .learn-more")
+            .forEach(button => {
 
-            const card =
-                button.closest(".card");
+                const language =
+                    translations[currentLanguage];
 
-            if (!card) {
-                return;
-            }
+                button.innerHTML =
+                    language.moreClose || language.more;
 
-            const textElement =
-                button.querySelector(
-                    "[data-i18n]"
-                );
+            });
 
-            if (!textElement) {
-                return;
-            }
-
-            const key =
-                card.classList.contains("open")
-                    ? "moreClose"
-                    : "more";
-
-            if (
-                translations[currentLanguage][key]
-            ) {
-
-                textElement.textContent =
-                    translations[currentLanguage][key];
-            }
-
-        });
     }
 
 
-    cardButtons.forEach(button => {
+    document
+        .querySelectorAll(".card .learn-more")
+        .forEach(button => {
 
-        button.addEventListener(
-            "click",
-            () => {
+            button.addEventListener("click", () => {
 
                 const card =
                     button.closest(".card");
@@ -622,68 +569,48 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
                 const details =
-                    card.querySelector(
-                        ".card-details"
-                    );
+                    card.querySelector(".card-details");
 
                 if (!details) {
                     return;
                 }
 
 
-                const key =
-                    button.dataset.openText;
-
-
-                if (
-                    !details.textContent.trim()
-                ) {
-
-                    if (
-                        translations[currentLanguage][key]
-                    ) {
-
-                        details.textContent =
-                            translations[currentLanguage][key];
-                    }
-                }
-
-
-                const isOpen =
-                    card.classList.contains("open");
-
-
-                /* close all other cards */
-
                 document
                     .querySelectorAll(".card.open")
-                    .forEach(otherCard => {
+                    .forEach(openCard => {
 
-                        if (otherCard !== card) {
+                        if (openCard !== card) {
 
-                            otherCard.classList.remove(
-                                "open"
-                            );
+                            openCard.classList.remove("open");
+
+                            const openButton =
+                                openCard.querySelector(".learn-more");
+
+                            if (openButton) {
+
+                                openButton.innerHTML =
+                                    translations[currentLanguage].more;
+
+                            }
+
                         }
+
                     });
 
 
-                card.classList.toggle(
-                    "open",
-                    !isOpen
-                );
-
+                card.classList.toggle("open");
 
                 updateOpenCardTexts();
-            }
-        );
 
-    });
+            });
+
+        });
 
 
-    /* =====================================================
+    /* =========================================
        MOBILE MENU
-    ===================================================== */
+    ========================================= */
 
     const mobileMenu =
         document.querySelector(".mobile-menu");
@@ -694,23 +621,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (mobileMenu && navRight) {
 
-        mobileMenu.addEventListener(
-            "click",
-            () => {
+        mobileMenu.addEventListener("click", () => {
 
-                navRight.classList.toggle(
-                    "mobile-open"
-                );
+            navRight.classList.toggle("mobile-open");
 
-            }
-        );
+            mobileMenu.classList.toggle("active");
+
+        });
+
+
+        navRight
+            .querySelectorAll("a")
+            .forEach(link => {
+
+                link.addEventListener("click", () => {
+
+                    navRight.classList.remove("mobile-open");
+
+                    mobileMenu.classList.remove("active");
+
+                });
+
+            });
 
     }
 
 
-    /* =====================================================
+    /* =========================================
        AI CHAT
-    ===================================================== */
+    ========================================= */
 
     const aiOpen =
         document.querySelector(".ai-open");
@@ -725,344 +664,303 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector(".ai-form");
 
     const aiInput =
-        document.querySelector(
-            ".ai-form input"
-        );
+        document.querySelector(".ai-form input");
 
     const aiMessages =
-        document.querySelector(
-            ".ai-messages"
-        );
+        document.querySelector(".ai-messages");
 
 
     if (aiOpen && aiChat) {
 
-        aiOpen.addEventListener(
-            "click",
-            () => {
+        aiOpen.addEventListener("click", () => {
 
-                aiChat.classList.add(
-                    "open"
-                );
+            aiChat.classList.add("active");
 
-                aiOpen.classList.add(
-                    "hidden"
-                );
-
-                if (aiInput) {
-                    setTimeout(
-                        () => aiInput.focus(),
-                        100
-                    );
-                }
-
-            }
-        );
+        });
 
     }
 
 
-    if (aiClose && aiChat && aiOpen) {
+    if (aiClose && aiChat) {
 
-        aiClose.addEventListener(
-            "click",
-            () => {
+        aiClose.addEventListener("click", () => {
 
-                aiChat.classList.remove(
-                    "open"
-                );
+            aiChat.classList.remove("active");
 
-                aiOpen.classList.remove(
-                    "hidden"
-                );
-
-            }
-        );
+        });
 
     }
 
 
-    if (
-        aiForm &&
-        aiInput &&
-        aiMessages
-    ) {
+    if (aiForm && aiInput && aiMessages) {
 
-        aiForm.addEventListener(
-            "submit",
-            event => {
+        aiForm.addEventListener("submit", event => {
 
-                event.preventDefault();
+            event.preventDefault();
 
+            const message =
+                aiInput.value.trim();
 
-                const text =
-                    aiInput.value.trim();
+            if (!message) {
+                return;
+            }
 
 
-                if (!text) {
-                    return;
-                }
+            const userMessage =
+                document.createElement("div");
+
+            userMessage.className =
+                "ai-message ai-message-user";
+
+            userMessage.innerHTML =
+                `<p>${escapeHtml(message)}</p>`;
+
+            aiMessages.appendChild(userMessage);
 
 
-                /* user message */
-
-                const userMessage =
-                    document.createElement(
-                        "div"
-                    );
-
-                userMessage.className =
-                    "ai-message user";
-
-                userMessage.textContent =
-                    text;
-
-                aiMessages.appendChild(
-                    userMessage
-                );
+            aiInput.value = "";
 
 
-                aiInput.value = "";
+            setTimeout(() => {
 
+                const botMessage =
+                    document.createElement("div");
 
-                /* demo response */
+                botMessage.className =
+                    "ai-message ai-message-bot";
 
-                setTimeout(
-                    () => {
+                botMessage.innerHTML =
+                    `<p>${getAIResponse(message)}</p>`;
 
-                        const botMessage =
-                            document.createElement(
-                                "div"
-                            );
-
-                        botMessage.className =
-                            "ai-message bot";
-
-
-                        let response;
-
-
-                        const lower =
-                            text.toLowerCase();
-
-
-                        if (
-                            lower.includes("was ist") ||
-                            lower.includes("what is") ||
-                            lower.includes("qu'est")
-                        ) {
-
-                            response =
-                                currentLanguage === "en"
-                                    ? "KERVAQ develops software solutions designed to automate processes, reduce workload and help businesses move forward."
-                                    : currentLanguage === "fr"
-                                        ? "KERVAQ développe des solutions logicielles destinées à automatiser les processus, réduire le travail et faire avancer les entreprises."
-                                        : "KERVAQ entwickelt Softwarelösungen, die Prozesse automatisieren, Arbeit reduzieren und Unternehmen voranbringen.";
-
-                        } else {
-
-                            response =
-                                currentLanguage === "en"
-                                    ? "KERVAQ focuses on automation, intelligent software and efficiency. The public AI is currently a demo and can answer general questions about KERVAQ."
-                                    : currentLanguage === "fr"
-                                        ? "KERVAQ se concentre sur l'automatisation, les logiciels intelligents et l'efficacité. L'IA publique est actuellement une démo et peut répondre aux questions générales sur KERVAQ."
-                                        : "KERVAQ konzentriert sich auf Automatisierung, intelligente Software und Effizienz. Die öffentliche AI ist aktuell eine Demo und kann allgemeine Fragen über KERVAQ beantworten.";
-
-                        }
-
-
-                        botMessage.textContent =
-                            response;
-
-                        aiMessages.appendChild(
-                            botMessage
-                        );
-
-
-                        aiMessages.scrollTop =
-                            aiMessages.scrollHeight;
-
-                    },
-                    650
-                );
-
+                aiMessages.appendChild(botMessage);
 
                 aiMessages.scrollTop =
                     aiMessages.scrollHeight;
 
-            }
-        );
+            }, 500);
+
+        });
 
     }
 
 
-    /* =====================================================
+    function escapeHtml(text) {
+
+        const div =
+            document.createElement("div");
+
+        div.textContent = text;
+
+        return div.innerHTML;
+
+    }
+
+
+    function getAIResponse(message) {
+
+        const text =
+            message.toLowerCase();
+
+
+        if (
+            text.includes("kervaq") ||
+            text.includes("was") ||
+            text.includes("what")
+        ) {
+
+            if (currentLanguage === "en") {
+
+                return "KERVAQ develops intelligent software for automation, efficiency and business growth.";
+
+            }
+
+            if (currentLanguage === "fr") {
+
+                return "KERVAQ développe des logiciels intelligents pour l'automatisation, l'efficacité et la croissance des entreprises.";
+
+            }
+
+            return "KERVAQ entwickelt intelligente Software für Automation, Effizienz und Unternehmenswachstum.";
+
+        }
+
+
+        if (
+            text.includes("automation") ||
+            text.includes("automatis")
+        ) {
+
+            if (currentLanguage === "en") {
+
+                return "KERVAQ helps automate repetitive processes and reduce manual work.";
+
+            }
+
+            if (currentLanguage === "fr") {
+
+                return "KERVAQ aide à automatiser les processus répétitifs et à réduire le travail manuel.";
+
+            }
+
+            return "KERVAQ hilft dabei, wiederkehrende Prozesse zu automatisieren und manuelle Arbeit zu reduzieren.";
+
+        }
+
+
+        if (currentLanguage === "en") {
+
+            return "I'm the KERVAQ AI demo. Ask me about KERVAQ, automation or our solutions.";
+
+        }
+
+        if (currentLanguage === "fr") {
+
+            return "Je suis la démo de KERVAQ AI. Posez-moi une question sur KERVAQ, l'automatisation ou nos solutions.";
+
+        }
+
+        return "Ich bin die KERVAQ AI Demo. Frag mich gerne etwas über KERVAQ, Automation oder unsere Lösungen.";
+
+    }
+
+
+    /* =========================================
        CONTACT FORM
-    ===================================================== */
+    ========================================= */
 
     const contactForm =
-        document.querySelector(
-            ".contact-form"
-        );
+        document.querySelector(".contact-form");
 
 
     if (contactForm) {
 
-        contactForm.addEventListener(
-            "submit",
-            event => {
+        contactForm.addEventListener("submit", event => {
 
-                event.preventDefault();
+            event.preventDefault();
 
+            const button =
+                contactForm.querySelector("button[type='submit']");
 
-                const button =
-                    contactForm.querySelector(
-                        "button[type='submit']"
-                    );
+            if (!button) {
+                return;
+            }
 
-
-                if (!button) {
-                    return;
-                }
+            const originalText =
+                button.innerHTML;
 
 
-                const originalText =
-                    button.textContent;
+            if (currentLanguage === "en") {
 
+                button.innerHTML = "Message sent ✓";
 
-                button.textContent =
-                    currentLanguage === "en"
-                        ? "Message sent ✓"
-                        : currentLanguage === "fr"
-                            ? "Message envoyé ✓"
-                            : "Nachricht gesendet ✓";
+            } else if (currentLanguage === "fr") {
 
+                button.innerHTML = "Message envoyé ✓";
 
-                button.disabled = true;
+            } else {
 
-
-                setTimeout(
-                    () => {
-
-                        button.textContent =
-                            originalText;
-
-                        button.disabled =
-                            false;
-
-                        contactForm.reset();
-
-                    },
-                    2500
-                );
+                button.innerHTML = "Nachricht gesendet ✓";
 
             }
-        );
+
+
+            button.disabled = true;
+
+
+            setTimeout(() => {
+
+                button.innerHTML = originalText;
+
+                button.disabled = false;
+
+                contactForm.reset();
+
+            }, 2500);
+
+        });
 
     }
 
 
-    /* =====================================================
+    /* =========================================
        LOGIN
-    ===================================================== */
+    ========================================= */
 
     const loginForm =
-        document.querySelector(
-            ".login-form"
-        );
+        document.querySelector(".login-form");
 
 
     if (loginForm) {
 
-        loginForm.addEventListener(
-            "submit",
-            event => {
+        loginForm.addEventListener("submit", event => {
 
-                event.preventDefault();
+            event.preventDefault();
 
 
-                const email =
-                    loginForm.querySelector(
-                        "input[type='email']"
-                    );
+            const email =
+                loginForm.querySelector("input[type='email']");
 
-                const password =
-                    loginForm.querySelector(
-                        "input[type='password']"
-                    );
+            const password =
+                loginForm.querySelector("input[type='password']");
 
-                const error =
-                    document.querySelector(
-                        ".login-error"
-                    );
+            const error =
+                document.querySelector(".login-error");
 
 
-                if (
-                    !email ||
-                    !password
-                ) {
-                    return;
-                }
-
-
-                if (
-                    !email.value.trim() ||
-                    !password.value.trim()
-                ) {
-
-                    if (error) {
-
-                        error.textContent =
-                            translations[
-                                currentLanguage
-                            ].loginError;
-
-                        error.style.display =
-                            "block";
-                    }
-
-                    return;
-                }
-
+            if (
+                !email ||
+                !password ||
+                !email.value.trim() ||
+                !password.value.trim()
+            ) {
 
                 if (error) {
 
-                    error.style.display =
-                        "none";
+                    error.textContent =
+                        translations[currentLanguage].loginError;
+
+                    error.classList.add("show");
+
                 }
 
-
-                sessionStorage.setItem(
-                    "kervaq-demo-user",
-                    email.value.trim()
-                );
-
-
-                window.location.href =
-                    "dashboard.html";
+                return;
 
             }
-        );
+
+
+            if (error) {
+
+                error.classList.remove("show");
+
+            }
+
+
+            sessionStorage.setItem(
+                "kervaq-user",
+                email.value.trim()
+            );
+
+
+            window.location.href =
+                "dashboard.html";
+
+        });
 
     }
 
 
-    /* =====================================================
-       DASHBOARD PROTECTION
-    ===================================================== */
+    /* =========================================
+       DASHBOARD
+    ========================================= */
 
     const dashboard =
-        document.querySelector(
-            ".dashboard"
-        );
+        document.querySelector(".dashboard");
 
 
     if (dashboard) {
 
         const user =
-            sessionStorage.getItem(
-                "kervaq-demo-user"
-            );
+            sessionStorage.getItem("kervaq-user");
 
 
         if (!user) {
@@ -1070,113 +968,97 @@ document.addEventListener("DOMContentLoaded", () => {
             window.location.href =
                 "login.html";
 
-            return;
-        }
+        } else {
+
+            const userEmail =
+                document.querySelector(".user-email");
+
+            const userAvatar =
+                document.querySelector(".user-avatar");
 
 
-        const userEmail =
-            document.querySelector(
-                ".user-email"
-            );
+            if (userEmail) {
+
+                userEmail.textContent =
+                    user;
+
+            }
 
 
-        if (userEmail) {
+            if (userAvatar) {
 
-            userEmail.textContent =
-                user;
-        }
+                userAvatar.textContent =
+                    user.charAt(0).toUpperCase();
 
+            }
 
-        const userAvatar =
-            document.querySelector(
-                ".user-avatar"
-            );
-
-
-        if (
-            userAvatar &&
-            user.length > 0
-        ) {
-
-            userAvatar.textContent =
-                user
-                    .charAt(0)
-                    .toUpperCase();
         }
 
     }
 
 
-    /* =====================================================
+    /* =========================================
        LOGOUT
-    ===================================================== */
+    ========================================= */
 
     const logoutButton =
-        document.querySelector(
-            ".logout-btn"
-        );
+        document.querySelector(".logout-btn");
 
 
     if (logoutButton) {
 
-        logoutButton.addEventListener(
-            "click",
-            () => {
+        logoutButton.addEventListener("click", () => {
 
-                sessionStorage.removeItem(
-                    "kervaq-demo-user"
-                );
+            sessionStorage.removeItem(
+                "kervaq-user"
+            );
 
-                window.location.href =
-                    "login.html";
+            window.location.href =
+                "login.html";
 
-            }
-        );
+        });
 
     }
 
 
-    /* =====================================================
+    /* =========================================
        ACTIVE NAVIGATION
-    ===================================================== */
+    ========================================= */
 
     const currentPage =
         window.location.pathname
             .split("/")
-            .pop() || "index.html";
+            .pop()
+            .toLowerCase();
 
 
     document
-        .querySelectorAll(".nav-links a")
+        .querySelectorAll(".nav-right a")
         .forEach(link => {
 
             const href =
                 link.getAttribute("href");
 
+            if (!href) {
+                return;
+            }
+
+
             if (
-                href === currentPage
+                href.toLowerCase() === currentPage
             ) {
 
-                link.classList.add(
-                    "active"
-                );
+                link.classList.add("active");
 
-            } else {
-
-                link.classList.remove(
-                    "active"
-                );
             }
 
         });
 
 
-    /* =====================================================
-       INITIAL LANGUAGE
-    ===================================================== */
+    /* =========================================
+       INITIALIZE
+    ========================================= */
 
-    applyLanguage(
-        currentLanguage
-    );
+    applyTranslations();
 
 });

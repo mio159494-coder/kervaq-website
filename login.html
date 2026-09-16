@@ -1,1 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KERVAQ Kundenbereich">
+    <title>Login — KERVAQ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
+<body class="login-page">
+
+<header class="navbar">
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+            <span class="logo-mark">K</span>
+            <span class="logo-text">
+                KERVAQ
+                <small>Move Business Forward.</small>
+            </span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="loesungen.html" data-i18n="navSolutions">Lösungen</a>
+            <a href="ueber-uns.html" data-i18n="navAbout">Über uns</a>
+            <a href="kontakt.html" data-i18n="navContact">Kontakt</a>
+            <a href="login.html" class="active" data-i18n="navLogin">Login</a>
+        </nav>
+
+        <div class="language-switcher">
+            <button class="lang-btn active" data-lang="de">🇩🇪</button>
+            <button class="lang-btn" data-lang="en">🇬🇧</button>
+            <button class="lang-btn" data-lang="fr">🇫🇷</button>
+        </div>
+
+    </div>
+</header>
+
+
+<main class="login-main">
+
+    <div class="login-card">
+
+        <div class="login-logo">
+            <span class="logo-mark">K</span>
+        </div>
+
+        <span class="eyebrow">
+            KERVAQ
+        </span>
+
+        <h1 data-i18n="loginTitle">
+            Willkommen zurück.
+        </h1>
+
+        <p data-i18n="loginText">
+            Melden Sie sich an, um Ihren KERVAQ Bereich zu öffnen.
+        </p>
+
+
+        <form class="login-form">
+
+            <div class="form-group">
+
+                <label for="login-email" data-i18n="loginEmail">
+                    E-Mail
+                </label>
+
+                <input
+                    type="email"
+                    id="login-email"
+                    name="email"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="login-password" data-i18n="loginPassword">
+                    Passwort
+                </label>
+
+                <input
+                    type="password"
+                    id="login-password"
+                    name="password"
+                    required
+                >
+
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">
+                <span data-i18n="loginButton">
+                    Einloggen
+                </span>
+                <span>→</span>
+            </button>
+
+        </form>
+
+
+        <p class="login-note" data-i18n="loginNote">
+            Demo-Login: Die Verbindung zu einem echten Benutzerkonto wird später integriert.
+        </p>
+
+
+        <a href="index.html" class="text-link">
+            ← Zurück zur Startseite
+        </a>
+
+    </div>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

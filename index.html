@@ -12,6 +12,843 @@
     >
 
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =========================================================
+           KERVAQ HOMEPAGE HERO
+           Nur für index.html
+           Navigation bleibt unverändert
+        ========================================================= */
+
+        .hero {
+            position: relative;
+            min-height: calc(100vh - 86px);
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding: 70px 5vw 90px;
+            background:
+                radial-gradient(
+                    circle at 76% 48%,
+                    rgba(0, 120, 255, 0.16),
+                    transparent 34%
+                ),
+                radial-gradient(
+                    circle at 20% 40%,
+                    rgba(0, 90, 255, 0.08),
+                    transparent 30%
+                );
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background-image:
+                linear-gradient(
+                    rgba(255,255,255,0.025) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.025) 1px,
+                    transparent 1px
+                );
+            background-size: 70px 70px;
+            mask-image: linear-gradient(
+                to right,
+                transparent,
+                black 35%,
+                black 85%,
+                transparent
+            );
+            opacity: 0.55;
+        }
+
+        .hero-layout {
+            position: relative;
+            z-index: 2;
+            width: min(1500px, 100%);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: minmax(0, 0.9fr) minmax(500px, 1.1fr);
+            align-items: center;
+            gap: 50px;
+        }
+
+        /* =========================================================
+           HERO TEXT
+        ========================================================= */
+
+        .hero-content {
+            position: relative;
+            z-index: 5;
+            max-width: 700px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 28px;
+            padding: 9px 15px;
+            border: 1px solid rgba(0, 145, 255, 0.3);
+            border-radius: 999px;
+            background: rgba(0, 90, 180, 0.07);
+            color: rgba(150, 205, 255, 0.95);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+        }
+
+        .pulse-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #4aa8ff;
+            box-shadow:
+                0 0 8px rgba(50, 150, 255, 0.9),
+                0 0 20px rgba(30, 120, 255, 0.7);
+            animation: heroPulse 2s ease-in-out infinite;
+        }
+
+        .hero-slogan {
+            margin-bottom: 18px;
+            color: #4da9ff;
+            font-size: clamp(18px, 2vw, 27px);
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            line-height: 1.2;
+            text-shadow:
+                0 0 20px rgba(40, 140, 255, 0.35);
+        }
+
+        .hero-slogan::after {
+            content: "";
+            display: block;
+            width: 85px;
+            height: 2px;
+            margin-top: 14px;
+            background: linear-gradient(
+                90deg,
+                #318fff,
+                transparent
+            );
+            box-shadow: 0 0 12px rgba(40, 140, 255, 0.5);
+        }
+
+        .hero h1 {
+            max-width: 760px;
+            margin: 0;
+            color: #ffffff;
+            font-size: clamp(48px, 6vw, 88px);
+            line-height: 0.98;
+            font-weight: 800;
+            letter-spacing: -0.045em;
+            text-wrap: balance;
+        }
+
+        .hero-text {
+            max-width: 650px;
+            margin: 30px 0 0;
+            color: rgba(220, 230, 242, 0.72);
+            font-size: 18px;
+            line-height: 1.75;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 36px;
+        }
+
+        .hero-actions .btn {
+            min-height: 52px;
+            padding: 0 24px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            margin-top: 46px;
+            color: rgba(255,255,255,0.32);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+        }
+
+        .hero-meta span {
+            position: relative;
+        }
+
+        .hero-meta span:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            right: -16px;
+            top: 50%;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: rgba(70, 160, 255, 0.7);
+            transform: translateY(-50%);
+        }
+
+        /* =========================================================
+           TECHNOLOGY CORE / SONNENSYSTEM
+        ========================================================= */
+
+        .hero-visual {
+            position: relative;
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tech-core {
+            position: relative;
+            width: min(680px, 48vw);
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .system-grid {
+            position: absolute;
+            inset: 5%;
+            border-radius: 50%;
+            background:
+                linear-gradient(
+                    rgba(55, 150, 255, 0.08) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(55, 150, 255, 0.08) 1px,
+                    transparent 1px
+                );
+            background-size: 35px 35px;
+            mask-image: radial-gradient(
+                circle,
+                black 20%,
+                transparent 70%
+            );
+            transform: perspective(600px) rotateX(65deg);
+            opacity: 0.55;
+        }
+
+        .core-glow {
+            position: absolute;
+            width: 48%;
+            height: 48%;
+            border-radius: 50%;
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(80, 175, 255, 0.3),
+                    rgba(20, 100, 255, 0.12) 38%,
+                    transparent 72%
+                );
+            filter: blur(20px);
+            animation: coreGlow 4s ease-in-out infinite;
+        }
+
+        .ring {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            border: 1px solid rgba(70, 165, 255, 0.38);
+            border-radius: 50%;
+            transform-style: preserve-3d;
+            pointer-events: none;
+        }
+
+        .ring::before {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            top: -4px;
+            left: 50%;
+            border-radius: 50%;
+            background: #6db9ff;
+            box-shadow:
+                0 0 8px #318fff,
+                0 0 22px rgba(45, 145, 255, 0.95),
+                0 0 45px rgba(30, 110, 255, 0.7);
+        }
+
+        .ring-one {
+            width: 92%;
+            height: 38%;
+            transform:
+                translate(-50%, -50%)
+                rotateX(68deg)
+                rotateZ(-18deg);
+            animation: orbitOne 12s linear infinite;
+        }
+
+        .ring-two {
+            width: 76%;
+            height: 76%;
+            transform:
+                translate(-50%, -50%)
+                rotateX(66deg)
+                rotateY(12deg)
+                rotateZ(22deg);
+            animation: orbitTwo 18s linear infinite reverse;
+        }
+
+        .ring-three {
+            width: 54%;
+            height: 90%;
+            transform:
+                translate(-50%, -50%)
+                rotateY(68deg)
+                rotateZ(-22deg);
+            animation: orbitThree 15s linear infinite;
+        }
+
+        /* zusätzliche Orbitlinien */
+        .ring-one::after,
+        .ring-two::after,
+        .ring-three::after {
+            content: "";
+            position: absolute;
+            inset: 8px;
+            border: 1px solid rgba(80, 175, 255, 0.08);
+            border-radius: inherit;
+        }
+
+        /* =========================================================
+           CENTER K
+        ========================================================= */
+
+        .core {
+            position: relative;
+            z-index: 10;
+            width: 190px;
+            height: 190px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background:
+                radial-gradient(
+                    circle at 35% 30%,
+                    rgba(120, 200, 255, 0.2),
+                    rgba(3, 15, 30, 0.95) 48%,
+                    #02060d 75%
+                );
+            border: 1px solid rgba(90, 180, 255, 0.65);
+            box-shadow:
+                0 0 25px rgba(40, 135, 255, 0.55),
+                0 0 70px rgba(20, 105, 255, 0.35),
+                inset 0 0 45px rgba(40, 130, 255, 0.18);
+        }
+
+        .core::before {
+            content: "";
+            position: absolute;
+            inset: -15px;
+            border-radius: 50%;
+            border: 1px solid rgba(70, 160, 255, 0.16);
+        }
+
+        .core::after {
+            content: "";
+            position: absolute;
+            inset: -32px;
+            border-radius: 50%;
+            border: 1px solid rgba(50, 145, 255, 0.08);
+        }
+
+        .core-inner {
+            color: #ffffff;
+            font-size: 105px;
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -0.08em;
+            text-shadow:
+                0 0 15px rgba(255,255,255,0.9),
+                0 0 35px rgba(50,150,255,0.9),
+                0 0 70px rgba(30,100,255,0.75);
+            animation: kFloat 4s ease-in-out infinite;
+        }
+
+        /* =========================================================
+           ORBIT PARTICLES
+        ========================================================= */
+
+        .orbit-dot {
+            position: absolute;
+            z-index: 12;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #9bd2ff;
+            box-shadow:
+                0 0 8px #5ab0ff,
+                0 0 20px rgba(50, 150, 255, 0.95);
+        }
+
+        .dot-one {
+            top: 20%;
+            left: 23%;
+        }
+
+        .dot-two {
+            top: 29%;
+            right: 17%;
+        }
+
+        .dot-three {
+            bottom: 17%;
+            left: 27%;
+        }
+
+        .dot-four {
+            bottom: 28%;
+            right: 20%;
+        }
+
+        .dot-five {
+            top: 48%;
+            left: 7%;
+            width: 5px;
+            height: 5px;
+        }
+
+        .core-label {
+            position: absolute;
+            bottom: 8%;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            color: rgba(130, 195, 255, 0.58);
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 0.28em;
+        }
+
+        .core-label::before,
+        .core-label::after {
+            content: "";
+            display: inline-block;
+            width: 30px;
+            height: 1px;
+            margin: 0 12px 3px;
+            background: rgba(70, 160, 255, 0.4);
+        }
+
+        /* =========================================================
+           ANIMATIONEN
+        ========================================================= */
+
+        @keyframes heroPulse {
+            0%, 100% {
+                opacity: 0.6;
+                transform: scale(0.8);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.15);
+            }
+        }
+
+        @keyframes coreGlow {
+            0%, 100% {
+                transform: scale(0.92);
+                opacity: 0.7;
+            }
+
+            50% {
+                transform: scale(1.08);
+                opacity: 1;
+            }
+        }
+
+        @keyframes kFloat {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-7px);
+            }
+        }
+
+        @keyframes orbitOne {
+            from {
+                transform:
+                    translate(-50%, -50%)
+                    rotateX(68deg)
+                    rotateZ(-18deg)
+                    rotate(0deg);
+            }
+
+            to {
+                transform:
+                    translate(-50%, -50%)
+                    rotateX(68deg)
+                    rotateZ(-18deg)
+                    rotate(360deg);
+            }
+        }
+
+        @keyframes orbitTwo {
+            from {
+                transform:
+                    translate(-50%, -50%)
+                    rotateX(66deg)
+                    rotateY(12deg)
+                    rotateZ(22deg)
+                    rotate(0deg);
+            }
+
+            to {
+                transform:
+                    translate(-50%, -50%)
+                    rotateX(66deg)
+                    rotateY(12deg)
+                    rotateZ(22deg)
+                    rotate(360deg);
+            }
+        }
+
+        @keyframes orbitThree {
+            from {
+                transform:
+                    translate(-50%, -50%)
+                    rotateY(68deg)
+                    rotateZ(-22deg)
+                    rotate(0deg);
+            }
+
+            to {
+                transform:
+                    translate(-50%, -50%)
+                    rotateY(68deg)
+                    rotateZ(-22deg)
+                    rotate(360deg);
+            }
+        }
+
+        /* =========================================================
+           HOMEPAGE CARDS
+           Nutzt vorhandene globale KERVAQ-Struktur
+        ========================================================= */
+
+        .cards-grid .card {
+            position: relative;
+            padding: 32px;
+            border: 1px solid rgba(255,255,255,0.08);
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.045),
+                    rgba(255,255,255,0.012)
+                );
+            border-radius: 4px;
+            overflow: hidden;
+            transition:
+                transform 0.35s ease,
+                border-color 0.35s ease,
+                box-shadow 0.35s ease;
+        }
+
+        .cards-grid .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(50,150,255,0.8),
+                transparent
+            );
+        }
+
+        .cards-grid .card:hover {
+            transform: translateY(-7px);
+            border-color: rgba(50,145,255,0.35);
+            box-shadow:
+                0 18px 55px rgba(0,0,0,0.25),
+                0 0 35px rgba(30,110,255,0.08);
+        }
+
+        .card-top {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .card-number {
+            color: rgba(100,185,255,0.7);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+        }
+
+        .card-line {
+            flex: 1;
+            height: 1px;
+            background: rgba(255,255,255,0.08);
+        }
+
+        .card-icon {
+            margin: 35px 0 18px;
+            color: #5db1ff;
+            font-size: 34px;
+            text-shadow: 0 0 25px rgba(40,145,255,0.65);
+        }
+
+        .cards-grid .card h3 {
+            margin-bottom: 12px;
+        }
+
+        .cards-grid .card-details {
+            margin-top: 15px;
+            color: rgba(255,255,255,0.48);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .learn-more {
+            margin-top: 18px;
+            padding: 0;
+            border: 0;
+            background: none;
+            color: #5aaeff;
+            cursor: pointer;
+            font: inherit;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* =========================================================
+           MISSION VISUAL
+        ========================================================= */
+
+        .about-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-section::after {
+            content: "K";
+            position: absolute;
+            right: 8%;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(40,130,255,0.035);
+            font-size: 420px;
+            font-weight: 900;
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .about-section .about-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        /* =========================================================
+           FOOTER KOMPATIBEL MIT VORHANDENEM DESIGN
+        ========================================================= */
+
+        .footer-container {
+            width: min(1450px, calc(100% - 40px));
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 50px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 18px;
+        }
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 1100px) {
+
+            .hero {
+                padding-top: 55px;
+            }
+
+            .hero-layout {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .hero-content {
+                max-width: 850px;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            .hero-badge {
+                justify-content: center;
+            }
+
+            .hero-slogan::after {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero h1 {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-text {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-actions {
+                justify-content: center;
+            }
+
+            .hero-meta {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                min-height: 570px;
+            }
+
+            .tech-core {
+                width: min(600px, 72vw);
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .hero {
+                min-height: auto;
+                padding: 50px 22px 65px;
+            }
+
+            .hero h1 {
+                font-size: clamp(42px, 12vw, 62px);
+            }
+
+            .hero-slogan {
+                font-size: 17px;
+            }
+
+            .hero-text {
+                font-size: 16px;
+                line-height: 1.65;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .hero-actions .btn {
+                width: 100%;
+            }
+
+            .hero-meta {
+                gap: 18px;
+                font-size: 8px;
+            }
+
+            .hero-meta span:not(:last-child)::after {
+                right: -11px;
+            }
+
+            .hero-visual {
+                min-height: 410px;
+                margin-top: 5px;
+            }
+
+            .tech-core {
+                width: min(440px, 94vw);
+            }
+
+            .core {
+                width: 125px;
+                height: 125px;
+            }
+
+            .core-inner {
+                font-size: 72px;
+            }
+
+            .core-label {
+                bottom: 5%;
+                font-size: 7px;
+            }
+
+            .core-label::before,
+            .core-label::after {
+                width: 15px;
+                margin-left: 6px;
+                margin-right: 6px;
+            }
+
+            .cards-grid .card {
+                padding: 25px;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+        }
+
+        @media (max-width: 420px) {
+
+            .hero {
+                padding-left: 17px;
+                padding-right: 17px;
+            }
+
+            .hero-visual {
+                min-height: 350px;
+            }
+
+            .tech-core {
+                width: 96vw;
+            }
+
+            .core {
+                width: 105px;
+                height: 105px;
+            }
+
+            .core-inner {
+                font-size: 60px;
+            }
+
+            .hero-meta {
+                gap: 14px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -155,6 +992,7 @@
 
             <div class="hero-layout">
 
+
                 <!-- HERO TEXT -->
 
                 <div class="hero-content">
@@ -165,6 +1003,11 @@
 
                         KERVAQ TECHNOLOGY
 
+                    </div>
+
+
+                    <div class="hero-slogan">
+                        Move Business Forward.
                     </div>
 
 
@@ -224,7 +1067,7 @@
 
 
                 <!-- =================================
-                     TECHNOLOGY CORE
+                     KERVAQ TECHNOLOGY CORE
                 ================================== -->
 
                 <div class="hero-visual">
@@ -236,7 +1079,7 @@
                         <div class="core-glow"></div>
 
 
-                        <!-- ORBITS -->
+                        <!-- ORBITEN -->
 
                         <div class="ring ring-one"></div>
 
@@ -245,7 +1088,7 @@
                         <div class="ring ring-three"></div>
 
 
-                        <!-- CENTER -->
+                        <!-- ZENTRALES K -->
 
                         <div class="core">
 
@@ -256,7 +1099,7 @@
                         </div>
 
 
-                        <!-- ORBIT PARTICLES -->
+                        <!-- ORBIT-PARTIKEL -->
 
                         <div class="orbit-dot dot-one"></div>
 
@@ -269,7 +1112,7 @@
                         <div class="orbit-dot dot-five"></div>
 
 
-                        <!-- LABEL -->
+                        <!-- BESCHRIFTUNG -->
 
                         <div class="core-label">
                             KERVAQ TECHNOLOGY CORE
@@ -320,10 +1163,6 @@
 
             <div class="cards-grid">
 
-
-                <!-- =================================
-                     CARD 01
-                ================================== -->
 
                 <article class="card">
 
@@ -377,10 +1216,6 @@
                 </article>
 
 
-                <!-- =================================
-                     CARD 02
-                ================================== -->
-
                 <article class="card">
 
                     <div class="card-top">
@@ -432,10 +1267,6 @@
 
                 </article>
 
-
-                <!-- =================================
-                     CARD 03
-                ================================== -->
 
                 <article class="card">
 
@@ -570,8 +1401,6 @@
             <div class="features-grid">
 
 
-                <!-- FEATURE 01 -->
-
                 <article class="feature">
 
                     <span class="feature-number">
@@ -592,8 +1421,6 @@
                 </article>
 
 
-                <!-- FEATURE 02 -->
-
                 <article class="feature">
 
                     <span class="feature-number">
@@ -613,8 +1440,6 @@
 
                 </article>
 
-
-                <!-- FEATURE 03 -->
 
                 <article class="feature">
 
@@ -693,7 +1518,7 @@
         aria-label="KERVAQ AI öffnen"
     >
 
-        <span class="ai-dot"></span>
+        <span class="ai-pulse"></span>
 
         KERVAQ AI
 
@@ -771,8 +1596,6 @@
         <div class="footer-container">
 
 
-            <!-- FOOTER BRAND -->
-
             <div class="footer-brand">
 
                 <a href="index.html" class="brand">
@@ -805,8 +1628,6 @@
             </div>
 
 
-            <!-- FOOTER SOLUTIONS -->
-
             <div class="footer-column">
 
                 <h3 data-i18n="footerSolutions">
@@ -830,8 +1651,6 @@
 
             </div>
 
-
-            <!-- FOOTER KERVAQ -->
 
             <div class="footer-column">
 
@@ -865,8 +1684,6 @@
 
             </div>
 
-
-            <!-- FOOTER LEGAL -->
 
             <div class="footer-column">
 

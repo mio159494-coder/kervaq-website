@@ -8,7 +8,6 @@
 :root {
 
     --blue: #1683ff;
-
     --blue-bright: #42a5ff;
 
     --white: #ffffff;
@@ -52,9 +51,7 @@ a {
 
 
 button {
-
     font-family: inherit;
-
 }
 
 
@@ -85,9 +82,9 @@ button {
     z-index: 100;
 
     background:
-        rgba(5,7,11,0.85);
+        rgba(5,7,11,0.82);
 
-    backdrop-filter: blur(18px);
+    backdrop-filter: blur(20px);
 
 }
 
@@ -108,6 +105,8 @@ button {
     width: 29px;
 
     height: 29px;
+
+    flex-shrink: 0;
 
 }
 
@@ -133,7 +132,7 @@ button {
 
     stroke-linejoin: round;
 
-    transition: 0.3s;
+    transition: 0.35s;
 
 }
 
@@ -141,6 +140,17 @@ button {
 .brand:hover .brand-symbol path {
 
     stroke: var(--blue-bright);
+
+}
+
+
+.brand-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1;
 
 }
 
@@ -156,6 +166,21 @@ button {
 }
 
 
+.brand-slogan {
+
+    margin-top: 5px;
+
+    color: #656d79;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+
 nav {
 
     display: flex;
@@ -167,9 +192,32 @@ nav {
 
 nav a {
 
-    color: #9da3ae;
+    position: relative;
+
+    color: #8e96a3;
 
     font-size: 13px;
+
+    transition: 0.3s;
+
+}
+
+
+nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -7px;
+
+    width: 0;
+
+    height: 1px;
+
+    background: var(--blue);
 
     transition: 0.3s;
 
@@ -183,10 +231,17 @@ nav a:hover {
 }
 
 
+nav a:hover::after {
+
+    width: 100%;
+
+}
+
+
 .nav-button {
 
     border:
-        1px solid rgba(255,255,255,0.18);
+        1px solid rgba(255,255,255,0.16);
 
     padding: 10px 18px;
 
@@ -206,7 +261,9 @@ nav a:hover {
     border-color: var(--blue);
 
     box-shadow:
-        0 0 25px rgba(22,131,255,0.2);
+        0 0 25px rgba(22,131,255,0.22);
+
+    transform: translateY(-1px);
 
 }
 
@@ -266,6 +323,9 @@ nav a:hover {
     font-size: 11px;
 
     margin-bottom: 30px;
+
+    background:
+        rgba(255,255,255,0.015);
 
 }
 
@@ -366,7 +426,11 @@ nav a:hover {
 
     font-weight: 600;
 
-    transition: 0.3s;
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s,
+        background 0.3s,
+        border-color 0.3s;
 
 }
 
@@ -386,7 +450,23 @@ nav a:hover {
 
     box-shadow:
         0 10px 35px
-        rgba(255,255,255,0.13);
+        rgba(255,255,255,0.15);
+
+}
+
+
+.primary span {
+
+    transition:
+        transform 0.3s;
+
+}
+
+
+.primary:hover span {
+
+    transform:
+        translateX(4px);
 
 }
 
@@ -398,6 +478,9 @@ nav a:hover {
 
     color: #c4c8cf;
 
+    background:
+        rgba(255,255,255,0.01);
+
 }
 
 
@@ -406,7 +489,10 @@ nav a:hover {
     border-color: var(--blue);
 
     background:
-        rgba(22,131,255,0.05);
+        rgba(22,131,255,0.06);
+
+    box-shadow:
+        0 0 25px rgba(22,131,255,0.08);
 
 }
 
@@ -442,13 +528,13 @@ nav a:hover {
     background-image:
 
         linear-gradient(
-            rgba(255,255,255,0.04) 1px,
+            rgba(255,255,255,0.035) 1px,
             transparent 1px
         ),
 
         linear-gradient(
             90deg,
-            rgba(255,255,255,0.04) 1px,
+            rgba(255,255,255,0.035) 1px,
             transparent 1px
         );
 
@@ -504,10 +590,12 @@ nav a:hover {
     border-radius: 50%;
 
     border:
-        1px solid rgba(255,255,255,0.24);
+        1px solid rgba(255,255,255,0.22);
 
     box-shadow:
-        0 0 60px rgba(22,131,255,0.07),
+
+        0 0 60px
+        rgba(22,131,255,0.07),
 
         inset 0 0 80px
         rgba(255,255,255,0.025);
@@ -607,9 +695,12 @@ nav a:hover {
         );
 
     box-shadow:
-        0 0 30px rgba(22,131,255,0.45),
 
-        0 0 80px rgba(22,131,255,0.18);
+        0 0 30px
+        rgba(22,131,255,0.45),
+
+        0 0 80px
+        rgba(22,131,255,0.18);
 
 }
 
@@ -634,6 +725,7 @@ nav a:hover {
     background: white;
 
     box-shadow:
+
         0 0 18px white,
 
         0 0 45px var(--blue),
@@ -784,19 +876,23 @@ nav a:hover {
 
 
 /* =========================
-   ANIMATIONS
+   ANIMATIONEN
 ========================= */
 
 @keyframes orbFloat {
 
     0%, 100% {
+
         transform:
             translate(-50%, -50%);
+
     }
 
     50% {
+
         transform:
             translate(-50%, -53%);
+
     }
 
 }
@@ -805,15 +901,19 @@ nav a:hover {
 @keyframes rotateRing {
 
     from {
+
         transform:
             translate(-50%, -50%)
             rotate(0deg);
+
     }
 
     to {
+
         transform:
             translate(-50%, -50%)
             rotate(360deg);
+
     }
 
 }
@@ -822,15 +922,19 @@ nav a:hover {
 @keyframes rotateRingReverse {
 
     from {
+
         transform:
             translate(-50%, -50%)
             rotate(360deg);
+
     }
 
     to {
+
         transform:
             translate(-50%, -50%)
             rotate(0deg);
+
     }
 
 }
@@ -839,15 +943,19 @@ nav a:hover {
 @keyframes corePulse {
 
     0%, 100% {
+
         transform:
             translate(-50%, -50%)
             scale(1);
+
     }
 
     50% {
+
         transform:
             translate(-50%, -50%)
             scale(1.13);
+
     }
 
 }
@@ -856,13 +964,21 @@ nav a:hover {
 @keyframes glowPulse {
 
     0%, 100% {
+
         opacity: 0.05;
-        transform: scale(0.95);
+
+        transform:
+            scale(0.95);
+
     }
 
     50% {
+
         opacity: 0.11;
-        transform: scale(1.08);
+
+        transform:
+            scale(1.08);
+
     }
 
 }
@@ -871,13 +987,21 @@ nav a:hover {
 @keyframes dotPulse {
 
     0%, 100% {
+
         opacity: 0.35;
-        transform: scale(1);
+
+        transform:
+            scale(1);
+
     }
 
     50% {
+
         opacity: 1;
-        transform: scale(1.5);
+
+        transform:
+            scale(1.5);
+
     }
 
 }
@@ -892,6 +1016,44 @@ nav a:hover {
     50% {
         opacity: 1;
     }
+
+}
+
+
+@keyframes revealUp {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+.reveal {
+
+    opacity: 0;
+
+}
+
+
+.reveal.visible {
+
+    animation:
+        revealUp 0.8s ease forwards;
 
 }
 
@@ -1335,12 +1497,6 @@ footer {
 
     gap: 10px;
 
-    font-size: 19px;
-
-    font-weight: 800;
-
-    letter-spacing: 3px;
-
 }
 
 
@@ -1377,6 +1533,39 @@ footer {
 }
 
 
+.footer-brand-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.footer-brand-text span {
+
+    font-size: 19px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+}
+
+
+.footer-brand-text small {
+
+    color: #555d69;
+
+    font-size: 7px;
+
+    letter-spacing: 1.5px;
+
+    margin-top: 3px;
+
+}
+
+
 footer p {
 
     text-align: center;
@@ -1399,6 +1588,13 @@ footer p {
     color: #777e89;
 
     font-size: 12px;
+
+}
+
+
+.footer-links a {
+
+    transition: 0.3s;
 
 }
 
@@ -1438,11 +1634,28 @@ footer p {
     }
 
 
+    .navbar {
+
+        padding: 0 5%;
+
+    }
+
+
+    .nav-button {
+
+        padding: 9px 14px;
+
+        font-size: 12px;
+
+    }
+
+
     .hero {
 
         flex-direction: column;
 
-        padding-top: 80px;
+        padding:
+            80px 7% 70px;
 
     }
 
@@ -1505,6 +1718,8 @@ footer p {
 
         text-align: center;
 
+        gap: 30px;
+
     }
 
 
@@ -1529,6 +1744,13 @@ footer p {
     footer p {
 
         text-align: center;
+
+    }
+
+
+    .footer-brand {
+
+        justify-content: center;
 
     }
 
@@ -1564,6 +1786,132 @@ footer p {
     .cta h2 {
 
         letter-spacing: -3px;
+
+    }
+
+
+}
+
+
+@media (max-width: 500px) {
+
+
+    .brand-name {
+
+        font-size: 18px;
+
+        letter-spacing: 3px;
+
+    }
+
+
+    .brand-slogan {
+
+        font-size: 6px;
+
+        letter-spacing: 1.5px;
+
+    }
+
+
+    .brand-symbol {
+
+        width: 25px;
+
+        height: 25px;
+
+    }
+
+
+    .nav-button {
+
+        display: none;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .button {
+
+        justify-content: center;
+
+    }
+
+
+    .hero-visual {
+
+        height: 400px;
+
+    }
+
+
+    .orb {
+
+        width: 230px;
+
+        height: 230px;
+
+    }
+
+
+    .ring-outer {
+
+        width: 310px;
+
+        height: 310px;
+
+    }
+
+
+    .ring-two {
+
+        width: 275px;
+
+        height: 275px;
+
+    }
+
+
+    .ring-inner {
+
+        width: 165px;
+
+        height: 165px;
+
+    }
+
+
+    .orb-inner {
+
+        width: 95px;
+
+        height: 95px;
+
+    }
+
+
+    .core {
+
+        width: 22px;
+
+        height: 22px;
+
+    }
+
+
+    .visual-label {
+
+        bottom: 14%;
+
+        font-size: 7px;
 
     }
 

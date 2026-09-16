@@ -4,1194 +4,673 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="description"
-        content="KERVAQ Dashboard — Ihr zentraler Bereich für Projekte, Automatisierung und Effizienz."
-    >
-
-    <title>KERVAQ — Dashboard</title>
+    <title>KERVAQ – Dashboard</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        /* =========================================================
-           KERVAQ DASHBOARD
-           Eigenständiges Dashboard-Design
-        ========================================================= */
-
-        .dashboard-page {
-            min-height: 100vh;
-            background:
-                radial-gradient(
-                    circle at 50% 18%,
-                    rgba(0, 119, 255, 0.14),
-                    transparent 34%
-                ),
-                radial-gradient(
-                    circle at 85% 70%,
-                    rgba(0, 119, 255, 0.06),
-                    transparent 28%
-                ),
-                #05080d;
-            color: #f4f7fb;
-            overflow-x: hidden;
-        }
-
-        .dashboard-page main {
-            position: relative;
-        }
-
-        /* GRID BACKGROUND */
-
-        .dashboard-page main::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            z-index: 0;
-
-            background-image:
-                linear-gradient(
-                    rgba(70, 150, 255, 0.035) 1px,
-                    transparent 1px
-                ),
-                linear-gradient(
-                    90deg,
-                    rgba(70, 150, 255, 0.035) 1px,
-                    transparent 1px
-                );
-
-            background-size: 52px 52px;
-
-            mask-image: linear-gradient(
-                to bottom,
-                black,
-                transparent 90%
-            );
-        }
-
-        .dashboard {
-            position: relative;
-            z-index: 1;
-            padding: 110px 0 90px;
-        }
-
-        /* =========================================================
-           HEADER
-        ========================================================= */
-
-        .dashboard-header {
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-            gap: 30px;
-            margin-bottom: 34px;
-        }
-
-        .dashboard-header .eyebrow {
-            display: inline-block;
-            margin-bottom: 14px;
-
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.22em;
-            color: #5da9ff;
-        }
-
-        .dashboard-header h1 {
-            margin: 0;
-
-            font-size: clamp(38px, 5vw, 64px);
-            line-height: 0.98;
-            letter-spacing: -0.045em;
-            font-weight: 700;
-        }
-
-        .dashboard-header p {
-            margin: 16px 0 0;
-            color: rgba(220, 230, 242, 0.58);
-            font-size: 16px;
-        }
-
-        /* SYSTEM STATUS */
-
-        .dashboard-status {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-
-            padding: 11px 16px;
-
-            border: 1px solid rgba(75, 160, 255, 0.18);
-            border-radius: 999px;
-
-            background: rgba(10, 22, 38, 0.58);
-            backdrop-filter: blur(14px);
-
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 0.15em;
-            color: rgba(220, 236, 255, 0.72);
-            white-space: nowrap;
-        }
-
-        .status-dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: #43a5ff;
-
-            box-shadow:
-                0 0 8px rgba(67, 165, 255, 0.9),
-                0 0 20px rgba(67, 165, 255, 0.45);
-
-            animation: dashboardPulse 2.4s ease-in-out infinite;
-        }
-
-        @keyframes dashboardPulse {
-            0%,
-            100% {
-                opacity: 0.65;
-                transform: scale(0.9);
-            }
-
-            50% {
-                opacity: 1;
-                transform: scale(1.15);
-            }
-        }
-
-        /* =========================================================
-           WELCOME CORE
-        ========================================================= */
-
-        .dashboard-welcome {
-            position: relative;
-            overflow: hidden;
-
-            min-height: 270px;
-            padding: 44px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 30px;
-
-            border: 1px solid rgba(87, 157, 226, 0.18);
-            border-radius: 28px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(15, 32, 52, 0.84),
-                    rgba(5, 12, 21, 0.72)
-                );
-
-            box-shadow:
-                inset 0 1px 0 rgba(255, 255, 255, 0.055),
-                0 25px 80px rgba(0, 0, 0, 0.28);
-
-            backdrop-filter: blur(18px);
-
-            margin-bottom: 18px;
-        }
-
-        .dashboard-welcome::before {
-            content: "";
-
-            position: absolute;
-            width: 440px;
-            height: 440px;
-
-            right: -100px;
-            top: -170px;
-
-            border-radius: 50%;
-
-            background: radial-gradient(
-                circle,
-                rgba(0, 130, 255, 0.22),
-                transparent 68%
-            );
-
-            pointer-events: none;
-        }
-
-        .dashboard-welcome::after {
-            content: "";
-
-            position: absolute;
-            inset: 0;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    transparent 0%,
-                    rgba(90, 170, 255, 0.04) 50%,
-                    transparent 100%
-                );
-
-            pointer-events: none;
-        }
-
-        .dashboard-welcome > div:first-child {
-            position: relative;
-            z-index: 2;
-        }
-
-        .card-number {
-            display: block;
-            margin-bottom: 18px;
-
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 0.3em;
-
-            color: #4da3ff;
-        }
-
-        .dashboard-welcome h2 {
-            max-width: 650px;
-            margin: 0;
-
-            font-size: clamp(28px, 4vw, 46px);
-            line-height: 1.05;
-            letter-spacing: -0.035em;
-        }
-
-        /* CORE */
-
-        .dashboard-welcome-core {
-            position: relative;
-            z-index: 2;
-
-            width: 150px;
-            height: 150px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            flex-shrink: 0;
-
-            border-radius: 50%;
-
-            border: 1px solid rgba(77, 163, 255, 0.45);
-
-            background:
-                radial-gradient(
-                    circle at 50% 45%,
-                    rgba(45, 142, 255, 0.3),
-                    rgba(3, 13, 25, 0.94) 63%
-                );
-
-            font-size: 54px;
-            font-weight: 800;
-            color: #ffffff;
-
-            box-shadow:
-                0 0 0 10px rgba(45, 140, 255, 0.025),
-                0 0 40px rgba(0, 125, 255, 0.28),
-                inset 0 0 35px rgba(0, 130, 255, 0.16);
-        }
-
-        .dashboard-welcome-core::before,
-        .dashboard-welcome-core::after {
-            content: "";
-            position: absolute;
-            inset: -14px;
-
-            border: 1px solid rgba(75, 160, 255, 0.12);
-            border-radius: 50%;
-        }
-
-        .dashboard-welcome-core::after {
-            inset: -28px;
-            border-color: rgba(75, 160, 255, 0.055);
-        }
-
-        /* =========================================================
-           STATS
-        ========================================================= */
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 18px;
-            margin-bottom: 18px;
-        }
-
-        .stat-card {
-            position: relative;
-            overflow: hidden;
-
-            min-height: 170px;
-            padding: 24px;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            border: 1px solid rgba(110, 150, 190, 0.14);
-            border-radius: 20px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(16, 28, 42, 0.76),
-                    rgba(6, 13, 22, 0.72)
-                );
-
-            backdrop-filter: blur(16px);
-
-            transition:
-                transform 0.3s ease,
-                border-color 0.3s ease,
-                background 0.3s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-4px);
-
-            border-color: rgba(76, 163, 255, 0.32);
-
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(20, 40, 62, 0.86),
-                    rgba(7, 15, 25, 0.82)
-                );
-        }
-
-        .stat-card::after {
-            content: "";
-
-            position: absolute;
-            width: 120px;
-            height: 120px;
-
-            right: -70px;
-            bottom: -70px;
-
-            border-radius: 50%;
-
-            background: rgba(0, 130, 255, 0.09);
-            filter: blur(20px);
-        }
-
-        .stat-label {
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: rgba(208, 224, 240, 0.48);
-        }
-
-        .stat-card strong {
-            margin-top: 15px;
-
-            font-size: 42px;
-            line-height: 1;
-            letter-spacing: -0.04em;
-            font-weight: 700;
-        }
-
-        .stat-status {
-            margin-top: 14px;
-
-            font-size: 9px;
-            font-weight: 700;
-            letter-spacing: 0.18em;
-
-            color: #4da3ff;
-        }
-
-        /* =========================================================
-           MAIN GRID
-        ========================================================= */
-
-        .dashboard-grid {
-            display: grid;
-            grid-template-columns: 1.25fr 0.75fr;
-            gap: 18px;
-        }
-
-        .dashboard-panel {
-            position: relative;
-            overflow: hidden;
-
-            min-height: 360px;
-            padding: 30px;
-
-            border: 1px solid rgba(110, 150, 190, 0.14);
-            border-radius: 24px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(13, 25, 39, 0.78),
-                    rgba(5, 12, 20, 0.76)
-                );
-
-            backdrop-filter: blur(18px);
-
-            box-shadow:
-                inset 0 1px 0 rgba(255, 255, 255, 0.035);
-        }
-
-        .panel-header {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            gap: 20px;
-
-            padding-bottom: 24px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.055);
-        }
-
-        .panel-header .eyebrow {
-            display: block;
-
-            margin-bottom: 8px;
-
-            font-size: 9px;
-            font-weight: 700;
-            letter-spacing: 0.2em;
-
-            color: #4da3ff;
-        }
-
-        .panel-header h2 {
-            margin: 0;
-
-            font-size: 23px;
-            line-height: 1.1;
-            letter-spacing: -0.025em;
-        }
-
-        .panel-live {
-            padding: 7px 10px;
-
-            border: 1px solid rgba(75, 163, 255, 0.2);
-            border-radius: 999px;
-
-            color: #5eaeff;
-
-            font-size: 8px;
-            font-weight: 700;
-            letter-spacing: 0.18em;
-        }
-
-        /* =========================================================
-           ACTIVITY
-        ========================================================= */
-
-        .activity-list {
-            padding-top: 24px;
-        }
-
-        .activity-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-
-            padding: 16px;
-
-            border: 1px solid rgba(255, 255, 255, 0.055);
-            border-radius: 15px;
-
-            background: rgba(255, 255, 255, 0.018);
-        }
-
-        .activity-indicator {
-            width: 9px;
-            height: 9px;
-            flex-shrink: 0;
-
-            border-radius: 50%;
-
-            background: #4da3ff;
-
-            box-shadow:
-                0 0 12px rgba(77, 163, 255, 0.8);
-        }
-
-        .activity-item strong {
-            display: block;
-            font-size: 13px;
-        }
-
-        .activity-item p {
-            margin: 5px 0 0;
-
-            color: rgba(220, 230, 242, 0.4);
-            font-size: 11px;
-        }
-
-        .activity-empty {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            min-height: 190px;
-
-            text-align: center;
-        }
-
-        .empty-icon {
-            width: 48px;
-            height: 48px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            margin-bottom: 14px;
-
-            border: 1px solid rgba(77, 163, 255, 0.18);
-            border-radius: 15px;
-
-            color: #4da3ff;
-            font-size: 19px;
-
-            background: rgba(77, 163, 255, 0.04);
-        }
-
-        .activity-empty p {
-            margin: 0;
-
-            color: rgba(220, 230, 242, 0.38);
-            font-size: 12px;
-        }
-
-        /* =========================================================
-           AI PANEL
-        ========================================================= */
-
-        .dashboard-ai-panel {
-            background:
-                radial-gradient(
-                    circle at 75% 20%,
-                    rgba(0, 125, 255, 0.12),
-                    transparent 40%
-                ),
-                linear-gradient(
-                    145deg,
-                    rgba(12, 28, 46, 0.85),
-                    rgba(5, 12, 20, 0.78)
-                );
-        }
-
-        .dashboard-ai-panel > p {
-            max-width: 440px;
-
-            margin: 28px 0;
-
-            color: rgba(220, 230, 242, 0.58);
-            font-size: 14px;
-            line-height: 1.7;
-        }
-
-        .mini-core {
-            width: 48px;
-            height: 48px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border: 1px solid rgba(77, 163, 255, 0.4);
-            border-radius: 50%;
-
-            background:
-                radial-gradient(
-                    circle,
-                    rgba(48, 145, 255, 0.26),
-                    rgba(3, 13, 25, 0.92)
-                );
-
-            color: #fff;
-            font-size: 17px;
-            font-weight: 800;
-
-            box-shadow:
-                0 0 25px rgba(0, 130, 255, 0.2);
-        }
-
-        .coming-soon {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-
-            padding: 11px 15px;
-
-            border: 1px solid rgba(77, 163, 255, 0.17);
-            border-radius: 999px;
-
-            background: rgba(77, 163, 255, 0.045);
-
-            color: rgba(220, 236, 255, 0.65);
-
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 0.15em;
-        }
-
-        .coming-dot {
-            width: 6px;
-            height: 6px;
-
-            border-radius: 50%;
-            background: #4da3ff;
-
-            box-shadow: 0 0 10px rgba(77, 163, 255, 0.75);
-        }
-
-        /* =========================================================
-           TECHNOLOGY CORE FOOTER
-        ========================================================= */
-
-        .dashboard-future {
-            display: flex;
-            align-items: center;
-            gap: 18px;
-
-            margin-top: 42px;
-
-            color: rgba(160, 190, 220, 0.28);
-
-            font-size: 8px;
-            font-weight: 700;
-            letter-spacing: 0.3em;
-            text-align: center;
-        }
-
-        .future-line {
-            flex: 1;
-            height: 1px;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    transparent,
-                    rgba(77, 163, 255, 0.16),
-                    transparent
-                );
-        }
-
-        /* =========================================================
-           RESPONSIVE
-        ========================================================= */
-
-        @media (max-width: 1000px) {
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .dashboard-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 700px) {
-            .dashboard {
-                padding: 90px 0 60px;
-            }
-
-            .dashboard-header {
-                align-items: flex-start;
-                flex-direction: column;
-            }
-
-            .dashboard-header h1 {
-                font-size: 42px;
-            }
-
-            .dashboard-status {
-                align-self: flex-start;
-            }
-
-            .dashboard-welcome {
-                min-height: 330px;
-                padding: 28px;
-
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: space-between;
-            }
-
-            .dashboard-welcome-core {
-                width: 100px;
-                height: 100px;
-
-                align-self: flex-end;
-
-                font-size: 38px;
-            }
-
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .dashboard-panel {
-                padding: 23px;
-                min-height: 320px;
-            }
-
-            .dashboard-future {
-                letter-spacing: 0.16em;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .dashboard-header h1 {
-                font-size: 35px;
-            }
-
-            .dashboard-welcome h2 {
-                font-size: 29px;
-            }
-
-            .dashboard-welcome-core {
-                width: 82px;
-                height: 82px;
-            }
-
-            .stat-card {
-                min-height: 145px;
-            }
-        }
-    </style>
 </head>
 
-<body class="dashboard-page">
+<body>
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
-    <header class="navbar">
-        <div class="container nav-container">
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
 
-            <a href="index.html" class="brand">
+<header class="navbar">
 
-                <div class="brand-mark">
-                    K
-                </div>
+    <div class="nav-container">
 
-                <div class="brand-text">
+        <!-- LOGO -->
+        <a href="index.html" class="brand">
 
-                    <span class="brand-name">
-                        KERVAQ
-                    </span>
-
-                    <span class="brand-tagline">
-                        Move Business Forward.
-                    </span>
-
-                </div>
-
-            </a>
-
-            <nav class="nav-links">
-
-                <a
-                    href="loesungen.html"
-                    data-i18n="solutions"
-                >
-                    Lösungen
-                </a>
-
-                <a
-                    href="ueber-uns.html"
-                    data-i18n="about"
-                >
-                    Über uns
-                </a>
-
-                <a
-                    href="kontakt.html"
-                    data-i18n="contact"
-                >
-                    Kontakt
-                </a>
-
-            </nav>
-
-            <div class="nav-right">
-
-                <div class="language-switcher">
-
-                    <button
-                        type="button"
-                        class="lang-btn active"
-                        data-lang="de"
-                        aria-label="Deutsch"
-                    >
-                        🇩🇪
-                    </button>
-
-                    <button
-                        type="button"
-                        class="lang-btn"
-                        data-lang="en"
-                        aria-label="English"
-                    >
-                        🇬🇧
-                    </button>
-
-                    <button
-                        type="button"
-                        class="lang-btn"
-                        data-lang="fr"
-                        aria-label="Français"
-                    >
-                        🇫🇷
-                    </button>
-
-                </div>
-
-                <div class="user-menu">
-
-                    <div class="user-avatar">
-                        K
-                    </div>
-
-                    <span class="user-email">
-                        —
-                    </span>
-
-                </div>
-
-                <button
-                    type="button"
-                    class="logout-btn"
-                    data-i18n="logout"
-                >
-                    Abmelden
-                </button>
-
-                <button
-                    type="button"
-                    class="mobile-menu"
-                    aria-label="Menü öffnen"
-                >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-
+            <div class="brand-logo">
+                K
             </div>
 
-        </div>
-    </header>
+            <div class="brand-text">
 
+                <span class="brand-name">
+                    KERVAQ
+                </span>
 
-    <main>
-
-        <section class="dashboard">
-
-            <div class="container">
-
-                <!-- HEADER -->
-                <div class="dashboard-header">
-
-                    <div>
-
-                        <span class="eyebrow">
-                            KERVAQ / CONTROL CENTER
-                        </span>
-
-                        <h1 data-i18n="dashboardTitle">
-                            Ihr KERVAQ Bereich.
-                        </h1>
-
-                        <p data-i18n="dashboardWelcome">
-                            Willkommen zurück.
-                        </p>
-
-                    </div>
-
-                    <div class="dashboard-status">
-
-                        <span class="status-dot"></span>
-
-                        <span>
-                            SYSTEM ONLINE
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- WELCOME CORE -->
-                <div class="dashboard-welcome">
-
-                    <div>
-
-                        <span class="card-number">
-                            KERVAQ TECHNOLOGY CORE
-                        </span>
-
-                        <h2 data-i18n="dashboardWelcomeText">
-                            Ihre Prozesse. Ihre Daten. Ihr Fortschritt.
-                        </h2>
-
-                    </div>
-
-                    <div class="dashboard-welcome-core">
-                        K
-                    </div>
-
-                </div>
-
-
-                <!-- STATS -->
-                <div class="stats-grid">
-
-                    <div class="stat-card">
-
-                        <span class="stat-label">
-                            <span data-i18n="statProjects">
-                                Projekte
-                            </span>
-                        </span>
-
-                        <strong>
-                            0
-                        </strong>
-
-                        <span class="stat-status">
-                            CURRENT
-                        </span>
-
-                    </div>
-
-
-                    <div class="stat-card">
-
-                        <span class="stat-label">
-                            <span data-i18n="statAutomation">
-                                Automatisierungen
-                            </span>
-                        </span>
-
-                        <strong>
-                            0
-                        </strong>
-
-                        <span class="stat-status">
-                            ACTIVE
-                        </span>
-
-                    </div>
-
-
-                    <div class="stat-card">
-
-                        <span class="stat-label">
-                            <span data-i18n="statTime">
-                                Zeit eingespart
-                            </span>
-                        </span>
-
-                        <strong>
-                            0h
-                        </strong>
-
-                        <span class="stat-status">
-                            THIS MONTH
-                        </span>
-
-                    </div>
-
-
-                    <div class="stat-card">
-
-                        <span class="stat-label">
-                            <span data-i18n="statEfficiency">
-                                Effizienz
-                            </span>
-                        </span>
-
-                        <strong>
-                            —
-                        </strong>
-
-                        <span class="stat-status">
-                            ANALYSIS
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- MAIN CONTENT -->
-                <div class="dashboard-grid">
-
-                    <!-- ACTIVITY -->
-                    <div class="dashboard-panel">
-
-                        <div class="panel-header">
-
-                            <div>
-
-                                <span class="eyebrow">
-                                    ACTIVITY
-                                </span>
-
-                                <h2 data-i18n="activityTitle">
-                                    Aktivitäten
-                                </h2>
-
-                            </div>
-
-                            <span class="panel-live">
-                                LIVE
-                            </span>
-
-                        </div>
-
-
-                        <div class="activity-list">
-
-                            <div class="activity-item">
-
-                                <div class="activity-indicator"></div>
-
-                                <div>
-
-                                    <strong>
-                                        KERVAQ Workspace
-                                    </strong>
-
-                                    <p data-i18n="activityToday">
-                                        Heute
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-
-                            <div class="activity-empty">
-
-                                <div class="empty-icon">
-                                    ◇
-                                </div>
-
-                                <p>
-                                    Noch keine Aktivitäten vorhanden.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- AI -->
-                    <div class="dashboard-panel dashboard-ai-panel">
-
-                        <div class="panel-header">
-
-                            <div>
-
-                                <span class="eyebrow">
-                                    KERVAQ AI
-                                </span>
-
-                                <h2 data-i18n="dashboardAI">
-                                    Intelligenz für Ihr Unternehmen
-                                </h2>
-
-                            </div>
-
-                            <div class="mini-core">
-                                K
-                            </div>
-
-                        </div>
-
-
-                        <p data-i18n="dashboardAIText">
-                            Die KERVAQ AI unterstützt Sie dabei,
-                            Informationen zu verstehen und Ihre
-                            nächsten Schritte zu planen.
-                        </p>
-
-
-                        <div class="coming-soon">
-
-                            <span class="coming-dot"></span>
-
-                            <span data-i18n="comingSoon">
-                                Coming Soon
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- TECHNOLOGY CORE -->
-                <div class="dashboard-future">
-
-                    <div class="future-line"></div>
-
-                    <span>
-                        KERVAQ TECHNOLOGY CORE
-                    </span>
-
-                    <div class="future-line"></div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================
-         AI CHAT
-    ========================== -->
-
-    <button
-        type="button"
-        class="ai-open"
-        aria-label="KERVAQ AI öffnen"
-    >
-        <span class="ai-pulse"></span>
-        K
-    </button>
-
-
-    <div class="ai-chat">
-
-        <div class="ai-chat-header">
-
-            <div>
-
-                <strong data-i18n="aiTitle">
-                    KERVAQ AI
-                </strong>
-
-                <span>
-                    Online
+                <span class="brand-tagline">
+                    Move Business Forward.
                 </span>
 
             </div>
 
+        </a>
+
+
+        <!-- NAVIGATION -->
+        <nav class="nav-right" id="navMenu">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="ueber-uns.html">
+                Über uns
+            </a>
+
+            <a href="loesungen.html">
+                Lösungen
+            </a>
+
+            <a href="kontakt.html">
+                Kontakt
+            </a>
+
+            <a href="dashboard.html" class="active">
+                Dashboard
+            </a>
+
+            <a href="login.html" class="nav-login">
+                Login
+            </a>
+
+
+            <!-- SPRACHE -->
+            <div class="language-switcher">
+
+                <button class="lang-btn active">
+                    DE
+                </button>
+
+                <button class="lang-btn">
+                    EN
+                </button>
+
+            </div>
+
+
+            <!-- CTA -->
+            <a href="kontakt.html" class="nav-cta">
+                Projekt starten
+            </a>
+
+        </nav>
+
+
+        <!-- MOBILE MENU -->
+        <button
+            class="mobile-menu"
+            id="mobileMenu"
+            aria-label="Menü öffnen"
+            type="button"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     DASHBOARD
+========================================================= -->
+
+<main class="dashboard-page">
+
+    <section class="dashboard-section">
+
+        <div class="container">
+
+
+            <!-- HEADER -->
+            <div class="dashboard-header">
+
+                <div>
+
+                    <span class="section-label">
+                        KERVAQ / CONTROL CENTER
+                    </span>
+
+                    <h1>
+                        Dashboard
+                    </h1>
+
+                    <p>
+                        Willkommen im KERVAQ Control Center.
+                        Hier behalten Sie Ihre Projekte,
+                        Systeme und Aktivitäten im Blick.
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-status">
+
+                    <span class="status-dot"></span>
+
+                    System Online
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 STATS
+            ================================================= -->
+
+            <div class="dashboard-grid">
+
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-icon">
+                        K
+                    </div>
+
+                    <div>
+
+                        <span class="dashboard-card-label">
+                            AKTIVE PROJEKTE
+                        </span>
+
+                        <strong>
+                            04
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-icon">
+                        ↗
+                    </div>
+
+                    <div>
+
+                        <span class="dashboard-card-label">
+                            SYSTEM STATUS
+                        </span>
+
+                        <strong>
+                            99.8%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-icon">
+                        ◉
+                    </div>
+
+                    <div>
+
+                        <span class="dashboard-card-label">
+                            AKTIVE MODULE
+                        </span>
+
+                        <strong>
+                            12
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-icon">
+                        +
+                    </div>
+
+                    <div>
+
+                        <span class="dashboard-card-label">
+                            NEUE AKTIVITÄTEN
+                        </span>
+
+                        <strong>
+                            08
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 MAIN DASHBOARD
+            ================================================= -->
+
+            <div class="dashboard-main-grid">
+
+
+                <!-- PROJEKTE -->
+                <div class="dashboard-panel">
+
+                    <div class="dashboard-panel-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                PROJECTS
+                            </span>
+
+                            <h2>
+                                Aktuelle Projekte
+                            </h2>
+
+                        </div>
+
+                        <button class="dashboard-action">
+                            + Projekt
+                        </button>
+
+                    </div>
+
+
+                    <div class="project-list">
+
+
+                        <div class="project-item">
+
+                            <div class="project-icon">
+                                K
+                            </div>
+
+                            <div class="project-info">
+
+                                <strong>
+                                    KERVAQ Platform
+                                </strong>
+
+                                <span>
+                                    Digital Business Platform
+                                </span>
+
+                            </div>
+
+                            <div class="project-progress">
+
+                                <span>
+                                    86%
+                                </span>
+
+                                <div class="progress-bar">
+
+                                    <div
+                                        class="progress-value"
+                                        style="width:86%;"
+                                    ></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="project-item">
+
+                            <div class="project-icon">
+                                AI
+                            </div>
+
+                            <div class="project-info">
+
+                                <strong>
+                                    KERVAQ AI
+                                </strong>
+
+                                <span>
+                                    Intelligent Business Assistant
+                                </span>
+
+                            </div>
+
+                            <div class="project-progress">
+
+                                <span>
+                                    72%
+                                </span>
+
+                                <div class="progress-bar">
+
+                                    <div
+                                        class="progress-value"
+                                        style="width:72%;"
+                                    ></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="project-item">
+
+                            <div class="project-icon">
+                                UX
+                            </div>
+
+                            <div class="project-info">
+
+                                <strong>
+                                    Client Experience
+                                </strong>
+
+                                <span>
+                                    Digital Customer Experience
+                                </span>
+
+                            </div>
+
+                            <div class="project-progress">
+
+                                <span>
+                                    61%
+                                </span>
+
+                                <div class="progress-bar">
+
+                                    <div
+                                        class="progress-value"
+                                        style="width:61%;"
+                                    ></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SYSTEM -->
+                <div class="dashboard-panel">
+
+                    <div class="dashboard-panel-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                SYSTEM
+                            </span>
+
+                            <h2>
+                                System Status
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="system-status-list">
+
+
+                        <div class="system-status-item">
+
+                            <div>
+
+                                <span class="status-dot"></span>
+
+                                <strong>
+                                    KERVAQ Core
+                                </strong>
+
+                            </div>
+
+                            <span class="system-online">
+                                Online
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="system-status-item">
+
+                            <div>
+
+                                <span class="status-dot"></span>
+
+                                <strong>
+                                    AI Engine
+                                </strong>
+
+                            </div>
+
+                            <span class="system-online">
+                                Online
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="system-status-item">
+
+                            <div>
+
+                                <span class="status-dot"></span>
+
+                                <strong>
+                                    API Services
+                                </strong>
+
+                            </div>
+
+                            <span class="system-online">
+                                Online
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="system-status-item">
+
+                            <div>
+
+                                <span class="status-dot"></span>
+
+                                <strong>
+                                    Database
+                                </strong>
+
+                            </div>
+
+                            <span class="system-online">
+                                Online
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 ACTIVITY
+            ================================================= -->
+
+            <div class="dashboard-panel dashboard-activity">
+
+                <div class="dashboard-panel-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            ACTIVITY
+                        </span>
+
+                        <h2>
+                            Letzte Aktivitäten
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="activity-list">
+
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Projekt aktualisiert
+                            </strong>
+
+                            <span>
+                                KERVAQ Platform wurde aktualisiert.
+                            </span>
+
+                        </div>
+
+                        <time>
+                            Vor 12 Min.
+                        </time>
+
+                    </div>
+
+
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon">
+                            AI
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                KERVAQ AI aktiviert
+                            </strong>
+
+                            <span>
+                                Das AI-System ist bereit.
+                            </span>
+
+                        </div>
+
+                        <time>
+                            Vor 34 Min.
+                        </time>
+
+                    </div>
+
+
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon">
+                            +
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Neues Projekt erstellt
+                            </strong>
+
+                            <span>
+                                Client Experience wurde angelegt.
+                            </span>
+
+                        </div>
+
+                        <time>
+                            Heute
+                        </time>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- =========================================================
+     KERVAQ AI BUTTON
+========================================================= -->
+
+<div class="ai-widget">
+
+    <button
+        class="ai-button"
+        id="aiButton"
+        type="button"
+        aria-label="KERVAQ AI öffnen"
+    >
+
+        <span class="ai-logo">
+            K
+        </span>
+
+        <span class="ai-label">
+            KERVAQ AI
+        </span>
+
+    </button>
+
+
+    <div class="ai-chat" id="aiChat">
+
+        <div class="ai-chat-header">
+
+            <strong>
+                KERVAQ AI
+            </strong>
+
             <button
                 type="button"
-                class="ai-close"
+                id="aiClose"
                 aria-label="Chat schließen"
             >
                 ×
@@ -1200,161 +679,194 @@
         </div>
 
 
-        <div class="ai-messages">
+        <div class="ai-chat-body">
 
-            <div
-                class="ai-welcome"
-                data-i18n="aiWelcome"
-            >
-                Hallo! Ich bin die KERVAQ AI.
-                Wie kann ich Ihnen helfen?
-            </div>
+            <p>
+                Hallo. Wie kann ich Ihnen helfen?
+            </p>
 
         </div>
 
 
-        <form class="ai-form">
+        <div class="ai-chat-input">
 
             <input
                 type="text"
-                data-i18n-placeholder="aiPlaceholder"
-                placeholder="Frage über KERVAQ..."
-                autocomplete="off"
+                placeholder="Nachricht..."
             >
 
-            <button
-                type="submit"
-                aria-label="Nachricht senden"
-            >
+            <button type="button">
                 →
             </button>
 
-        </form>
+        </div>
 
     </div>
 
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer class="footer">
-
-        <div class="container">
-
-            <div class="footer-grid">
-
-                <div class="footer-brand">
-
-                    <a href="index.html" class="brand">
-
-                        <div class="brand-mark">
-                            K
-                        </div>
-
-                        <div class="brand-text">
-
-                            <span class="brand-name">
-                                KERVAQ
-                            </span>
-
-                            <span class="brand-tagline">
-                                Move Business Forward.
-                            </span>
-
-                        </div>
-
-                    </a>
-
-                    <p>
-                        Software. Automation. Intelligence.
-                    </p>
-
-                </div>
+</div>
 
 
-                <div class="footer-column">
 
-                    <h4 data-i18n="footerSolutions">
-                        Lösungen
-                    </h4>
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
-                    <a
-                        href="loesungen.html"
-                        data-i18n="solutions"
-                    >
-                        Lösungen
-                    </a>
+<footer class="footer">
 
-                </div>
+    <div class="container">
 
+        <div class="footer-content">
 
-                <div class="footer-column">
+            <div>
 
-                    <h4 data-i18n="footerAbout">
-                        Unternehmen
-                    </h4>
+                <strong>
+                    KERVAQ
+                </strong>
 
-                    <a
-                        href="ueber-uns.html"
-                        data-i18n="about"
-                    >
-                        Über uns
-                    </a>
-
-                    <a
-                        href="kontakt.html"
-                        data-i18n="contact"
-                    >
-                        Kontakt
-                    </a>
-
-                </div>
-
-
-                <div class="footer-column">
-
-                    <h4 data-i18n="footerContact">
-                        Rechtliches
-                    </h4>
-
-                    <a
-                        href="datenschutz.html"
-                        data-i18n="footerPrivacy"
-                    >
-                        Datenschutz
-                    </a>
-
-                    <a
-                        href="impressum.html"
-                        data-i18n="footerImprint"
-                    >
-                        Impressum
-                    </a>
-
-                </div>
+                <p>
+                    Move Business Forward.
+                </p>
 
             </div>
 
 
-            <div class="footer-bottom">
+            <div class="footer-links">
 
-                <span>
-                    © 2026 KERVAQ
-                </span>
+                <a href="index.html">
+                    Home
+                </a>
 
-                <span>
-                    Move Business Forward.
-                </span>
+                <a href="ueber-uns.html">
+                    Über uns
+                </a>
+
+                <a href="loesungen.html">
+                    Lösungen
+                </a>
+
+                <a href="kontakt.html">
+                    Kontakt
+                </a>
 
             </div>
 
         </div>
 
-    </footer>
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 KERVAQ
+            </span>
+
+            <span>
+                Digital Business Systems
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
 
 
-    <script src="script.js"></script>
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+
+    /* ==========================================
+       MOBILE MENU
+    ========================================== */
+
+    const mobileMenu =
+        document.getElementById("mobileMenu");
+
+    const navMenu =
+        document.getElementById("navMenu");
+
+
+    if (mobileMenu && navMenu) {
+
+        mobileMenu.addEventListener("click", () => {
+
+            navMenu.classList.toggle("mobile-open");
+
+            mobileMenu.classList.toggle("active");
+
+        });
+
+    }
+
+
+
+    /* ==========================================
+       AI CHAT
+    ========================================== */
+
+    const aiButton =
+        document.getElementById("aiButton");
+
+    const aiChat =
+        document.getElementById("aiChat");
+
+    const aiClose =
+        document.getElementById("aiClose");
+
+
+    if (aiButton && aiChat) {
+
+        aiButton.addEventListener("click", () => {
+
+            aiChat.classList.toggle("active");
+
+        });
+
+    }
+
+
+    if (aiClose && aiChat) {
+
+        aiClose.addEventListener("click", () => {
+
+            aiChat.classList.remove("active");
+
+        });
+
+    }
+
+
+
+    /* ==========================================
+       LANGUAGE BUTTONS
+    ========================================== */
+
+    const languageButtons =
+        document.querySelectorAll(".lang-btn");
+
+
+    languageButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            languageButtons.forEach(btn => {
+                btn.classList.remove("active");
+            });
+
+            button.classList.add("active");
+
+        });
+
+    });
+
+});
+
+</script>
 
 </body>
 </html>

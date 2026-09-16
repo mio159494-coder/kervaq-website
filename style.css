@@ -1,28 +1,43 @@
+/* =========================
+   RESET
+========================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
     font-family: Arial, Helvetica, sans-serif;
+
     background: #05070b;
+
     color: #ffffff;
+
     line-height: 1.6;
+
+    overflow-x: hidden;
 }
+
 
 a {
     text-decoration: none;
+
     color: inherit;
 }
+
 
 button {
     font-family: inherit;
 }
+
 
 
 /* =========================
@@ -30,49 +45,71 @@ button {
 ========================= */
 
 .navbar {
+
     height: 80px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     padding: 0 7%;
 
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    border-bottom:
+        1px solid rgba(255,255,255,0.08);
 
     position: sticky;
+
     top: 0;
+
     z-index: 100;
 
-    background: rgba(5,7,11,0.85);
+    background:
+        rgba(5,7,11,0.85);
 
     backdrop-filter: blur(15px);
 }
 
+
 .logo {
+
     font-size: 22px;
+
     font-weight: 800;
+
     letter-spacing: 4px;
 }
 
+
 nav {
+
     display: flex;
+
     gap: 35px;
 }
 
+
 nav a {
+
     color: #9da3ae;
+
     font-size: 14px;
 
     transition: 0.3s;
 }
 
+
 nav a:hover {
+
     color: white;
 }
 
+
 .nav-button {
-    border: 1px solid rgba(255,255,255,0.2);
+
+    border:
+        1px solid rgba(255,255,255,0.2);
 
     padding: 10px 18px;
 
@@ -83,10 +120,14 @@ nav a:hover {
     transition: 0.3s;
 }
 
+
 .nav-button:hover {
+
     background: white;
+
     color: black;
 }
+
 
 
 /* =========================
@@ -94,10 +135,13 @@ nav a:hover {
 ========================= */
 
 .hero {
+
     min-height: 850px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     padding: 100px 7%;
@@ -107,19 +151,25 @@ nav a:hover {
     overflow: hidden;
 }
 
+
 .hero-content {
+
     width: 55%;
 
     position: relative;
+
     z-index: 2;
 }
 
+
 .badge {
+
     display: inline-block;
 
     padding: 8px 14px;
 
-    border: 1px solid rgba(255,255,255,0.12);
+    border:
+        1px solid rgba(255,255,255,0.12);
 
     border-radius: 50px;
 
@@ -130,8 +180,11 @@ nav a:hover {
     margin-bottom: 30px;
 }
 
+
 .hero h1 {
-    font-size: clamp(55px, 7vw, 105px);
+
+    font-size:
+        clamp(55px, 7vw, 105px);
 
     line-height: 0.95;
 
@@ -140,21 +193,26 @@ nav a:hover {
     margin-bottom: 35px;
 }
 
+
 .hero h1 span {
+
     display: block;
 
-    background: linear-gradient(
-        90deg,
-        #ffffff,
-        #737b89
-    );
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #737b89
+        );
 
     -webkit-background-clip: text;
 
     color: transparent;
 }
 
+
 .hero p {
+
     max-width: 620px;
 
     color: #9da3ae;
@@ -164,12 +222,17 @@ nav a:hover {
     margin-bottom: 40px;
 }
 
+
 .hero-buttons {
+
     display: flex;
+
     gap: 15px;
 }
 
+
 .button {
+
     display: inline-block;
 
     padding: 14px 25px;
@@ -183,53 +246,79 @@ nav a:hover {
     transition: 0.3s;
 }
 
+
 .primary {
+
     background: white;
+
     color: black;
 }
 
+
 .primary:hover {
+
     transform: translateY(-3px);
 
     box-shadow:
         0 10px 30px rgba(255,255,255,0.15);
 }
 
+
 .secondary {
-    border: 1px solid rgba(255,255,255,0.15);
+
+    border:
+        1px solid rgba(255,255,255,0.15);
 
     color: #c4c8cf;
 }
 
+
 .secondary:hover {
+
     border-color: white;
 }
 
 
+
 /* =========================
-   HERO VISUAL
+   KERVAQ HERO VISUAL
 ========================= */
 
 .hero-visual {
+
     width: 42%;
-    height: 500px;
+
+    height: 560px;
 
     position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
 }
 
+
+
+/* Hintergrund-Raster */
+
 .grid {
+
     position: absolute;
 
     inset: 0;
 
     background-image:
+
         linear-gradient(
-            rgba(255,255,255,0.05) 1px,
+            rgba(255,255,255,0.045) 1px,
             transparent 1px
         ),
+
         linear-gradient(
             90deg,
-            rgba(255,255,255,0.05) 1px,
+            rgba(255,255,255,0.045) 1px,
             transparent 1px
         );
 
@@ -243,95 +332,360 @@ nav a:hover {
         );
 }
 
+
+
+/* Äußerer Kreis */
+
 .orb {
+
     position: absolute;
 
-    width: 280px;
-    height: 280px;
+    width: 330px;
+
+    height: 330px;
 
     top: 50%;
+
     left: 50%;
 
-    transform: translate(-50%, -50%);
+    transform:
+        translate(-50%, -50%);
 
     border-radius: 50%;
 
-    border: 1px solid rgba(255,255,255,0.3);
+    border:
+        1px solid rgba(255,255,255,0.28);
 
     box-shadow:
-        0 0 80px rgba(255,255,255,0.08),
-        inset 0 0 60px rgba(255,255,255,0.05);
 
-    animation: float 6s ease-in-out infinite;
+        0 0 50px
+        rgba(255,255,255,0.04),
+
+        0 0 120px
+        rgba(255,255,255,0.05),
+
+        inset 0 0 80px
+        rgba(255,255,255,0.04);
+
+    animation:
+        orbFloat 7s ease-in-out infinite;
 }
 
-.orb-inner {
+
+
+/* Zusätzliche Ringe */
+
+.orb-ring {
+
     position: absolute;
 
-    width: 110px;
-    height: 110px;
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(255,255,255,0.08);
 
     top: 50%;
+
     left: 50%;
 
-    transform: translate(-50%, -50%);
+    transform:
+        translate(-50%, -50%);
+}
+
+
+.ring-one {
+
+    width: 390px;
+
+    height: 390px;
+
+    animation:
+        rotateRing 18s linear infinite;
+}
+
+
+.ring-two {
+
+    width: 455px;
+
+    height: 455px;
+
+    border:
+        1px dashed rgba(255,255,255,0.06);
+
+    animation:
+        rotateRingReverse 25s linear infinite;
+}
+
+
+
+/* Innerer Kern */
+
+.orb-inner {
+
+    position: absolute;
+
+    width: 125px;
+
+    height: 125px;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #ffffff 0%,
+            #dfe2e6 35%,
+            #777f8b 65%,
+            transparent 72%
+        );
+
+    box-shadow:
+
+        0 0 25px
+        rgba(255,255,255,0.5),
+
+        0 0 70px
+        rgba(255,255,255,0.18),
+
+        0 0 130px
+        rgba(255,255,255,0.08);
+}
+
+
+
+/* Kleiner Kern */
+
+.core {
+
+    position: absolute;
+
+    width: 35px;
+
+    height: 35px;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
 
     border-radius: 50%;
 
     background: white;
 
     box-shadow:
-        0 0 40px rgba(255,255,255,0.5);
+        0 0 25px white;
+
+    animation:
+        corePulse 3s ease-in-out infinite;
 }
 
-@keyframes float {
 
-    0%,100% {
-        transform: translate(-50%, -50%);
+
+/* Orbit-Punkte */
+
+.orbit-dot {
+
+    position: absolute;
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow:
+        0 0 15px
+        rgba(255,255,255,0.7);
+}
+
+
+.dot-one {
+
+    top: 17%;
+
+    right: 22%;
+
+    animation:
+        dotPulse 2s ease-in-out infinite;
+}
+
+
+.dot-two {
+
+    bottom: 18%;
+
+    left: 20%;
+
+    animation:
+        dotPulse 2.5s ease-in-out infinite;
+}
+
+
+.dot-three {
+
+    top: 38%;
+
+    right: 4%;
+
+    animation:
+        dotPulse 3s ease-in-out infinite;
+}
+
+
+
+/* Technologische Linien */
+
+.tech-line {
+
+    position: absolute;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.25),
+            transparent
+        );
+
+    width: 150px;
+
+    opacity: 0.5;
+}
+
+
+.line-one {
+
+    top: 25%;
+
+    left: -5%;
+
+    transform: rotate(25deg);
+}
+
+
+.line-two {
+
+    bottom: 24%;
+
+    right: -5%;
+
+    transform: rotate(-25deg);
+}
+
+
+
+/* Animationen */
+
+@keyframes orbFloat {
+
+    0%, 100% {
+
+        transform:
+            translate(-50%, -50%);
     }
 
     50% {
-        transform: translate(-50%, -57%);
+
+        transform:
+            translate(-50%, -54%);
     }
 
 }
 
-.floating-card {
-    position: absolute;
 
-    padding: 15px 20px;
+@keyframes rotateRing {
 
-    background: rgba(15,18,24,0.8);
+    from {
 
-    border: 1px solid rgba(255,255,255,0.1);
+        transform:
+            translate(-50%, -50%)
+            rotate(0deg);
+    }
 
-    backdrop-filter: blur(10px);
+    to {
 
-    border-radius: 8px;
+        transform:
+            translate(-50%, -50%)
+            rotate(360deg);
+    }
 
-    display: flex;
-    flex-direction: column;
 }
 
-.floating-card span {
-    color: #777e8a;
 
-    font-size: 11px;
+@keyframes rotateRingReverse {
+
+    from {
+
+        transform:
+            translate(-50%, -50%)
+            rotate(360deg);
+    }
+
+    to {
+
+        transform:
+            translate(-50%, -50%)
+            rotate(0deg);
+    }
+
 }
 
-.floating-card strong {
-    font-size: 20px;
+
+@keyframes corePulse {
+
+    0%, 100% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+
+        opacity: 1;
+    }
+
+    50% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.15);
+
+        opacity: 0.85;
+    }
+
 }
 
-.card-one {
-    top: 100px;
-    left: 0;
+
+@keyframes dotPulse {
+
+    0%, 100% {
+
+        opacity: 0.3;
+
+        transform: scale(1);
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform: scale(1.6);
+    }
+
 }
 
-.card-two {
-    bottom: 100px;
-    right: 0;
-}
 
 
 /* =========================
@@ -339,19 +693,21 @@ nav a:hover {
 ========================= */
 
 .section {
+
     padding: 150px 7%;
 }
 
+
 .section-heading {
+
     max-width: 800px;
 
     margin-bottom: 70px;
 }
 
 
-/* Kleiner Label-Text */
-
 .section-label {
+
     color: #737b89;
 
     font-size: 12px;
@@ -360,10 +716,10 @@ nav a:hover {
 }
 
 
-/* HAUPTÜBERSCHRIFT */
-
 .section-heading h2 {
-    font-size: clamp(48px, 5vw, 75px);
+
+    font-size:
+        clamp(48px, 5vw, 75px);
 
     line-height: 1;
 
@@ -373,9 +729,8 @@ nav a:hover {
 }
 
 
-/* Das ist jetzt bewusst GROSS */
-
 .section-heading h2 span {
+
     display: block;
 
     color: #737b89;
@@ -385,7 +740,9 @@ nav a:hover {
     letter-spacing: inherit;
 }
 
+
 .section-heading p {
+
     color: #858c98;
 
     font-size: 17px;
@@ -394,11 +751,13 @@ nav a:hover {
 }
 
 
+
 /* =========================
    CARDS
 ========================= */
 
 .cards {
+
     display: grid;
 
     grid-template-columns:
@@ -407,10 +766,13 @@ nav a:hover {
     gap: 20px;
 }
 
+
 .feature-card {
+
     padding: 35px;
 
-    border: 1px solid rgba(255,255,255,0.08);
+    border:
+        1px solid rgba(255,255,255,0.08);
 
     border-radius: 10px;
 
@@ -426,14 +788,19 @@ nav a:hover {
         border-color 0.4s;
 }
 
+
 .feature-card:hover {
-    transform: translateY(-8px);
+
+    transform:
+        translateY(-8px);
 
     border-color:
         rgba(255,255,255,0.2);
 }
 
+
 .icon {
+
     color: #737b89;
 
     font-size: 12px;
@@ -441,13 +808,17 @@ nav a:hover {
     margin-bottom: 70px;
 }
 
+
 .feature-card h3 {
+
     font-size: 25px;
 
     margin-bottom: 15px;
 }
 
+
 .feature-card > p {
+
     color: #858c98;
 
     font-size: 14px;
@@ -456,11 +827,13 @@ nav a:hover {
 }
 
 
+
 /* =========================
-   MEHR ERFAHREN BUTTON
+   MEHR ERFAHREN
 ========================= */
 
 .learn-more {
+
     width: 100%;
 
     display: flex;
@@ -484,24 +857,31 @@ nav a:hover {
     text-align: left;
 }
 
+
 .learn-more:hover {
+
     color: #bfc4cc;
 }
 
+
 .arrow {
+
     font-size: 22px;
 
     font-weight: 300;
 
-    transition: transform 0.3s;
+    transition:
+        transform 0.3s;
 }
 
 
+
 /* =========================
-   AUSKLAPPBARER BEREICH
+   CARD DETAILS
 ========================= */
 
 .card-details {
+
     max-height: 0;
 
     overflow: hidden;
@@ -509,12 +889,17 @@ nav a:hover {
     opacity: 0;
 
     transition:
+
         max-height 0.5s ease,
+
         opacity 0.4s ease,
+
         margin-top 0.4s ease;
 }
 
+
 .card-details p {
+
     color: #858c98;
 
     font-size: 14px;
@@ -524,7 +909,9 @@ nav a:hover {
     margin-bottom: 15px;
 }
 
+
 .card-details ul {
+
     list-style: none;
 
     display: flex;
@@ -534,7 +921,9 @@ nav a:hover {
     gap: 9px;
 }
 
+
 .card-details li {
+
     color: #aeb3bc;
 
     font-size: 13px;
@@ -544,7 +933,9 @@ nav a:hover {
     position: relative;
 }
 
+
 .card-details li::before {
+
     content: "→";
 
     position: absolute;
@@ -555,9 +946,9 @@ nav a:hover {
 }
 
 
-/* Wenn Karte geöffnet ist */
+.feature-card.active
+.card-details {
 
-.feature-card.active .card-details {
     max-height: 300px;
 
     opacity: 1;
@@ -565,9 +956,14 @@ nav a:hover {
     margin-top: 5px;
 }
 
-.feature-card.active .arrow {
-    transform: rotate(45deg);
+
+.feature-card.active
+.arrow {
+
+    transform:
+        rotate(45deg);
 }
+
 
 
 /* =========================
@@ -575,6 +971,7 @@ nav a:hover {
 ========================= */
 
 .about-section {
+
     min-height: 700px;
 
     padding: 150px 7%;
@@ -589,41 +986,55 @@ nav a:hover {
         1px solid rgba(255,255,255,0.06);
 }
 
+
 .about-number {
+
     font-size: 300px;
 
     font-weight: 900;
 
-    color: rgba(255,255,255,0.03);
+    color:
+        rgba(255,255,255,0.03);
 
     line-height: 1;
 }
 
+
 .about-content {
+
     max-width: 600px;
 }
 
+
 .about-content h2 {
-    font-size: clamp(50px, 6vw, 85px);
+
+    font-size:
+        clamp(50px, 6vw, 85px);
 
     line-height: 0.95;
 
     letter-spacing: -4px;
 
-    margin: 25px 0 40px;
+    margin:
+        25px 0 40px;
 }
 
+
 .about-content h2 span {
+
     color: #747c89;
 
     font-size: inherit;
 }
 
+
 .about-content p {
+
     color: #858c98;
 
     margin-bottom: 20px;
 }
+
 
 
 /* =========================
@@ -631,6 +1042,7 @@ nav a:hover {
 ========================= */
 
 .cta {
+
     padding: 150px 7%;
 
     text-align: center;
@@ -639,6 +1051,7 @@ nav a:hover {
         1px solid rgba(255,255,255,0.06);
 
     background:
+
         radial-gradient(
             circle at center,
             rgba(255,255,255,0.08),
@@ -646,19 +1059,25 @@ nav a:hover {
         );
 }
 
+
 .cta h2 {
-    font-size: clamp(50px, 7vw, 100px);
+
+    font-size:
+        clamp(50px, 7vw, 100px);
 
     letter-spacing: -5px;
 
     margin: 25px 0;
 }
 
+
 .cta p {
+
     color: #858c98;
 
     margin-bottom: 35px;
 }
+
 
 
 /* =========================
@@ -666,6 +1085,7 @@ nav a:hover {
 ========================= */
 
 footer {
+
     padding: 50px 7%;
 
     border-top:
@@ -679,7 +1099,9 @@ footer {
     align-items: center;
 }
 
+
 .footer-logo {
+
     font-size: 20px;
 
     font-weight: 800;
@@ -687,7 +1109,9 @@ footer {
     letter-spacing: 4px;
 }
 
+
 footer p {
+
     text-align: center;
 
     color: #666d78;
@@ -695,7 +1119,9 @@ footer p {
     font-size: 13px;
 }
 
+
 .footer-links {
+
     display: flex;
 
     justify-content: flex-end;
@@ -707,7 +1133,9 @@ footer p {
     font-size: 12px;
 }
 
+
 .copyright {
+
     grid-column: 1 / -1;
 
     margin-top: 40px;
@@ -720,47 +1148,90 @@ footer p {
 }
 
 
+
 /* =========================
    MOBILE
 ========================= */
 
 @media (max-width: 900px) {
 
+
     nav {
+
         display: none;
     }
 
+
     .hero {
+
         flex-direction: column;
 
         padding-top: 80px;
     }
 
+
     .hero-content {
+
         width: 100%;
     }
+
 
     .hero-visual {
+
         width: 100%;
 
-        margin-top: 80px;
+        height: 480px;
+
+        margin-top: 60px;
     }
 
+
+    .orb {
+
+        width: 270px;
+
+        height: 270px;
+    }
+
+
+    .ring-one {
+
+        width: 320px;
+
+        height: 320px;
+    }
+
+
+    .ring-two {
+
+        width: 370px;
+
+        height: 370px;
+    }
+
+
     .cards {
+
         grid-template-columns: 1fr;
     }
 
+
     .about-section {
+
         flex-direction: column;
 
         text-align: center;
     }
 
+
     .about-number {
+
         font-size: 180px;
     }
 
+
     footer {
+
         grid-template-columns: 1fr;
 
         gap: 20px;
@@ -768,27 +1239,39 @@ footer p {
         text-align: center;
     }
 
+
     footer p {
+
         text-align: center;
     }
 
+
     .footer-links {
+
         justify-content: center;
     }
 
+
     .copyright {
+
         grid-column: auto;
     }
 
+
     .hero h1 {
+
         letter-spacing: -3px;
     }
 
+
     .section-heading h2 {
+
         letter-spacing: -2px;
     }
 
+
     .cta h2 {
+
         letter-spacing: -3px;
     }
 

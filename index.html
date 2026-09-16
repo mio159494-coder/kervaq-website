@@ -1,1396 +1,410 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KERVAQ – Softwarelösungen, die Unternehmen voranbringen. Weniger Arbeit, weniger Kosten und mehr Zeit.">
     <title>KERVAQ — Move Business Forward.</title>
-
-    <meta
-        name="description"
-        content="KERVAQ entwickelt intelligente Software und Automatisierungslösungen für moderne Unternehmen."
-    >
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
-
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
-
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
+<header class="navbar">
+    <div class="nav-container">
 
-<!-- =========================
-     BACKGROUND
-========================= -->
-
-<div class="background-glow glow-one"></div>
-<div class="background-glow glow-two"></div>
-
-
-<!-- =========================
-     NAVIGATION
-========================= -->
-
-<header class="navbar" id="navbar">
-
-    <a
-        href="#top"
-        class="brand"
-    >
-
-        <div class="brand-symbol">
-
-            <svg viewBox="0 0 50 50">
-
-                <path d="M10 8V42"></path>
-                <path d="M10 25L38 8"></path>
-                <path d="M10 25L39 42"></path>
-
-            </svg>
-
-        </div>
-
-
-        <div class="brand-text">
-
-            <div class="brand-name">
+        <a href="index.html" class="logo">
+            <span class="logo-mark">K</span>
+            <span class="logo-text">
                 KERVAQ
-            </div>
+                <small>Move Business Forward.</small>
+            </span>
+        </a>
 
-            <div class="brand-slogan">
-                Move Business Forward.
-            </div>
+        <nav class="nav-links">
+            <a href="loesungen.html" data-i18n="navSolutions">Lösungen</a>
+            <a href="ueber-uns.html" data-i18n="navAbout">Über uns</a>
+            <a href="kontakt.html" data-i18n="navContact">Kontakt</a>
+            <a href="login.html" data-i18n="navLogin">Login</a>
+            <a href="kontakt.html" class="nav-cta" data-i18n="navStart">Starten</a>
+        </nav>
 
+        <div class="language-switcher">
+            <button class="lang-btn active" data-lang="de">🇩🇪</button>
+            <button class="lang-btn" data-lang="en">🇬🇧</button>
+            <button class="lang-btn" data-lang="fr">🇫🇷</button>
         </div>
 
-    </a>
-
-
-    <nav class="desktop-nav">
-
-        <a href="#solutions" data-i18n="navSolutions">
-            Lösungen
-        </a>
-
-        <a href="#about" data-i18n="navAbout">
-            Über uns
-        </a>
-
-        <a href="#contact" data-i18n="navContact">
-            Kontakt
-        </a>
-
-    </nav>
-
-
-    <div class="nav-actions">
-
-
-        <!-- LANGUAGE -->
-
-        <div class="language-selector">
-
-            <button
-                class="language-button"
-                id="languageButton"
-                type="button"
-                aria-label="Sprache auswählen"
-            >
-
-                <span id="currentFlag">🇩🇪</span>
-
-                <span class="language-arrow">
-                    ↓
-                </span>
-
-            </button>
-
-
-            <div
-                class="language-menu"
-                id="languageMenu"
-            >
-
-                <button
-                    type="button"
-                    data-language="de"
-                >
-                    🇩🇪 Deutsch
-                </button>
-
-                <button
-                    type="button"
-                    data-language="en"
-                >
-                    🇬🇧 English
-                </button>
-
-                <button
-                    type="button"
-                    data-language="fr"
-                >
-                    🇫🇷 Français
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <a
-            href="#contact"
-            class="nav-button"
-            data-i18n="navStart"
-        >
-            Starten
-        </a>
-
-
-        <button
-            class="mobile-menu-button"
-            id="mobileMenuButton"
-            type="button"
-            aria-label="Menü öffnen"
-        >
-
-            <span></span>
-            <span></span>
-            <span></span>
-
+        <button class="mobile-menu-btn" aria-label="Menü öffnen">
+            ☰
         </button>
 
     </div>
-
-
-    <!-- MOBILE NAV -->
-
-    <div
-        class="mobile-menu"
-        id="mobileMenu"
-    >
-
-        <a
-            href="#solutions"
-            data-i18n="navSolutions"
-        >
-            Lösungen
-        </a>
-
-        <a
-            href="#about"
-            data-i18n="navAbout"
-        >
-            Über uns
-        </a>
-
-        <a
-            href="#contact"
-            data-i18n="navContact"
-        >
-            Kontakt
-        </a>
-
-    </div>
-
 </header>
 
 
+<main>
 
-<main id="top">
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-container">
 
+            <div class="hero-content">
 
-<!-- =========================
-     HERO
-========================= -->
-
-<section class="hero">
-
-
-    <div class="hero-content reveal">
-
-        <div class="badge">
-
-            <span class="status-dot"></span>
-
-            <span data-i18n="heroBadge">
-                Intelligente Technologie für moderne Unternehmen
-            </span>
-
-        </div>
-
-
-        <h1>
-
-            <span data-i18n="heroTitleOne">
-                Bringen Sie Ihr
-            </span>
-
-            <span data-i18n="heroTitleTwo">
-                Unternehmen voran.
-            </span>
-
-        </h1>
-
-
-        <p data-i18n="heroText">
-
-            KERVAQ entwickelt intelligente Software,
-            automatisiert Prozesse und reduziert
-            unnötige Arbeit – damit Unternehmen
-            mehr Zeit für Wachstum haben.
-
-        </p>
-
-
-        <div class="hero-buttons">
-
-            <a
-                href="#solutions"
-                class="button primary"
-            >
-
-                <span data-i18n="heroButtonOne">
-                    Lösungen entdecken
-                </span>
-
-                <span class="button-arrow">
-                    →
-                </span>
-
-            </a>
-
-
-            <a
-                href="#about"
-                class="button secondary"
-                data-i18n="heroButtonTwo"
-            >
-
-                KERVAQ entdecken
-
-            </a>
-
-        </div>
-
-
-        <div class="hero-stats">
-
-            <div>
-
-                <strong>
-                    AI
-                </strong>
-
-                <span data-i18n="statOne">
-                    Intelligente Systeme
-                </span>
-
-            </div>
-
-
-            <div>
-
-                <strong>
-                    AUTO
-                </strong>
-
-                <span data-i18n="statTwo">
-                    Automatisierte Prozesse
-                </span>
-
-            </div>
-
-
-            <div>
-
-                <strong>
-                    SCALE
-                </strong>
-
-                <span data-i18n="statThree">
-                    Wachstum ermöglichen
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- =========================
-         TECHNOLOGY CORE
-    ========================= -->
-
-    <div class="hero-visual reveal">
-
-
-        <div class="visual-grid"></div>
-
-
-        <div class="visual-glow"></div>
-
-
-        <div class="ring ring-outer"></div>
-
-        <div class="ring ring-middle"></div>
-
-        <div class="ring ring-inner"></div>
-
-
-        <div class="orb">
-
-            <div class="orb-center">
-
-                <div class="core"></div>
-
-            </div>
-
-        </div>
-
-
-        <div class="orbit-dot dot-one"></div>
-
-        <div class="orbit-dot dot-two"></div>
-
-        <div class="orbit-dot dot-three"></div>
-
-        <div class="orbit-dot dot-four"></div>
-
-
-        <div class="tech-line tech-line-one"></div>
-
-        <div class="tech-line tech-line-two"></div>
-
-        <div class="tech-line tech-line-three"></div>
-
-
-        <div class="visual-data data-one">
-            01
-        </div>
-
-        <div class="visual-data data-two">
-            100%
-        </div>
-
-        <div class="visual-data data-three">
-            KQ
-        </div>
-
-
-        <div class="visual-label">
-
-            <span></span>
-
-            KERVAQ SYSTEM CORE
-
-            <span></span>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     INTRO
-========================= -->
-
-<section class="intro-section reveal">
-
-    <div class="intro-number">
-        01
-    </div>
-
-
-    <div class="intro-content">
-
-        <div class="section-label" data-i18n="introLabel">
-            UNSERE MISSION
-        </div>
-
-
-        <h2 data-i18n="introTitle">
-
-            Unternehmen sollen
-            <span>vorankommen.</span>
-
-        </h2>
-
-
-        <p data-i18n="introText">
-
-            Zu viel Zeit geht in Unternehmen
-            durch wiederkehrende Aufgaben,
-            komplizierte Abläufe und unnötige
-            manuelle Arbeit verloren.
-
-            KERVAQ setzt genau dort an.
-
-        </p>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     SOLUTIONS
-========================= -->
-
-<section
-    id="solutions"
-    class="section"
->
-
-
-    <div class="section-heading reveal">
-
-        <div
-            class="section-label"
-            data-i18n="solutionsLabel"
-        >
-            WAS WIR TUN
-        </div>
-
-
-        <h2 data-i18n="solutionsTitle">
-
-            Technologie, die
-            <span>Probleme löst.</span>
-
-        </h2>
-
-
-        <p data-i18n="solutionsText">
-
-            Wir verbinden Automatisierung,
-            intelligente Systeme und moderne
-            Software, um Unternehmen einfacher
-            und effizienter zu machen.
-
-        </p>
-
-    </div>
-
-
-
-    <div class="cards">
-
-
-        <!-- AUTOMATISIERUNG -->
-
-        <article class="feature-card reveal">
-
-            <div class="card-top">
-
-                <div class="icon">
-                    01
+                <div class="hero-badge">
+                    <span></span>
+                    <span data-i18n="heroBadge">Software für die Zukunft</span>
                 </div>
 
-                <div class="card-line"></div>
+                <h1 data-i18n="heroTitle">
+                    Bringen Sie Ihr Unternehmen voran.
+                </h1>
 
-            </div>
-
-
-            <h3 data-i18n="cardOneTitle">
-                Automatisierung
-            </h3>
-
-
-            <p data-i18n="cardOneText">
-
-                Wiederkehrende Arbeit wird
-                zu intelligenten, automatisierten
-                Prozessen.
-
-            </p>
-
-
-            <button
-                class="learn-more"
-                type="button"
-            >
-
-                <span data-i18n="learnMore">
-                    Mehr erfahren
-                </span>
-
-                <strong>
-                    +
-                </strong>
-
-            </button>
-
-
-            <div class="card-details">
-
-                <p data-i18n="cardOneDetails">
-
-                    KERVAQ hilft dabei, manuelle
-                    Abläufe zu reduzieren und
-                    Prozesse effizienter zu gestalten.
-
+                <p data-i18n="heroText">
+                    Wir entwickeln intelligente Softwarelösungen, die Prozesse vereinfachen,
+                    Arbeit reduzieren und Unternehmen effizienter machen.
                 </p>
 
+                <div class="hero-buttons">
+                    <a href="#loesungen" class="btn btn-primary" data-i18n="heroPrimary">
+                        Lösungen entdecken
+                    </a>
 
-                <ul>
-
-                    <li data-i18n="cardOnePointOne">
-                        Wiederkehrende Aufgaben automatisieren
-                    </li>
-
-                    <li data-i18n="cardOnePointTwo">
-                        Manuelle Arbeit reduzieren
-                    </li>
-
-                    <li data-i18n="cardOnePointThree">
-                        Prozesse beschleunigen
-                    </li>
-
-                    <li data-i18n="cardOnePointFour">
-                        Fehlerquellen reduzieren
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- KI -->
-
-        <article class="feature-card reveal">
-
-            <div class="card-top">
-
-                <div class="icon">
-                    02
+                    <a href="kontakt.html" class="btn btn-secondary" data-i18n="heroSecondary">
+                        Kontakt aufnehmen
+                    </a>
                 </div>
 
-                <div class="card-line"></div>
-
             </div>
 
 
-            <h3 data-i18n="cardTwoTitle">
-                Intelligenz
-            </h3>
+            <!-- TECH CORE -->
+            <div class="tech-core">
 
+                <div class="core-glow"></div>
+                <div class="core-ring ring-one"></div>
+                <div class="core-ring ring-two"></div>
+                <div class="core-ring ring-three"></div>
 
-            <p data-i18n="cardTwoText">
-
-                Intelligente Technologien helfen
-                Unternehmen, Informationen besser
-                zu nutzen und Prozesse neu zu denken.
-
-            </p>
-
-
-            <button
-                class="learn-more"
-                type="button"
-            >
-
-                <span data-i18n="learnMore">
-                    Mehr erfahren
-                </span>
-
-                <strong>
-                    +
-                </strong>
-
-            </button>
-
-
-            <div class="card-details">
-
-                <p data-i18n="cardTwoDetails">
-
-                    Moderne KI-Systeme können
-                    Informationen analysieren,
-                    Aufgaben unterstützen und
-                    neue Möglichkeiten schaffen.
-
-                </p>
-
-
-                <ul>
-
-                    <li data-i18n="cardTwoPointOne">
-                        Informationen intelligenter nutzen
-                    </li>
-
-                    <li data-i18n="cardTwoPointTwo">
-                        Daten automatisch verarbeiten
-                    </li>
-
-                    <li data-i18n="cardTwoPointThree">
-                        Arbeitsabläufe unterstützen
-                    </li>
-
-                    <li data-i18n="cardTwoPointFour">
-                        Neue digitale Möglichkeiten schaffen
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- SOFTWARE -->
-
-        <article class="feature-card reveal">
-
-            <div class="card-top">
-
-                <div class="icon">
-                    03
+                <div class="core-center">
+                    <span>K</span>
                 </div>
 
-                <div class="card-line"></div>
+                <div class="orbit-dot dot-one"></div>
+                <div class="orbit-dot dot-two"></div>
+                <div class="orbit-dot dot-three"></div>
 
             </div>
 
-
-            <h3 data-i18n="cardThreeTitle">
-                Software
-            </h3>
+        </div>
+    </section>
 
 
-            <p data-i18n="cardThreeText">
+    <!-- TECHNOLOGY -->
+    <section class="technology-section">
+        <div class="section-container">
 
-                Digitale Lösungen, die genau zu
-                den Herausforderungen eines
-                Unternehmens passen.
+            <div class="section-heading center">
+                <span class="eyebrow" data-i18n="technology">
+                    Technologie
+                </span>
+            </div>
 
-            </p>
+        </div>
+    </section>
 
 
-            <button
-                class="learn-more"
-                type="button"
-            >
+    <!-- SOLUTIONS -->
+    <section class="section solutions-section" id="loesungen">
 
-                <span data-i18n="learnMore">
-                    Mehr erfahren
+        <div class="section-container">
+
+            <div class="section-heading">
+
+                <span class="eyebrow" data-i18n="solutionsEyebrow">
+                    Unsere Lösungen
                 </span>
 
-                <strong>
-                    +
-                </strong>
+                <h2 data-i18n="solutionsTitle">
+                    Weniger Aufwand.<br>
+                    Mehr Fortschritt.
+                </h2>
 
-            </button>
-
-
-            <div class="card-details">
-
-                <p data-i18n="cardThreeDetails">
-
-                    Wenn Standardlösungen nicht
-                    ausreichen, entwickelt KERVAQ
-                    individuelle digitale Systeme.
-
+                <p data-i18n="solutionsText">
+                    KERVAQ verbindet Automatisierung, intelligente Software und effiziente
+                    Prozesse zu Lösungen, die Unternehmen im Alltag wirklich entlasten.
                 </p>
 
-
-                <ul>
-
-                    <li data-i18n="cardThreePointOne">
-                        Individuelle Softwarelösungen
-                    </li>
-
-                    <li data-i18n="cardThreePointTwo">
-                        Digitale Prozesse vereinfachen
-                    </li>
-
-                    <li data-i18n="cardThreePointThree">
-                        Systeme miteinander verbinden
-                    </li>
-
-                    <li data-i18n="cardThreePointFour">
-                        Lösungen für reales Wachstum
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </article>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     PROCESS
-========================= -->
-
-<section class="process-section">
-
-
-    <div class="process-heading reveal">
-
-        <div
-            class="section-label"
-            data-i18n="processLabel"
-        >
-            DER KERVAQ-PROZESS
-        </div>
-
-
-        <h2 data-i18n="processTitle">
-
-            Vom Problem zur
-            <span>Lösung.</span>
-
-        </h2>
-
-    </div>
-
-
-
-    <div class="process">
-
-
-        <div class="process-line"></div>
-
-
-        <div class="process-item reveal">
-
-            <div class="process-number">
-                01
             </div>
 
 
-            <h3 data-i18n="processOneTitle">
-                Verstehen
-            </h3>
+            <div class="solution-grid">
 
+                <!-- CARD 1 -->
+                <article class="solution-card">
 
-            <p data-i18n="processOneText">
+                    <div class="solution-icon">
+                        ↗
+                    </div>
 
-                Wir verstehen zuerst das Problem,
-                bevor wir über Technologie sprechen.
+                    <h3 data-i18n="automationTitle">
+                        Automatisierung
+                    </h3>
 
-            </p>
+                    <p data-i18n="automationText">
+                        Wiederkehrende Aufgaben automatisieren und wertvolle Arbeitszeit zurückgewinnen.
+                    </p>
 
-        </div>
+                    <button
+                        class="learn-more"
+                        type="button"
+                        data-open-text="automationDetails"
+                    >
+                        <span data-i18n="more">Mehr erfahren</span>
+                        <span>→</span>
+                    </button>
 
+                    <div class="solution-details"></div>
 
+                </article>
 
-        <div class="process-item reveal">
 
-            <div class="process-number">
-                02
-            </div>
+                <!-- CARD 2 -->
+                <article class="solution-card">
 
+                    <div class="solution-icon">
+                        ◇
+                    </div>
 
-            <h3 data-i18n="processTwoTitle">
-                Entwickeln
-            </h3>
+                    <h3 data-i18n="intelligenceTitle">
+                        Intelligente Software
+                    </h3>
 
+                    <p data-i18n="intelligenceText">
+                        Moderne Software, die Informationen verbindet und Prozesse intelligenter macht.
+                    </p>
 
-            <p data-i18n="processTwoText">
+                    <button
+                        class="learn-more"
+                        type="button"
+                        data-open-text="intelligenceDetails"
+                    >
+                        <span data-i18n="more">Mehr erfahren</span>
+                        <span>→</span>
+                    </button>
 
-                Wir entwickeln eine Lösung,
-                die zum Unternehmen und
-                seinen Abläufen passt.
+                    <div class="solution-details"></div>
 
-            </p>
+                </article>
 
-        </div>
 
+                <!-- CARD 3 -->
+                <article class="solution-card">
 
+                    <div class="solution-icon">
+                        ∞
+                    </div>
 
-        <div class="process-item reveal">
+                    <h3 data-i18n="efficiencyTitle">
+                        Effizienz
+                    </h3>
 
-            <div class="process-number">
-                03
-            </div>
+                    <p data-i18n="efficiencyText">
+                        Klarere Abläufe, weniger Fehler und mehr Zeit für die wirklich wichtigen Aufgaben.
+                    </p>
 
+                    <button
+                        class="learn-more"
+                        type="button"
+                        data-open-text="efficiencyDetails"
+                    >
+                        <span data-i18n="more">Mehr erfahren</span>
+                        <span>→</span>
+                    </button>
 
-            <h3 data-i18n="processThreeTitle">
-                Vereinfachen
-            </h3>
+                    <div class="solution-details"></div>
 
-
-            <p data-i18n="processThreeText">
-
-                Unnötige Schritte werden reduziert
-                und Prozesse werden intelligenter.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="process-item reveal">
-
-            <div class="process-number">
-                04
-            </div>
-
-
-            <h3 data-i18n="processFourTitle">
-                Vorankommen
-            </h3>
-
-
-            <p data-i18n="processFourText">
-
-                Weniger Arbeit. Mehr Zeit.
-                Mehr Möglichkeiten für Wachstum.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     ABOUT
-========================= -->
-
-<section
-    id="about"
-    class="about-section"
->
-
-
-    <div class="about-number">
-        K
-    </div>
-
-
-    <div class="about-content reveal">
-
-        <div
-            class="section-label"
-            data-i18n="aboutLabel"
-        >
-            DER KERVAQ-ANSATZ
-        </div>
-
-
-        <h2>
-
-            <span data-i18n="aboutTitleOne">
-                Einfacher.
-            </span>
-
-            <br>
-
-            <span data-i18n="aboutTitleTwo">
-                Schneller.
-            </span>
-
-            <br>
-
-            <strong data-i18n="aboutTitleThree">
-                Weiter.
-            </strong>
-
-        </h2>
-
-
-        <p data-i18n="aboutTextOne">
-
-            Wir glauben, dass Technologie
-            kein Selbstzweck sein sollte.
-
-            Sie soll Menschen Arbeit abnehmen,
-            Prozesse vereinfachen und Unternehmen
-            dabei helfen, ihre Ziele schneller
-            zu erreichen.
-
-        </p>
-
-
-        <p data-i18n="aboutTextTwo">
-
-            KERVAQ entwickelt Lösungen mit
-            einem klaren Ziel:
-
-            Unternehmen sollen mehr Zeit für
-            das haben, was wirklich wichtig ist.
-
-        </p>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     BENEFITS
-========================= -->
-
-<section class="benefits-section">
-
-
-    <div class="benefits-heading reveal">
-
-        <div
-            class="section-label"
-            data-i18n="benefitsLabel"
-        >
-            WAS DABEI ENTSTEHT
-        </div>
-
-
-        <h2 data-i18n="benefitsTitle">
-
-            Mehr von dem,
-            <span>was zählt.</span>
-
-        </h2>
-
-    </div>
-
-
-
-    <div class="benefits-grid">
-
-
-        <div class="benefit reveal">
-
-            <div class="benefit-icon">
-                ↓
-            </div>
-
-            <h3 data-i18n="benefitOneTitle">
-                Weniger Arbeit
-            </h3>
-
-            <p data-i18n="benefitOneText">
-                Weniger manuelle und wiederkehrende Aufgaben.
-            </p>
-
-        </div>
-
-
-
-        <div class="benefit reveal">
-
-            <div class="benefit-icon">
-                €
-            </div>
-
-            <h3 data-i18n="benefitTwoTitle">
-                Weniger Kosten
-            </h3>
-
-            <p data-i18n="benefitTwoText">
-                Effizientere Abläufe schaffen neue Spielräume.
-            </p>
-
-        </div>
-
-
-
-        <div class="benefit reveal">
-
-            <div class="benefit-icon">
-                +
-            </div>
-
-            <h3 data-i18n="benefitThreeTitle">
-                Mehr Zeit
-            </h3>
-
-            <p data-i18n="benefitThreeText">
-                Mehr Zeit für Kunden, Strategie und Wachstum.
-            </p>
-
-        </div>
-
-
-
-        <div class="benefit reveal">
-
-            <div class="benefit-icon">
-                ↗
-            </div>
-
-            <h3 data-i18n="benefitFourTitle">
-                Mehr Wachstum
-            </h3>
-
-            <p data-i18n="benefitFourText">
-                Technologie schafft Raum für den nächsten Schritt.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section
-    id="contact"
-    class="contact-section"
->
-
-
-    <div class="contact-content reveal">
-
-        <div
-            class="section-label"
-            data-i18n="contactLabel"
-        >
-            BEREIT FÜR DEN NÄCHSTEN SCHRITT?
-        </div>
-
-
-        <h2 data-i18n="contactTitle">
-
-            Lassen Sie uns
-            <span>etwas bewegen.</span>
-
-        </h2>
-
-
-        <p data-i18n="contactText">
-
-            Sie haben einen Prozess,
-            der zu viel Zeit kostet?
-
-            Erzählen Sie uns davon.
-
-        </p>
-
-    </div>
-
-
-
-    <form
-        class="contact-form reveal"
-        id="contactForm"
-    >
-
-        <div class="form-row">
-
-
-            <div class="form-group">
-
-                <label
-                    for="name"
-                    data-i18n="formName"
-                >
-                    Name
-                </label>
-
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Max Mustermann"
-                    required
-                >
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label
-                    for="company"
-                    data-i18n="formCompany"
-                >
-                    Unternehmen
-                </label>
-
-                <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    placeholder="Unternehmen GmbH"
-                >
+                </article>
 
             </div>
 
         </div>
+    </section>
 
 
-        <div class="form-group">
+    <!-- ABOUT -->
+    <section class="section about-section" id="ueber-uns">
 
-            <label
-                for="email"
-                data-i18n="formEmail"
-            >
-                E-Mail
-            </label>
+        <div class="section-container">
 
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="name@unternehmen.de"
-                required
-            >
+            <div class="about-grid">
+
+                <div class="about-visual">
+                    <div class="big-k">K</div>
+                </div>
+
+                <div class="about-content">
+
+                    <span class="eyebrow" data-i18n="aboutEyebrow">
+                        KERVAQ
+                    </span>
+
+                    <h2 data-i18n="aboutTitle">
+                        Technologie soll Arbeit abnehmen.
+                    </h2>
+
+                    <p data-i18n="aboutText">
+                        Wir entwickeln Software mit einem klaren Ziel:
+                        Unternehmen sollen schneller, einfacher und effizienter arbeiten können.
+                        Routineaufgaben werden reduziert, Prozesse verbessert und Zeit wird zurückgewonnen.
+                    </p>
+
+                    <a href="ueber-uns.html" class="text-link">
+                        <span>Mehr über KERVAQ</span>
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
 
         </div>
+    </section>
 
 
-        <div class="form-group">
+    <!-- CTA -->
+    <section class="cta-section">
 
-            <label
-                for="message"
-                data-i18n="formMessage"
-            >
-                Wie können wir helfen?
-            </label>
+        <div class="section-container">
 
-            <textarea
-                id="message"
-                name="message"
-                rows="5"
-                placeholder="Erzählen Sie uns kurz von Ihrem Vorhaben..."
-                required
-            ></textarea>
+            <div class="cta-box">
+
+                <div>
+                    <span class="eyebrow">KERVAQ</span>
+
+                    <h2 data-i18n="ctaTitle">
+                        Bereit für den nächsten Schritt?
+                    </h2>
+
+                    <p data-i18n="ctaText">
+                        Lassen Sie uns herausfinden, wie Software Ihr Unternehmen voranbringen kann.
+                    </p>
+                </div>
+
+                <a href="kontakt.html" class="btn btn-primary" data-i18n="ctaButton">
+                    Gespräch starten
+                </a>
+
+            </div>
 
         </div>
-
-
-        <button
-            class="button primary form-button"
-            type="submit"
-        >
-
-            <span data-i18n="formButton">
-                Anfrage senden
-            </span>
-
-            <span>
-                →
-            </span>
-
-        </button>
-
-
-        <div
-            class="form-message"
-            id="formMessage"
-        ></div>
-
-    </form>
-
-</section>
-
-
-
-<!-- =========================
-     LEGAL MODALS
-========================= -->
-
-<div
-    class="legal-modal"
-    id="privacyModal"
->
-
-    <div class="legal-box">
-
-        <button
-            class="legal-close"
-            type="button"
-            data-close-modal
-        >
-            ×
-        </button>
-
-
-        <div
-            class="section-label"
-            data-i18n="privacyLabel"
-        >
-            DATENSCHUTZ
-        </div>
-
-
-        <h2 data-i18n="privacyTitle">
-            Datenschutzerklärung
-        </h2>
-
-
-        <p data-i18n="privacyText">
-
-            Diese Datenschutzerklärung ist derzeit
-            als Platzhalter hinterlegt.
-
-            Vor dem öffentlichen Betrieb von KERVAQ
-            muss sie an die tatsächliche technische
-            Umsetzung, die verwendeten Dienste,
-            den Sitz des Unternehmens und die
-            konkreten Datenverarbeitungen angepasst
-            werden.
-
-        </p>
-
-    </div>
-
-</div>
-
-
-
-<div
-    class="legal-modal"
-    id="imprintModal"
->
-
-    <div class="legal-box">
-
-        <button
-            class="legal-close"
-            type="button"
-            data-close-modal
-        >
-            ×
-        </button>
-
-
-        <div
-            class="section-label"
-            data-i18n="imprintLabel"
-        >
-            RECHTLICHES
-        </div>
-
-
-        <h2 data-i18n="imprintTitle">
-            Impressum
-        </h2>
-
-
-        <p data-i18n="imprintText">
-
-            Das Impressum wird ergänzt,
-            sobald die Unternehmensdaten
-            von KERVAQ feststehen.
-
-            Benötigt werden unter anderem
-            Unternehmensname, Anschrift,
-            vertretungsberechtigte Person und
-            gegebenenfalls weitere Pflichtangaben.
-
-        </p>
-
-    </div>
-
-</div>
-
+    </section>
 
 </main>
 
 
+<!-- AI CHAT -->
+<div class="ai-chat">
 
-<!-- =========================
-     FOOTER
-========================= -->
+    <button class="ai-chat-toggle" aria-label="KERVAQ AI öffnen">
+        ✦
+    </button>
 
-<footer>
+    <div class="ai-chat-window">
 
+        <div class="ai-chat-header">
 
-    <div class="footer-main">
-
-
-        <div class="footer-brand">
-
-            <div class="footer-symbol">
-
-                <svg viewBox="0 0 50 50">
-
-                    <path d="M10 8V42"></path>
-                    <path d="M10 25L38 8"></path>
-                    <path d="M10 25L39 42"></path>
-
-                </svg>
-
-            </div>
-
-
-            <div class="footer-brand-text">
-
-                <strong>
-                    KERVAQ
+            <div>
+                <strong data-i18n="aiTitle">
+                    KERVAQ AI
                 </strong>
 
-                <small>
-                    Move Business Forward.
-                </small>
+                <span>● Online</span>
+            </div>
 
+            <button class="ai-chat-close" aria-label="Chat schließen">
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="ai-chat-messages">
+
+            <div class="ai-message ai-bot ai-welcome">
+                Hallo! Ich bin die KERVAQ AI.
+                Wie kann ich dir etwas über KERVAQ erklären?
             </div>
 
         </div>
 
 
-        <div class="footer-description">
+        <form class="ai-chat-form">
 
-            <span data-i18n="footerText">
-                Technologie für den nächsten Schritt.
-            </span>
+            <input
+                type="text"
+                placeholder="Frage über KERVAQ..."
+                data-i18n-placeholder="aiPlaceholder"
+                autocomplete="off"
+            >
+
+            <button type="submit">
+                →
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="logo">
+                <span class="logo-mark">K</span>
+
+                <span class="logo-text">
+                    KERVAQ
+                    <small data-i18n="footerSlogan">
+                        Move Business Forward.
+                    </small>
+                </span>
+            </a>
+
+            <p>
+                Software, die Unternehmen voranbringt.
+            </p>
 
         </div>
 
 
         <div class="footer-links">
 
-            <button
-                type="button"
-                data-open-modal="privacyModal"
-                data-i18n="privacyLink"
-            >
-                Datenschutz
-            </button>
+            <a href="loesungen.html" data-i18n="navSolutions">
+                Lösungen
+            </a>
 
-            <button
-                type="button"
-                data-open-modal="imprintModal"
-                data-i18n="imprintLink"
-            >
+            <a href="ueber-uns.html" data-i18n="navAbout">
+                Über uns
+            </a>
+
+            <a href="kontakt.html" data-i18n="navContact">
+                Kontakt
+            </a>
+
+            <a href="datenschutz.html" data-i18n="privacy">
+                Datenschutz
+            </a>
+
+            <a href="impressum.html" data-i18n="imprint">
                 Impressum
-            </button>
+            </a>
 
         </div>
 
@@ -1398,23 +412,14 @@
 
 
     <div class="footer-bottom">
-
-        <span>
-            © 2026 KERVAQ.
-        </span>
-
-        <span data-i18n="footerRights">
-            Alle Rechte vorbehalten.
-        </span>
-
+        <span>© 2026 KERVAQ</span>
+        <span>Move Business Forward.</span>
     </div>
 
 </footer>
 
 
-
 <script src="script.js"></script>
 
 </body>
-
 </html>

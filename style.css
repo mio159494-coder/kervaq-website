@@ -1,11 +1,24 @@
-/* =========================
-   RESET
-========================= */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+
+:root {
+
+    --blue: #1683ff;
+
+    --blue-bright: #42a5ff;
+
+    --white: #ffffff;
+
+    --text: #9da3ae;
+
+    --muted: #737b89;
+
+    --border: rgba(255,255,255,0.08);
+
 }
 
 
@@ -15,52 +28,32 @@ html {
 
 
 body {
-    font-family: "Inter", Arial, Helvetica, sans-serif;
+
+    font-family: "Inter", Arial, sans-serif;
 
     background: #05070b;
 
-    color: #ffffff;
+    color: white;
 
     line-height: 1.6;
 
     overflow-x: hidden;
+
 }
 
 
 a {
+
     text-decoration: none;
 
     color: inherit;
+
 }
 
 
 button {
+
     font-family: inherit;
-}
-
-
-
-/* =========================
-   KERVAQ COLORS
-========================= */
-
-:root {
-
-    --blue: #1683ff;
-
-    --blue-bright: #42a5ff;
-
-    --blue-soft:
-        rgba(22,131,255,0.15);
-
-    --white: #ffffff;
-
-    --text: #9da3ae;
-
-    --muted: #737b89;
-
-    --border:
-        rgba(255,255,255,0.08);
 
 }
 
@@ -92,17 +85,12 @@ button {
     z-index: 100;
 
     background:
-        rgba(5,7,11,0.82);
+        rgba(5,7,11,0.85);
 
-    backdrop-filter:
-        blur(18px);
+    backdrop-filter: blur(18px);
+
 }
 
-
-
-/* =========================
-   LOGO
-========================= */
 
 .brand {
 
@@ -111,6 +99,7 @@ button {
     align-items: center;
 
     gap: 11px;
+
 }
 
 
@@ -120,11 +109,6 @@ button {
 
     height: 29px;
 
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
 }
 
 
@@ -134,7 +118,6 @@ button {
 
     height: 100%;
 
-    overflow: visible;
 }
 
 
@@ -150,15 +133,15 @@ button {
 
     stroke-linejoin: round;
 
-    transition:
-        stroke 0.3s;
+    transition: 0.3s;
+
 }
 
 
-.brand:hover
-.brand-symbol path {
+.brand:hover .brand-symbol path {
 
     stroke: var(--blue-bright);
+
 }
 
 
@@ -169,17 +152,16 @@ button {
     font-weight: 800;
 
     letter-spacing: 4px;
+
 }
 
-
-
-/* Navigation */
 
 nav {
 
     display: flex;
 
     gap: 35px;
+
 }
 
 
@@ -189,19 +171,17 @@ nav a {
 
     font-size: 13px;
 
-    transition:
-        color 0.3s;
+    transition: 0.3s;
+
 }
 
 
 nav a:hover {
 
     color: white;
+
 }
 
-
-
-/* Button */
 
 .nav-button {
 
@@ -214,24 +194,20 @@ nav a:hover {
 
     font-size: 13px;
 
-    transition:
-        0.3s;
+    transition: 0.3s;
+
 }
 
 
 .nav-button:hover {
 
-    border-color:
-        var(--blue);
+    background: var(--blue);
 
-    background:
-        var(--blue);
-
-    color: white;
+    border-color: var(--blue);
 
     box-shadow:
-        0 0 25px
-        rgba(22,131,255,0.2);
+        0 0 25px rgba(22,131,255,0.2);
+
 }
 
 
@@ -255,6 +231,7 @@ nav a:hover {
     position: relative;
 
     overflow: hidden;
+
 }
 
 
@@ -265,11 +242,9 @@ nav a:hover {
     position: relative;
 
     z-index: 2;
+
 }
 
-
-
-/* Badge */
 
 .badge {
 
@@ -292,8 +267,6 @@ nav a:hover {
 
     margin-bottom: 30px;
 
-    background:
-        rgba(255,255,255,0.015);
 }
 
 
@@ -305,20 +278,16 @@ nav a:hover {
 
     border-radius: 50%;
 
-    background:
-        var(--blue);
+    background: var(--blue);
 
     box-shadow:
-        0 0 12px
-        rgba(22,131,255,0.9);
+        0 0 12px var(--blue);
 
     animation:
-        statusPulse 2.5s ease-in-out infinite;
+        statusPulse 2.5s infinite;
+
 }
 
-
-
-/* Headline */
 
 .hero h1 {
 
@@ -332,6 +301,7 @@ nav a:hover {
     margin-bottom: 35px;
 
     font-weight: 700;
+
 }
 
 
@@ -342,9 +312,9 @@ nav a:hover {
     background:
         linear-gradient(
             90deg,
-            #ffffff 0%,
-            #ffffff 35%,
-            #1683ff 100%
+            white 0%,
+            white 35%,
+            var(--blue) 100%
         );
 
     -webkit-background-clip: text;
@@ -352,11 +322,9 @@ nav a:hover {
     background-clip: text;
 
     color: transparent;
+
 }
 
-
-
-/* Hero Text */
 
 .hero p {
 
@@ -369,17 +337,16 @@ nav a:hover {
     margin-bottom: 40px;
 
     line-height: 1.8;
+
 }
 
-
-
-/* Hero Buttons */
 
 .hero-buttons {
 
     display: flex;
 
     gap: 15px;
+
 }
 
 
@@ -399,8 +366,8 @@ nav a:hover {
 
     font-weight: 600;
 
-    transition:
-        0.3s;
+    transition: 0.3s;
+
 }
 
 
@@ -409,31 +376,18 @@ nav a:hover {
     background: white;
 
     color: black;
+
 }
 
 
 .primary:hover {
 
-    transform:
-        translateY(-3px);
+    transform: translateY(-3px);
 
     box-shadow:
         0 10px 35px
         rgba(255,255,255,0.13);
-}
 
-
-.primary span {
-
-    transition:
-        transform 0.3s;
-}
-
-
-.primary:hover span {
-
-    transform:
-        translateX(4px);
 }
 
 
@@ -443,18 +397,17 @@ nav a:hover {
         1px solid rgba(255,255,255,0.15);
 
     color: #c4c8cf;
+
 }
 
 
 .secondary:hover {
 
-    border-color:
-        var(--blue);
-
-    color: white;
+    border-color: var(--blue);
 
     background:
         rgba(22,131,255,0.05);
+
 }
 
 
@@ -476,11 +429,9 @@ nav a:hover {
     align-items: center;
 
     justify-content: center;
+
 }
 
-
-
-/* Grid */
 
 .grid {
 
@@ -509,11 +460,9 @@ nav a:hover {
             black,
             transparent 68%
         );
+
 }
 
-
-
-/* Blue Glow */
 
 .core-glow {
 
@@ -525,21 +474,17 @@ nav a:hover {
 
     border-radius: 50%;
 
-    background:
-        var(--blue);
+    background: var(--blue);
 
-    filter:
-        blur(100px);
+    filter: blur(100px);
 
     opacity: 0.08;
 
     animation:
-        glowPulse 5s ease-in-out infinite;
+        glowPulse 5s infinite;
+
 }
 
-
-
-/* Main outer ring */
 
 .orb {
 
@@ -559,24 +504,19 @@ nav a:hover {
     border-radius: 50%;
 
     border:
-        1px solid
-        rgba(255,255,255,0.24);
+        1px solid rgba(255,255,255,0.24);
 
     box-shadow:
-
-        0 0 60px
-        rgba(22,131,255,0.07),
+        0 0 60px rgba(22,131,255,0.07),
 
         inset 0 0 80px
         rgba(255,255,255,0.025);
 
     animation:
-        orbFloat 7s ease-in-out infinite;
+        orbFloat 7s infinite;
+
 }
 
-
-
-/* Rings */
 
 .orb-ring {
 
@@ -590,6 +530,7 @@ nav a:hover {
 
     transform:
         translate(-50%, -50%);
+
 }
 
 
@@ -600,11 +541,11 @@ nav a:hover {
     height: 440px;
 
     border:
-        1px dashed
-        rgba(22,131,255,0.16);
+        1px dashed rgba(22,131,255,0.16);
 
     animation:
         rotateRing 25s linear infinite;
+
 }
 
 
@@ -615,11 +556,11 @@ nav a:hover {
     height: 385px;
 
     border:
-        1px solid
-        rgba(255,255,255,0.07);
+        1px solid rgba(255,255,255,0.07);
 
     animation:
         rotateRingReverse 18s linear infinite;
+
 }
 
 
@@ -630,16 +571,13 @@ nav a:hover {
     height: 215px;
 
     border:
-        1px solid
-        rgba(22,131,255,0.15);
+        1px solid rgba(22,131,255,0.15);
 
     animation:
         rotateRing 12s linear infinite;
+
 }
 
-
-
-/* Inner core */
 
 .orb-inner {
 
@@ -661,25 +599,20 @@ nav a:hover {
     background:
         radial-gradient(
             circle,
-            #ffffff 0%,
+            white 0%,
             #dcecff 25%,
-            #1683ff 58%,
+            var(--blue) 58%,
             rgba(22,131,255,0.1) 72%,
             transparent 75%
         );
 
     box-shadow:
+        0 0 30px rgba(22,131,255,0.45),
 
-        0 0 30px
-        rgba(22,131,255,0.45),
+        0 0 80px rgba(22,131,255,0.18);
 
-        0 0 80px
-        rgba(22,131,255,0.18);
 }
 
-
-
-/* Core */
 
 .core {
 
@@ -701,22 +634,18 @@ nav a:hover {
     background: white;
 
     box-shadow:
-
         0 0 18px white,
 
-        0 0 45px
-        var(--blue),
+        0 0 45px var(--blue),
 
         0 0 80px
         rgba(22,131,255,0.7);
 
     animation:
-        corePulse 3s ease-in-out infinite;
+        corePulse 3s infinite;
+
 }
 
-
-
-/* Orbit dots */
 
 .orbit-dot {
 
@@ -728,14 +657,11 @@ nav a:hover {
 
     border-radius: 50%;
 
-    background:
-        var(--blue-bright);
+    background: var(--blue-bright);
 
     box-shadow:
-        0 0 14px
-        var(--blue);
+        0 0 14px var(--blue);
 
-    z-index: 5;
 }
 
 
@@ -746,7 +672,8 @@ nav a:hover {
     right: 20%;
 
     animation:
-        dotPulse 2.5s ease-in-out infinite;
+        dotPulse 2.5s infinite;
+
 }
 
 
@@ -757,7 +684,8 @@ nav a:hover {
     left: 19%;
 
     animation:
-        dotPulse 3s ease-in-out infinite;
+        dotPulse 3s infinite;
+
 }
 
 
@@ -768,12 +696,10 @@ nav a:hover {
     right: 2%;
 
     animation:
-        dotPulse 2s ease-in-out infinite;
+        dotPulse 2s infinite;
+
 }
 
-
-
-/* Tech lines */
 
 .tech-line {
 
@@ -791,7 +717,6 @@ nav a:hover {
             transparent
         );
 
-    opacity: 0.6;
 }
 
 
@@ -801,8 +726,8 @@ nav a:hover {
 
     left: -4%;
 
-    transform:
-        rotate(25deg);
+    transform: rotate(25deg);
+
 }
 
 
@@ -812,13 +737,10 @@ nav a:hover {
 
     right: -4%;
 
-    transform:
-        rotate(-25deg);
+    transform: rotate(-25deg);
+
 }
 
-
-
-/* Visual label */
 
 .visual-label {
 
@@ -845,6 +767,7 @@ nav a:hover {
     letter-spacing: 2px;
 
     white-space: nowrap;
+
 }
 
 
@@ -854,10 +777,8 @@ nav a:hover {
 
     height: 1px;
 
-    background:
-        var(--blue);
+    background: var(--blue);
 
-    opacity: 0.7;
 }
 
 
@@ -869,13 +790,11 @@ nav a:hover {
 @keyframes orbFloat {
 
     0%, 100% {
-
         transform:
             translate(-50%, -50%);
     }
 
     50% {
-
         transform:
             translate(-50%, -53%);
     }
@@ -886,14 +805,12 @@ nav a:hover {
 @keyframes rotateRing {
 
     from {
-
         transform:
             translate(-50%, -50%)
             rotate(0deg);
     }
 
     to {
-
         transform:
             translate(-50%, -50%)
             rotate(360deg);
@@ -905,14 +822,12 @@ nav a:hover {
 @keyframes rotateRingReverse {
 
     from {
-
         transform:
             translate(-50%, -50%)
             rotate(360deg);
     }
 
     to {
-
         transform:
             translate(-50%, -50%)
             rotate(0deg);
@@ -924,14 +839,12 @@ nav a:hover {
 @keyframes corePulse {
 
     0%, 100% {
-
         transform:
             translate(-50%, -50%)
             scale(1);
     }
 
     50% {
-
         transform:
             translate(-50%, -50%)
             scale(1.13);
@@ -943,16 +856,12 @@ nav a:hover {
 @keyframes glowPulse {
 
     0%, 100% {
-
         opacity: 0.05;
-
         transform: scale(0.95);
     }
 
     50% {
-
         opacity: 0.11;
-
         transform: scale(1.08);
     }
 
@@ -962,16 +871,12 @@ nav a:hover {
 @keyframes dotPulse {
 
     0%, 100% {
-
         opacity: 0.35;
-
         transform: scale(1);
     }
 
     50% {
-
         opacity: 1;
-
         transform: scale(1.5);
     }
 
@@ -981,12 +886,10 @@ nav a:hover {
 @keyframes statusPulse {
 
     0%, 100% {
-
         opacity: 0.4;
     }
 
     50% {
-
         opacity: 1;
     }
 
@@ -1001,6 +904,7 @@ nav a:hover {
 .section {
 
     padding: 150px 7%;
+
 }
 
 
@@ -1009,17 +913,18 @@ nav a:hover {
     max-width: 800px;
 
     margin-bottom: 70px;
+
 }
 
 
 .section-label {
 
-    color:
-        var(--muted);
+    color: var(--muted);
 
     font-size: 11px;
 
     letter-spacing: 3px;
+
 }
 
 
@@ -1034,7 +939,6 @@ nav a:hover {
 
     margin: 20px 0;
 
-    font-weight: 700;
 }
 
 
@@ -1042,23 +946,19 @@ nav a:hover {
 
     display: block;
 
-    color:
-        #737b89;
+    color: #737b89;
 
-    font-size: inherit;
-
-    letter-spacing: inherit;
 }
 
 
 .section-heading p {
 
-    color:
-        #858c98;
+    color: #858c98;
 
     font-size: 16px;
 
     max-width: 650px;
+
 }
 
 
@@ -1075,6 +975,7 @@ nav a:hover {
         repeat(3, 1fr);
 
     gap: 20px;
+
 }
 
 
@@ -1097,8 +998,8 @@ nav a:hover {
     transition:
         transform 0.4s,
         border-color 0.4s,
-
         box-shadow 0.4s;
+
 }
 
 
@@ -1110,17 +1011,18 @@ nav a:hover {
     box-shadow:
         0 15px 50px
         rgba(0,0,0,0.2);
+
 }
 
 
 .icon {
 
-    color:
-        #737b89;
+    color: #737b89;
 
     font-size: 12px;
 
     margin-bottom: 70px;
+
 }
 
 
@@ -1129,17 +1031,18 @@ nav a:hover {
     font-size: 24px;
 
     margin-bottom: 15px;
+
 }
 
 
 .feature-card > p {
 
-    color:
-        #858c98;
+    color: #858c98;
 
     font-size: 14px;
 
     margin-bottom: 25px;
+
 }
 
 
@@ -1171,13 +1074,14 @@ nav a:hover {
     padding: 0;
 
     text-align: left;
+
 }
 
 
 .learn-more:hover {
 
-    color:
-        var(--blue-bright);
+    color: var(--blue-bright);
+
 }
 
 
@@ -1185,16 +1089,15 @@ nav a:hover {
 
     font-size: 22px;
 
-    font-weight: 300;
-
     transition:
         transform 0.3s;
+
 }
 
 
 
 /* =========================
-   CARD DETAILS
+   DETAILS
 ========================= */
 
 .card-details {
@@ -1206,25 +1109,23 @@ nav a:hover {
     opacity: 0;
 
     transition:
-
         max-height 0.5s ease,
-
         opacity 0.4s ease,
-
         margin-top 0.4s ease;
+
 }
 
 
 .card-details p {
 
-    color:
-        #858c98;
+    color: #858c98;
 
     font-size: 14px;
 
     margin-top: 25px;
 
     margin-bottom: 15px;
+
 }
 
 
@@ -1237,19 +1138,20 @@ nav a:hover {
     flex-direction: column;
 
     gap: 9px;
+
 }
 
 
 .card-details li {
 
-    color:
-        #aeb3bc;
+    color: #aeb3bc;
 
     font-size: 13px;
 
     padding-left: 15px;
 
     position: relative;
+
 }
 
 
@@ -1261,30 +1163,27 @@ nav a:hover {
 
     left: 0;
 
-    color:
-        var(--blue);
+    color: var(--blue);
+
 }
 
 
-.feature-card.active
-.card-details {
+.feature-card.active .card-details {
 
-    max-height: 300px;
+    max-height: 400px;
 
     opacity: 1;
 
-    margin-top: 5px;
 }
 
 
-.feature-card.active
-.arrow {
+.feature-card.active .arrow {
 
     transform:
         rotate(45deg);
 
-    color:
-        var(--blue);
+    color: var(--blue);
+
 }
 
 
@@ -1307,6 +1206,7 @@ nav a:hover {
 
     border-top:
         1px solid rgba(255,255,255,0.06);
+
 }
 
 
@@ -1319,13 +1219,13 @@ nav a:hover {
     color:
         rgba(22,131,255,0.035);
 
-    line-height: 1;
 }
 
 
 .about-content {
 
     max-width: 600px;
+
 }
 
 
@@ -1340,24 +1240,23 @@ nav a:hover {
 
     margin:
         25px 0 40px;
+
 }
 
 
 .about-content h2 span {
 
-    color:
-        var(--blue);
+    color: var(--blue);
 
-    font-size: inherit;
 }
 
 
 .about-content p {
 
-    color:
-        #858c98;
+    color: #858c98;
 
     margin-bottom: 20px;
+
 }
 
 
@@ -1376,12 +1275,12 @@ nav a:hover {
         1px solid rgba(255,255,255,0.06);
 
     background:
-
         radial-gradient(
             circle at center,
             rgba(22,131,255,0.08),
             transparent 50%
         );
+
 }
 
 
@@ -1393,15 +1292,16 @@ nav a:hover {
     letter-spacing: -5px;
 
     margin: 25px 0;
+
 }
 
 
 .cta p {
 
-    color:
-        #858c98;
+    color: #858c98;
 
     margin-bottom: 35px;
+
 }
 
 
@@ -1423,6 +1323,7 @@ footer {
         1fr 1fr 1fr;
 
     align-items: center;
+
 }
 
 
@@ -1439,6 +1340,7 @@ footer {
     font-weight: 800;
 
     letter-spacing: 3px;
+
 }
 
 
@@ -1447,6 +1349,7 @@ footer {
     width: 25px;
 
     height: 25px;
+
 }
 
 
@@ -1455,6 +1358,7 @@ footer {
     width: 100%;
 
     height: 100%;
+
 }
 
 
@@ -1469,6 +1373,7 @@ footer {
     stroke-linecap: round;
 
     stroke-linejoin: round;
+
 }
 
 
@@ -1476,10 +1381,10 @@ footer p {
 
     text-align: center;
 
-    color:
-        #666d78;
+    color: #666d78;
 
     font-size: 13px;
+
 }
 
 
@@ -1491,17 +1396,17 @@ footer p {
 
     gap: 20px;
 
-    color:
-        #777e89;
+    color: #777e89;
 
     font-size: 12px;
+
 }
 
 
 .footer-links a:hover {
 
-    color:
-        var(--blue-bright);
+    color: var(--blue-bright);
+
 }
 
 
@@ -1511,12 +1416,12 @@ footer p {
 
     margin-top: 40px;
 
-    color:
-        #4f5560;
+    color: #4f5560;
 
     font-size: 11px;
 
     text-align: center;
+
 }
 
 
@@ -1529,7 +1434,6 @@ footer p {
 
 
     nav {
-
         display: none;
     }
 
@@ -1539,12 +1443,14 @@ footer p {
         flex-direction: column;
 
         padding-top: 80px;
+
     }
 
 
     .hero-content {
 
         width: 100%;
+
     }
 
 
@@ -1555,6 +1461,7 @@ footer p {
         height: 480px;
 
         margin-top: 60px;
+
     }
 
 
@@ -1563,6 +1470,7 @@ footer p {
         width: 270px;
 
         height: 270px;
+
     }
 
 
@@ -1571,6 +1479,7 @@ footer p {
         width: 370px;
 
         height: 370px;
+
     }
 
 
@@ -1579,12 +1488,14 @@ footer p {
         width: 330px;
 
         height: 330px;
+
     }
 
 
     .cards {
 
         grid-template-columns: 1fr;
+
     }
 
 
@@ -1593,12 +1504,14 @@ footer p {
         flex-direction: column;
 
         text-align: center;
+
     }
 
 
     .about-number {
 
         font-size: 180px;
+
     }
 
 
@@ -1609,42 +1522,49 @@ footer p {
         gap: 20px;
 
         text-align: center;
+
     }
 
 
     footer p {
 
         text-align: center;
+
     }
 
 
     .footer-links {
 
         justify-content: center;
+
     }
 
 
     .copyright {
 
         grid-column: auto;
+
     }
 
 
     .hero h1 {
 
         letter-spacing: -3px;
+
     }
 
 
     .section-heading h2 {
 
         letter-spacing: -2px;
+
     }
 
 
     .cta h2 {
 
         letter-spacing: -3px;
+
     }
 
 }

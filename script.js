@@ -3,19 +3,17 @@
 ========================= */
 
 
-const cards =
-    document.querySelectorAll(".feature-card");
+const cards = document.querySelectorAll(".feature-card");
 
 
 cards.forEach(card => {
 
 
-    const button =
-        card.querySelector(".learn-more");
+    const button = card.querySelector(".learn-more");
 
 
     /* =========================
-       AUSKLAPPEN
+       MEHR ERFAHREN
     ========================== */
 
     button.addEventListener("click", () => {
@@ -43,37 +41,30 @@ cards.forEach(card => {
        3D HOVER
     ========================== */
 
-    card.addEventListener(
-        "mousemove",
-        event => {
+    card.addEventListener("mousemove", event => {
 
 
-            const rect =
-                card.getBoundingClientRect();
+        const rect = card.getBoundingClientRect();
 
 
-            const x =
-                event.clientX - rect.left;
+        const x = event.clientX - rect.left;
+
+        const y = event.clientY - rect.top;
 
 
-            const y =
-                event.clientY - rect.top;
+        const rotateX =
+            (y / rect.height - 0.5) * -6;
 
 
-            const rotateX =
-                (y / rect.height - 0.5) * -6;
+        const rotateY =
+            (x / rect.width - 0.5) * 6;
 
 
-            const rotateY =
-                (x / rect.width - 0.5) * 6;
+        card.style.transform =
+            `perspective(700px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
 
 
-            card.style.transform =
-                `perspective(700px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
-
-
-        }
-    );
+    });
 
 
 
@@ -81,17 +72,14 @@ cards.forEach(card => {
        HOVER ZURÜCKSETZEN
     ========================== */
 
-    card.addEventListener(
-        "mouseleave",
-        () => {
+    card.addEventListener("mouseleave", () => {
 
 
-            card.style.transform =
-                "perspective(700px) rotateX(0deg) rotateY(0deg) translateY(0px)";
+        card.style.transform =
+            "perspective(700px) rotateX(0deg) rotateY(0deg) translateY(0px)";
 
 
-        }
-    );
+    });
 
 
 });

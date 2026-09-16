@@ -47,9 +47,11 @@ cards.forEach(card => {
         const rect = card.getBoundingClientRect();
 
 
-        const x = event.clientX - rect.left;
+        const x =
+            event.clientX - rect.left;
 
-        const y = event.clientY - rect.top;
+        const y =
+            event.clientY - rect.top;
 
 
         const rotateX =
@@ -81,5 +83,49 @@ cards.forEach(card => {
 
     });
 
+
+});
+
+
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+
+const revealElements =
+    document.querySelectorAll(".reveal");
+
+
+const revealObserver =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("visible");
+
+                    revealObserver.unobserve(
+                        entry.target
+                    );
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold: 0.12
+        }
+
+    );
+
+
+revealElements.forEach(element => {
+
+    revealObserver.observe(element);
 
 });

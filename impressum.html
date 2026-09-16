@@ -3,170 +3,559 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Impressum von KERVAQ">
-    <title>Impressum — KERVAQ</title>
+
+    <title>KERVAQ — Impressum</title>
+
+    <meta
+        name="description"
+        content="Impressum von KERVAQ."
+    >
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="navbar">
-    <div class="nav-container">
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
 
-        <a href="index.html" class="logo">
-            <span class="logo-mark">K</span>
+    <header class="navbar">
 
-            <span class="logo-text">
-                KERVAQ
-                <small>Move Business Forward.</small>
-            </span>
-        </a>
+        <div class="nav-container">
 
-        <nav class="nav-links">
-            <a href="loesungen.html">Lösungen</a>
-            <a href="ueber-uns.html">Über uns</a>
-            <a href="kontakt.html">Kontakt</a>
-            <a href="login.html">Login</a>
-        </nav>
+            <a href="index.html" class="brand">
+                <div class="brand-logo">K</div>
 
-        <div class="language-switcher">
-            <button class="lang-btn active" data-lang="de">🇩🇪</button>
-            <button class="lang-btn" data-lang="en">🇬🇧</button>
-            <button class="lang-btn" data-lang="fr">🇫🇷</button>
-        </div>
-
-        <button class="mobile-menu-btn">☰</button>
-
-    </div>
-</header>
-
-
-<main>
-
-    <section class="page-hero">
-
-        <div class="section-container">
-
-            <span class="eyebrow">
-                KERVAQ
-            </span>
-
-            <h1 data-i18n="imprint">
-                Impressum
-            </h1>
-
-            <p>
-                Angaben gemäß den gesetzlichen Informationspflichten.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <section class="section legal-section">
-
-        <div class="section-container legal-content">
-
-            <h2>Angaben zum Unternehmen</h2>
-
-            <p>
-                <strong>KERVAQ</strong><br>
-                [Unternehmensname / Rechtsform]<br>
-                [Vor- und Nachname]<br>
-                [Anschrift]<br>
-                [PLZ Ort]<br>
-                [Deutschland]
-            </p>
-
-
-            <h2>Kontakt</h2>
-
-            <p>
-                E-Mail: [E-Mail-Adresse]<br>
-                Telefon: [Telefonnummer – falls vorhanden]
-            </p>
-
-
-            <h2>Vertretungsberechtigte Person</h2>
-
-            <p>
-                [Name der vertretungsberechtigten Person]
-            </p>
-
-
-            <h2>Registerangaben</h2>
-
-            <p>
-                [Falls vorhanden: Registergericht]<br>
-                [Falls vorhanden: Registernummer]
-            </p>
-
-
-            <h2>Umsatzsteuer</h2>
-
-            <p>
-                [Falls vorhanden: Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG]
-            </p>
-
-
-            <h2>Inhaltlich Verantwortlicher</h2>
-
-            <p>
-                [Name und Anschrift der verantwortlichen Person]
-            </p>
-
-
-            <p class="legal-placeholder">
-                Hinweis: Diese Seite ist derzeit eine Vorlage.
-                Die tatsächlichen Unternehmens- und Kontaktdaten müssen vor einer
-                geschäftlichen Veröffentlichung ergänzt und rechtlich geprüft werden.
-            </p>
-
-        </div>
-
-    </section>
-
-</main>
-
-
-<footer class="footer">
-
-    <div class="footer-container">
-
-        <div class="footer-brand">
-
-            <a href="index.html" class="logo">
-                <span class="logo-mark">K</span>
-
-                <span class="logo-text">
-                    KERVAQ
-                    <small>Move Business Forward.</small>
-                </span>
+                <div class="brand-text">
+                    <span class="brand-name">KERVAQ</span>
+                    <span class="brand-tagline">Move Business Forward.</span>
+                </div>
             </a>
 
-            <p>Software, die Unternehmen voranbringt.</p>
+
+            <nav class="nav-right">
+
+                <a href="loesungen.html" data-i18n="solutions">
+                    Lösungen
+                </a>
+
+                <a href="ueber-uns.html" data-i18n="about">
+                    Über uns
+                </a>
+
+                <a href="kontakt.html" data-i18n="contact">
+                    Kontakt
+                </a>
+
+
+                <div class="language-switcher">
+
+                    <button
+                        class="lang-btn active"
+                        data-lang="de"
+                        type="button"
+                    >
+                        🇩🇪
+                    </button>
+
+                    <button
+                        class="lang-btn"
+                        data-lang="en"
+                        type="button"
+                    >
+                        🇬🇧
+                    </button>
+
+                    <button
+                        class="lang-btn"
+                        data-lang="fr"
+                        type="button"
+                    >
+                        🇫🇷
+                    </button>
+
+                </div>
+
+
+                <a href="login.html" class="nav-login" data-i18n="login">
+                    Login
+                </a>
+
+                <a href="kontakt.html" class="nav-cta" data-i18n="start">
+                    Starten
+                </a>
+
+            </nav>
+
+
+            <button
+                class="mobile-menu"
+                type="button"
+                aria-label="Menü öffnen"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
         </div>
 
-        <div class="footer-links">
-            <a href="loesungen.html">Lösungen</a>
-            <a href="ueber-uns.html">Über uns</a>
-            <a href="kontakt.html">Kontakt</a>
-            <a href="datenschutz.html">Datenschutz</a>
-            <a href="impressum.html">Impressum</a>
+    </header>
+
+
+    <!-- =========================
+         PAGE HERO
+    ========================== -->
+
+    <main>
+
+        <section class="page-hero">
+
+            <div class="page-hero-inner">
+
+                <div class="eyebrow">
+                    KERVAQ / LEGAL
+                </div>
+
+                <h1 data-i18n="imprintTitle">
+                    Impressum
+                </h1>
+
+                <p>
+                    Anbieterinformationen und rechtliche Hinweise.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             IMPRESSUM
+        ========================== -->
+
+        <section class="section legal-section">
+
+            <div class="legal-content">
+
+                <div class="legal-notice">
+
+                    <div class="legal-notice-label">
+                        VORLÄUFIGER PLATZHALTER
+                    </div>
+
+                    <h2>
+                        Diese Angaben befinden sich noch in Vorbereitung.
+                    </h2>
+
+                    <p>
+                        KERVAQ befindet sich aktuell in der Entwicklungs- und
+                        Vorbereitungsphase. Die endgültigen Unternehmens-,
+                        Kontakt- und Anbieterinformationen werden vor dem
+                        öffentlichen Betrieb ergänzt und rechtlich geprüft.
+                    </p>
+
+                    <p>
+                        Diese Seite stellt daher noch kein vollständiges,
+                        abschließendes Impressum dar.
+                    </p>
+
+                </div>
+
+
+                <div class="legal-block">
+
+                    <span class="legal-number">
+                        01
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Anbieter
+                        </h2>
+
+                        <p>
+                            KERVAQ
+                        </p>
+
+                        <p>
+                            Rechtsform:
+                            <strong>[wird ergänzt]</strong>
+                        </p>
+
+                        <p>
+                            Anschrift:
+                            <strong>[wird ergänzt]</strong>
+                        </p>
+
+                        <p>
+                            Sitz:
+                            <strong>[wird ergänzt]</strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="legal-block">
+
+                    <span class="legal-number">
+                        02
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Kontakt
+                        </h2>
+
+                        <p>
+                            E-Mail:
+                            <strong>[wird ergänzt]</strong>
+                        </p>
+
+                        <p>
+                            Telefon:
+                            <strong>[wird ergänzt]</strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="legal-block">
+
+                    <span class="legal-number">
+                        03
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Verantwortlich für Inhalte
+                        </h2>
+
+                        <p>
+                            Verantwortliche Person:
+                            <strong>[wird ergänzt]</strong>
+                        </p>
+
+                        <p>
+                            Anschrift:
+                            <strong>[wird ergänzt]</strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="legal-block">
+
+                    <span class="legal-number">
+                        04
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Unternehmensangaben
+                        </h2>
+
+                        <p>
+                            Handelsregister:
+                            <strong>[wird ergänzt, sofern zutreffend]</strong>
+                        </p>
+
+                        <p>
+                            Registergericht:
+                            <strong>[wird ergänzt]</strong>
+                        </p>
+
+                        <p>
+                            Umsatzsteuer-ID:
+                            <strong>[wird ergänzt, sofern vorhanden]</strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="legal-block">
+
+                    <span class="legal-number">
+                        05
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Haftung für Inhalte
+                        </h2>
+
+                        <p>
+                            Die Inhalte dieser Website werden mit größter
+                            Sorgfalt erstellt. Die endgültigen rechtlichen
+                            Hinweise und Formulierungen werden vor dem
+                            öffentlichen Launch überprüft und entsprechend
+                            ergänzt.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="legal-block">
+
+                    <span class="legal-number">
+                        06
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Urheberrecht
+                        </h2>
+
+                        <p>
+                            Die auf dieser Website verwendeten Texte,
+                            Grafiken, Designs, Logos und sonstigen Inhalte
+                            können urheberrechtlich geschützt sein.
+                        </p>
+
+                        <p>
+                            Eine Verwendung außerhalb der gesetzlich
+                            zulässigen Grenzen bedarf grundsätzlich der
+                            entsprechenden Zustimmung.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="legal-final">
+
+                    <div class="legal-final-mark">
+                        K
+                    </div>
+
+                    <div>
+
+                        <span>
+                            KERVAQ / LEGAL
+                        </span>
+
+                        <h2>
+                            Vor dem Launch wird diese Seite vollständig
+                            finalisiert.
+                        </h2>
+
+                        <p>
+                            Unternehmensdaten, Kontaktdaten und weitere
+                            erforderliche Angaben werden ergänzt, sobald die
+                            entsprechenden Informationen feststehen.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             AI CHAT
+        ========================== -->
+
+        <button
+            class="ai-open"
+            type="button"
+            aria-label="KERVAQ AI öffnen"
+        >
+            <span class="ai-dot"></span>
+            KERVAQ AI
+        </button>
+
+
+        <div class="ai-chat">
+
+            <div class="ai-header">
+
+                <div>
+                    <span class="ai-status"></span>
+                    <strong data-i18n="aiTitle">
+                        KERVAQ AI
+                    </strong>
+                </div>
+
+                <button
+                    class="ai-close"
+                    type="button"
+                    aria-label="Chat schließen"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="ai-messages">
+
+                <div class="ai-message ai-message-bot">
+
+                    <p data-i18n="aiWelcome">
+                        Hallo! Ich bin die KERVAQ AI. Wie kann ich dir helfen?
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <form class="ai-form">
+
+                <input
+                    type="text"
+                    data-i18n-placeholder="aiPlaceholder"
+                    placeholder="Frag etwas über KERVAQ..."
+                    autocomplete="off"
+                >
+
+                <button type="submit">
+                    →
+                </button>
+
+            </form>
+
         </div>
 
-    </div>
+    </main>
 
-    <div class="footer-bottom">
-        <span>© 2026 KERVAQ</span>
-        <span>Move Business Forward.</span>
-    </div>
 
-</footer>
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
-<script src="script.js"></script>
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="brand">
+
+                    <div class="brand-logo">
+                        K
+                    </div>
+
+                    <div class="brand-text">
+
+                        <span class="brand-name">
+                            KERVAQ
+                        </span>
+
+                        <span class="brand-tagline">
+                            Move Business Forward.
+                        </span>
+
+                    </div>
+
+                </a>
+
+                <p>
+                    Technologie für Unternehmen,
+                    die schneller und einfacher wachsen wollen.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3 data-i18n="footerSolutions">
+                    Lösungen
+                </h3>
+
+                <a href="loesungen.html">
+                    Automation
+                </a>
+
+                <a href="loesungen.html">
+                    Intelligence
+                </a>
+
+                <a href="loesungen.html">
+                    Efficiency
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3 data-i18n="footerAbout">
+                    Unternehmen
+                </h3>
+
+                <a href="ueber-uns.html">
+                    Über uns
+                </a>
+
+                <a href="kontakt.html">
+                    Kontakt
+                </a>
+
+                <a href="login.html" data-i18n="login">
+                    Login
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3 data-i18n="footerContact">
+                    Rechtliches
+                </h3>
+
+                <a href="datenschutz.html" data-i18n="footerPrivacy">
+                    Datenschutz
+                </a>
+
+                <a href="impressum.html" data-i18n="footerImprint">
+                    Impressum
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 KERVAQ
+            </span>
+
+            <span>
+                Move Business Forward.
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
 </html>

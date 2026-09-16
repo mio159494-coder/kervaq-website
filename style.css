@@ -15,7 +15,7 @@ html {
 
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
 
     background: #05070b;
 
@@ -41,6 +41,32 @@ button {
 
 
 /* =========================
+   KERVAQ COLORS
+========================= */
+
+:root {
+
+    --blue: #1683ff;
+
+    --blue-bright: #42a5ff;
+
+    --blue-soft:
+        rgba(22,131,255,0.15);
+
+    --white: #ffffff;
+
+    --text: #9da3ae;
+
+    --muted: #737b89;
+
+    --border:
+        rgba(255,255,255,0.08);
+
+}
+
+
+
+/* =========================
    NAVIGATION
 ========================= */
 
@@ -57,7 +83,7 @@ button {
     padding: 0 7%;
 
     border-bottom:
-        1px solid rgba(255,255,255,0.08);
+        1px solid var(--border);
 
     position: sticky;
 
@@ -66,21 +92,88 @@ button {
     z-index: 100;
 
     background:
-        rgba(5,7,11,0.85);
+        rgba(5,7,11,0.82);
 
-    backdrop-filter: blur(15px);
+    backdrop-filter:
+        blur(18px);
 }
 
 
-.logo {
 
-    font-size: 22px;
+/* =========================
+   LOGO
+========================= */
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+}
+
+
+.brand-symbol {
+
+    width: 29px;
+
+    height: 29px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.brand-symbol svg {
+
+    width: 100%;
+
+    height: 100%;
+
+    overflow: visible;
+}
+
+
+.brand-symbol path {
+
+    fill: none;
+
+    stroke: white;
+
+    stroke-width: 4;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+    transition:
+        stroke 0.3s;
+}
+
+
+.brand:hover
+.brand-symbol path {
+
+    stroke: var(--blue-bright);
+}
+
+
+.brand-name {
+
+    font-size: 21px;
 
     font-weight: 800;
 
     letter-spacing: 4px;
 }
 
+
+
+/* Navigation */
 
 nav {
 
@@ -94,9 +187,10 @@ nav a {
 
     color: #9da3ae;
 
-    font-size: 14px;
+    font-size: 13px;
 
-    transition: 0.3s;
+    transition:
+        color 0.3s;
 }
 
 
@@ -106,26 +200,38 @@ nav a:hover {
 }
 
 
+
+/* Button */
+
 .nav-button {
 
     border:
-        1px solid rgba(255,255,255,0.2);
+        1px solid rgba(255,255,255,0.18);
 
     padding: 10px 18px;
 
     border-radius: 6px;
 
-    font-size: 14px;
+    font-size: 13px;
 
-    transition: 0.3s;
+    transition:
+        0.3s;
 }
 
 
 .nav-button:hover {
 
-    background: white;
+    border-color:
+        var(--blue);
 
-    color: black;
+    background:
+        var(--blue);
+
+    color: white;
+
+    box-shadow:
+        0 0 25px
+        rgba(22,131,255,0.2);
 }
 
 
@@ -162,24 +268,57 @@ nav a:hover {
 }
 
 
+
+/* Badge */
+
 .badge {
 
-    display: inline-block;
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
 
     padding: 8px 14px;
 
     border:
-        1px solid rgba(255,255,255,0.12);
+        1px solid rgba(255,255,255,0.11);
 
     border-radius: 50px;
 
     color: #aab0ba;
 
-    font-size: 12px;
+    font-size: 11px;
 
     margin-bottom: 30px;
+
+    background:
+        rgba(255,255,255,0.015);
 }
 
+
+.status-dot {
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background:
+        var(--blue);
+
+    box-shadow:
+        0 0 12px
+        rgba(22,131,255,0.9);
+
+    animation:
+        statusPulse 2.5s ease-in-out infinite;
+}
+
+
+
+/* Headline */
 
 .hero h1 {
 
@@ -191,6 +330,8 @@ nav a:hover {
     letter-spacing: -5px;
 
     margin-bottom: 35px;
+
+    font-weight: 700;
 }
 
 
@@ -201,27 +342,38 @@ nav a:hover {
     background:
         linear-gradient(
             90deg,
-            #ffffff,
-            #737b89
+            #ffffff 0%,
+            #ffffff 35%,
+            #1683ff 100%
         );
 
     -webkit-background-clip: text;
+
+    background-clip: text;
 
     color: transparent;
 }
 
 
+
+/* Hero Text */
+
 .hero p {
 
     max-width: 620px;
 
-    color: #9da3ae;
+    color: var(--text);
 
-    font-size: 18px;
+    font-size: 17px;
 
     margin-bottom: 40px;
+
+    line-height: 1.8;
 }
 
+
+
+/* Hero Buttons */
 
 .hero-buttons {
 
@@ -233,17 +385,22 @@ nav a:hover {
 
 .button {
 
-    display: inline-block;
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
 
     padding: 14px 25px;
 
     border-radius: 7px;
 
-    font-size: 14px;
+    font-size: 13px;
 
     font-weight: 600;
 
-    transition: 0.3s;
+    transition:
+        0.3s;
 }
 
 
@@ -257,10 +414,26 @@ nav a:hover {
 
 .primary:hover {
 
-    transform: translateY(-3px);
+    transform:
+        translateY(-3px);
 
     box-shadow:
-        0 10px 30px rgba(255,255,255,0.15);
+        0 10px 35px
+        rgba(255,255,255,0.13);
+}
+
+
+.primary span {
+
+    transition:
+        transform 0.3s;
+}
+
+
+.primary:hover span {
+
+    transform:
+        translateX(4px);
 }
 
 
@@ -275,13 +448,19 @@ nav a:hover {
 
 .secondary:hover {
 
-    border-color: white;
+    border-color:
+        var(--blue);
+
+    color: white;
+
+    background:
+        rgba(22,131,255,0.05);
 }
 
 
 
 /* =========================
-   KERVAQ HERO VISUAL
+   HERO VISUAL
 ========================= */
 
 .hero-visual {
@@ -301,7 +480,7 @@ nav a:hover {
 
 
 
-/* Hintergrund-Raster */
+/* Grid */
 
 .grid {
 
@@ -312,13 +491,13 @@ nav a:hover {
     background-image:
 
         linear-gradient(
-            rgba(255,255,255,0.045) 1px,
+            rgba(255,255,255,0.04) 1px,
             transparent 1px
         ),
 
         linear-gradient(
             90deg,
-            rgba(255,255,255,0.045) 1px,
+            rgba(255,255,255,0.04) 1px,
             transparent 1px
         );
 
@@ -328,21 +507,47 @@ nav a:hover {
         radial-gradient(
             circle,
             black,
-            transparent 70%
+            transparent 68%
         );
 }
 
 
 
-/* Äußerer Kreis */
+/* Blue Glow */
+
+.core-glow {
+
+    position: absolute;
+
+    width: 240px;
+
+    height: 240px;
+
+    border-radius: 50%;
+
+    background:
+        var(--blue);
+
+    filter:
+        blur(100px);
+
+    opacity: 0.08;
+
+    animation:
+        glowPulse 5s ease-in-out infinite;
+}
+
+
+
+/* Main outer ring */
 
 .orb {
 
     position: absolute;
 
-    width: 330px;
+    width: 320px;
 
-    height: 330px;
+    height: 320px;
 
     top: 50%;
 
@@ -354,18 +559,16 @@ nav a:hover {
     border-radius: 50%;
 
     border:
-        1px solid rgba(255,255,255,0.28);
+        1px solid
+        rgba(255,255,255,0.24);
 
     box-shadow:
 
-        0 0 50px
-        rgba(255,255,255,0.04),
-
-        0 0 120px
-        rgba(255,255,255,0.05),
+        0 0 60px
+        rgba(22,131,255,0.07),
 
         inset 0 0 80px
-        rgba(255,255,255,0.04);
+        rgba(255,255,255,0.025);
 
     animation:
         orbFloat 7s ease-in-out infinite;
@@ -373,61 +576,78 @@ nav a:hover {
 
 
 
-/* Zusätzliche Ringe */
+/* Rings */
 
 .orb-ring {
 
     position: absolute;
 
-    border-radius: 50%;
-
-    border:
-        1px solid rgba(255,255,255,0.08);
-
     top: 50%;
 
     left: 50%;
+
+    border-radius: 50%;
 
     transform:
         translate(-50%, -50%);
 }
 
 
-.ring-one {
+.ring-outer {
 
-    width: 390px;
+    width: 440px;
 
-    height: 390px;
+    height: 440px;
+
+    border:
+        1px dashed
+        rgba(22,131,255,0.16);
 
     animation:
-        rotateRing 18s linear infinite;
+        rotateRing 25s linear infinite;
 }
 
 
 .ring-two {
 
-    width: 455px;
+    width: 385px;
 
-    height: 455px;
+    height: 385px;
 
     border:
-        1px dashed rgba(255,255,255,0.06);
+        1px solid
+        rgba(255,255,255,0.07);
 
     animation:
-        rotateRingReverse 25s linear infinite;
+        rotateRingReverse 18s linear infinite;
+}
+
+
+.ring-inner {
+
+    width: 215px;
+
+    height: 215px;
+
+    border:
+        1px solid
+        rgba(22,131,255,0.15);
+
+    animation:
+        rotateRing 12s linear infinite;
 }
 
 
 
-/* Innerer Kern */
+/* Inner core */
 
 .orb-inner {
 
     position: absolute;
 
-    width: 125px;
+    width: 120px;
 
-    height: 125px;
+    height: 120px;
 
     top: 50%;
 
@@ -442,34 +662,32 @@ nav a:hover {
         radial-gradient(
             circle,
             #ffffff 0%,
-            #dfe2e6 35%,
-            #777f8b 65%,
-            transparent 72%
+            #dcecff 25%,
+            #1683ff 58%,
+            rgba(22,131,255,0.1) 72%,
+            transparent 75%
         );
 
     box-shadow:
 
-        0 0 25px
-        rgba(255,255,255,0.5),
+        0 0 30px
+        rgba(22,131,255,0.45),
 
-        0 0 70px
-        rgba(255,255,255,0.18),
-
-        0 0 130px
-        rgba(255,255,255,0.08);
+        0 0 80px
+        rgba(22,131,255,0.18);
 }
 
 
 
-/* Kleiner Kern */
+/* Core */
 
 .core {
 
     position: absolute;
 
-    width: 35px;
+    width: 28px;
 
-    height: 35px;
+    height: 28px;
 
     top: 50%;
 
@@ -483,7 +701,14 @@ nav a:hover {
     background: white;
 
     box-shadow:
-        0 0 25px white;
+
+        0 0 18px white,
+
+        0 0 45px
+        var(--blue),
+
+        0 0 80px
+        rgba(22,131,255,0.7);
 
     animation:
         corePulse 3s ease-in-out infinite;
@@ -491,7 +716,7 @@ nav a:hover {
 
 
 
-/* Orbit-Punkte */
+/* Orbit dots */
 
 .orbit-dot {
 
@@ -503,22 +728,25 @@ nav a:hover {
 
     border-radius: 50%;
 
-    background: white;
+    background:
+        var(--blue-bright);
 
     box-shadow:
-        0 0 15px
-        rgba(255,255,255,0.7);
+        0 0 14px
+        var(--blue);
+
+    z-index: 5;
 }
 
 
 .dot-one {
 
-    top: 17%;
+    top: 18%;
 
-    right: 22%;
+    right: 20%;
 
     animation:
-        dotPulse 2s ease-in-out infinite;
+        dotPulse 2.5s ease-in-out infinite;
 }
 
 
@@ -526,30 +754,32 @@ nav a:hover {
 
     bottom: 18%;
 
-    left: 20%;
-
-    animation:
-        dotPulse 2.5s ease-in-out infinite;
-}
-
-
-.dot-three {
-
-    top: 38%;
-
-    right: 4%;
+    left: 19%;
 
     animation:
         dotPulse 3s ease-in-out infinite;
 }
 
 
+.dot-three {
 
-/* Technologische Linien */
+    top: 42%;
+
+    right: 2%;
+
+    animation:
+        dotPulse 2s ease-in-out infinite;
+}
+
+
+
+/* Tech lines */
 
 .tech-line {
 
     position: absolute;
+
+    width: 150px;
 
     height: 1px;
 
@@ -557,13 +787,11 @@ nav a:hover {
         linear-gradient(
             90deg,
             transparent,
-            rgba(255,255,255,0.25),
+            rgba(22,131,255,0.35),
             transparent
         );
 
-    width: 150px;
-
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 
@@ -571,9 +799,10 @@ nav a:hover {
 
     top: 25%;
 
-    left: -5%;
+    left: -4%;
 
-    transform: rotate(25deg);
+    transform:
+        rotate(25deg);
 }
 
 
@@ -581,14 +810,61 @@ nav a:hover {
 
     bottom: 24%;
 
-    right: -5%;
+    right: -4%;
 
-    transform: rotate(-25deg);
+    transform:
+        rotate(-25deg);
 }
 
 
 
-/* Animationen */
+/* Visual label */
+
+.visual-label {
+
+    position: absolute;
+
+    bottom: 20%;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color:
+        rgba(255,255,255,0.28);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    white-space: nowrap;
+}
+
+
+.visual-line {
+
+    width: 20px;
+
+    height: 1px;
+
+    background:
+        var(--blue);
+
+    opacity: 0.7;
+}
+
+
+
+/* =========================
+   ANIMATIONS
+========================= */
 
 @keyframes orbFloat {
 
@@ -601,7 +877,7 @@ nav a:hover {
     50% {
 
         transform:
-            translate(-50%, -54%);
+            translate(-50%, -53%);
     }
 
 }
@@ -652,17 +928,32 @@ nav a:hover {
         transform:
             translate(-50%, -50%)
             scale(1);
-
-        opacity: 1;
     }
 
     50% {
 
         transform:
             translate(-50%, -50%)
-            scale(1.15);
+            scale(1.13);
+    }
 
-        opacity: 0.85;
+}
+
+
+@keyframes glowPulse {
+
+    0%, 100% {
+
+        opacity: 0.05;
+
+        transform: scale(0.95);
+    }
+
+    50% {
+
+        opacity: 0.11;
+
+        transform: scale(1.08);
     }
 
 }
@@ -672,7 +963,7 @@ nav a:hover {
 
     0%, 100% {
 
-        opacity: 0.3;
+        opacity: 0.35;
 
         transform: scale(1);
     }
@@ -681,7 +972,22 @@ nav a:hover {
 
         opacity: 1;
 
-        transform: scale(1.6);
+        transform: scale(1.5);
+    }
+
+}
+
+
+@keyframes statusPulse {
+
+    0%, 100% {
+
+        opacity: 0.4;
+    }
+
+    50% {
+
+        opacity: 1;
     }
 
 }
@@ -708,9 +1014,10 @@ nav a:hover {
 
 .section-label {
 
-    color: #737b89;
+    color:
+        var(--muted);
 
-    font-size: 12px;
+    font-size: 11px;
 
     letter-spacing: 3px;
 }
@@ -726,6 +1033,8 @@ nav a:hover {
     letter-spacing: -3px;
 
     margin: 20px 0;
+
+    font-weight: 700;
 }
 
 
@@ -733,7 +1042,8 @@ nav a:hover {
 
     display: block;
 
-    color: #737b89;
+    color:
+        #737b89;
 
     font-size: inherit;
 
@@ -743,9 +1053,10 @@ nav a:hover {
 
 .section-heading p {
 
-    color: #858c98;
+    color:
+        #858c98;
 
-    font-size: 17px;
+    font-size: 16px;
 
     max-width: 650px;
 }
@@ -785,23 +1096,27 @@ nav a:hover {
 
     transition:
         transform 0.4s,
-        border-color 0.4s;
+        border-color 0.4s,
+
+        box-shadow 0.4s;
 }
 
 
 .feature-card:hover {
 
-    transform:
-        translateY(-8px);
-
     border-color:
-        rgba(255,255,255,0.2);
+        rgba(22,131,255,0.3);
+
+    box-shadow:
+        0 15px 50px
+        rgba(0,0,0,0.2);
 }
 
 
 .icon {
 
-    color: #737b89;
+    color:
+        #737b89;
 
     font-size: 12px;
 
@@ -811,7 +1126,7 @@ nav a:hover {
 
 .feature-card h3 {
 
-    font-size: 25px;
+    font-size: 24px;
 
     margin-bottom: 15px;
 }
@@ -819,7 +1134,8 @@ nav a:hover {
 
 .feature-card > p {
 
-    color: #858c98;
+    color:
+        #858c98;
 
     font-size: 14px;
 
@@ -860,7 +1176,8 @@ nav a:hover {
 
 .learn-more:hover {
 
-    color: #bfc4cc;
+    color:
+        var(--blue-bright);
 }
 
 
@@ -900,7 +1217,8 @@ nav a:hover {
 
 .card-details p {
 
-    color: #858c98;
+    color:
+        #858c98;
 
     font-size: 14px;
 
@@ -924,7 +1242,8 @@ nav a:hover {
 
 .card-details li {
 
-    color: #aeb3bc;
+    color:
+        #aeb3bc;
 
     font-size: 13px;
 
@@ -942,7 +1261,8 @@ nav a:hover {
 
     left: 0;
 
-    color: #737b89;
+    color:
+        var(--blue);
 }
 
 
@@ -962,6 +1282,9 @@ nav a:hover {
 
     transform:
         rotate(45deg);
+
+    color:
+        var(--blue);
 }
 
 
@@ -991,10 +1314,10 @@ nav a:hover {
 
     font-size: 300px;
 
-    font-weight: 900;
+    font-weight: 800;
 
     color:
-        rgba(255,255,255,0.03);
+        rgba(22,131,255,0.035);
 
     line-height: 1;
 }
@@ -1022,7 +1345,8 @@ nav a:hover {
 
 .about-content h2 span {
 
-    color: #747c89;
+    color:
+        var(--blue);
 
     font-size: inherit;
 }
@@ -1030,7 +1354,8 @@ nav a:hover {
 
 .about-content p {
 
-    color: #858c98;
+    color:
+        #858c98;
 
     margin-bottom: 20px;
 }
@@ -1054,7 +1379,7 @@ nav a:hover {
 
         radial-gradient(
             circle at center,
-            rgba(255,255,255,0.08),
+            rgba(22,131,255,0.08),
             transparent 50%
         );
 }
@@ -1073,7 +1398,8 @@ nav a:hover {
 
 .cta p {
 
-    color: #858c98;
+    color:
+        #858c98;
 
     margin-bottom: 35px;
 }
@@ -1100,13 +1426,49 @@ footer {
 }
 
 
-.footer-logo {
+.footer-brand {
 
-    font-size: 20px;
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 19px;
 
     font-weight: 800;
 
-    letter-spacing: 4px;
+    letter-spacing: 3px;
+}
+
+
+.footer-symbol {
+
+    width: 25px;
+
+    height: 25px;
+}
+
+
+.footer-symbol svg {
+
+    width: 100%;
+
+    height: 100%;
+}
+
+
+.footer-symbol path {
+
+    fill: none;
+
+    stroke: white;
+
+    stroke-width: 4;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
 }
 
 
@@ -1114,7 +1476,8 @@ footer p {
 
     text-align: center;
 
-    color: #666d78;
+    color:
+        #666d78;
 
     font-size: 13px;
 }
@@ -1128,9 +1491,17 @@ footer p {
 
     gap: 20px;
 
-    color: #777e89;
+    color:
+        #777e89;
 
     font-size: 12px;
+}
+
+
+.footer-links a:hover {
+
+    color:
+        var(--blue-bright);
 }
 
 
@@ -1140,7 +1511,8 @@ footer p {
 
     margin-top: 40px;
 
-    color: #4f5560;
+    color:
+        #4f5560;
 
     font-size: 11px;
 
@@ -1194,19 +1566,19 @@ footer p {
     }
 
 
-    .ring-one {
+    .ring-outer {
 
-        width: 320px;
+        width: 370px;
 
-        height: 320px;
+        height: 370px;
     }
 
 
     .ring-two {
 
-        width: 370px;
+        width: 330px;
 
-        height: 370px;
+        height: 330px;
     }
 
 

@@ -20,11 +20,12 @@
          NAVIGATION
     ========================== -->
     <header class="navbar">
-        <div class="container nav-container">
+
+        <div class="nav-container">
 
             <a href="index.html" class="brand">
 
-                <div class="brand-mark">
+                <div class="brand-logo">
                     K
                 </div>
 
@@ -43,10 +44,11 @@
             </a>
 
 
-            <nav class="nav-links">
+            <nav class="nav-right">
 
                 <a
                     href="loesungen.html"
+                    data-nav="loesungen"
                     data-i18n="solutions"
                 >
                     Lösungen
@@ -54,6 +56,7 @@
 
                 <a
                     href="ueber-uns.html"
+                    data-nav="ueber-uns"
                     data-i18n="about"
                 >
                     Über uns
@@ -61,22 +64,10 @@
 
                 <a
                     href="kontakt.html"
+                    data-nav="kontakt"
                     data-i18n="contact"
                 >
                     Kontakt
-                </a>
-
-            </nav>
-
-
-            <div class="nav-right">
-
-                <a
-                    href="login.html"
-                    class="login-link"
-                    data-i18n="login"
-                >
-                    Login
                 </a>
 
 
@@ -113,6 +104,16 @@
 
 
                 <a
+                    href="login.html"
+                    class="nav-login"
+                    data-nav="login"
+                    data-i18n="login"
+                >
+                    Login
+                </a>
+
+
+                <a
                     href="kontakt.html"
                     class="nav-cta"
                     data-i18n="start"
@@ -120,20 +121,21 @@
                     Starten
                 </a>
 
+            </nav>
 
-                <button
-                    type="button"
-                    class="mobile-menu"
-                    aria-label="Menü öffnen"
-                >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
 
-            </div>
+            <button
+                type="button"
+                class="mobile-menu"
+                aria-label="Menü öffnen"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
         </div>
+
     </header>
 
 
@@ -256,9 +258,11 @@
                     class="back-link"
                 >
                     <span>←</span>
+
                     <span>
                         Zurück zu KERVAQ
                     </span>
+
                 </a>
 
             </div>
@@ -269,7 +273,7 @@
 
 
     <!-- =========================
-         AI CHAT
+         KERVAQ AI
     ========================== -->
     <button
         type="button"
@@ -356,7 +360,7 @@
 
                     <a href="index.html" class="brand">
 
-                        <div class="brand-mark">
+                        <div class="brand-logo">
                             K
                         </div>
 

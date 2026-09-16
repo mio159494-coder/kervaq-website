@@ -516,4 +516,272 @@ document.addEventListener("DOMContentLoaded", () => {
                 details.textContent =
                     dictionary[key] || "";
 
-                const
+                const span = button.querySelector("span");
+
+                if (span) {
+                    span.textContent = dictionary.less;
+                }
+
+            } else {
+
+                details.textContent = "";
+
+                const span = button.querySelector("span");
+
+                if (span) {
+                    span.textContent = dictionary.more;
+                }
+
+            }
+
+        });
+
+    });
+
+
+    /* =====================================================
+       AI OPEN
+    ===================================================== */
+
+    if (aiOpen && aiChat) {
+
+        aiOpen.addEventListener("click", () => {
+
+            aiChat.classList.add("open");
+            aiOpen.classList.add("hidden");
+
+            if (aiInput) {
+
+                setTimeout(() => {
+                    aiInput.focus();
+                }, 150);
+
+            }
+
+        });
+
+    }
+
+
+    /* =====================================================
+       AI CLOSE
+    ===================================================== */
+
+    if (aiClose && aiChat && aiOpen) {
+
+        aiClose.addEventListener("click", () => {
+
+            aiChat.classList.remove("open");
+            aiOpen.classList.remove("hidden");
+
+        });
+
+    }
+
+
+    /* =====================================================
+       AI FORM
+    ===================================================== */
+
+    if (aiForm && aiInput && aiMessages) {
+
+        aiForm.addEventListener("submit", event => {
+
+            event.preventDefault();
+
+            const question = aiInput.value.trim();
+
+            if (!question) return;
+
+
+            const userMessage =
+                document.createElement("div");
+
+            userMessage.className = "ai-message user";
+            userMessage.textContent = question;
+
+            aiMessages.appendChild(userMessage);
+
+            aiInput.value = "";
+
+
+            setTimeout(() => {
+
+                const lang =
+                    localStorage.getItem("kervaq-language") || "de";
+
+                const dictionary = translations[lang];
+
+
+                const botMessage =
+                    document.createElement("div");
+
+                botMessage.className = "ai-message bot";
+                botMessage.textContent = dictionary.aiDemo;
+
+                aiMessages.appendChild(botMessage);
+
+                aiMessages.scrollTop =
+                    aiMessages.scrollHeight;
+
+            }, 600);
+
+
+            aiMessages.scrollTop =
+                aiMessages.scrollHeight;
+
+        });
+
+    }
+
+
+    /* =====================================================
+       CONTACT FORM
+    ===================================================== */
+
+    const contactForm =
+        document.querySelector("#contactForm");
+
+    if (contactForm) {
+
+        contactForm.addEventListener("submit", event => {
+
+            event.preventDefault();
+
+            alert(
+                "Danke für Ihre Nachricht! Das Formular ist aktuell eine Demo."
+            );
+
+            contactForm.reset();
+
+        });
+
+    }
+
+
+    /* =====================================================
+       LOGIN
+    ===================================================== */
+
+    const loginForm =
+        document.querySelector("#loginForm");
+
+    if (loginForm) {
+
+        loginForm.addEventListener("submit", event => {
+
+            event.preventDefault();
+
+            const email =
+                document.querySelector("#loginEmail");
+
+            const password =
+                document.querySelector("#loginPassword");
+
+            const error =
+                document.querySelector(".login-error");
+
+
+            if (!email || !password) return;
+
+
+            if (
+                !email.value.trim() ||
+                password.value.length < 4
+            ) {
+
+                if (error) {
+
+                    error.style.display = "block";
+
+                    error.textContent =
+                        "Bitte E-Mail und ein Passwort mit mindestens 4 Zeichen eingeben.";
+
+                }
+
+                return;
+
+            }
+
+
+            sessionStorage.setItem(
+                "kervaq-demo-user",
+                email.value.trim()
+            );
+
+
+            window.location.href =
+                "dashboard.html";
+
+        });
+
+    }
+
+
+    /* =====================================================
+       DASHBOARD PROTECTION
+    ===================================================== */
+
+    const isDashboard =
+        document.body.classList.contains("dashboard-page");
+
+    if (isDashboard) {
+
+        const user =
+            sessionStorage.getItem("kervaq-demo-user");
+
+
+        if (!user) {
+
+            window.location.href =
+                "login.html";
+
+            return;
+
+        }
+
+
+        const emailElement =
+            document.querySelector("[data-user-email]");
+
+        if (emailElement) {
+            emailElement.textContent = user;
+        }
+
+
+        const avatar =
+            document.querySelector("[data-user-avatar]");
+
+        if (avatar) {
+
+            avatar.textContent =
+                user.charAt(0).toUpperCase();
+
+        }
+
+    }
+
+
+    /* =====================================================
+       LOGOUT
+    ===================================================== */
+
+    const logoutButton =
+        document.querySelector(".logout-btn");
+
+    if (logoutButton) {
+
+        logoutButton.addEventListener("click", () => {
+
+            sessionStorage.removeItem(
+                "kervaq-demo-user"
+            );
+
+            window.location.href =
+                "login.html";
+
+        });
+
+    }
+
+});

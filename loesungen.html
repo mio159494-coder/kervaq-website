@@ -16,71 +16,103 @@
 
 <body>
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
     <header class="navbar">
-        <div class="container nav-container">
+
+        <div class="nav-container">
 
             <a href="index.html" class="brand">
-                <div class="brand-mark">K</div>
+
+                <div class="brand-logo">
+                    K
+                </div>
 
                 <div class="brand-text">
-                    <span class="brand-name">KERVAQ</span>
-                    <span class="brand-tagline">Move Business Forward.</span>
+
+                    <span class="brand-name">
+                        KERVAQ
+                    </span>
+
+                    <span class="brand-tagline">
+                        Move Business Forward.
+                    </span>
+
                 </div>
+
             </a>
 
-            <nav class="nav-links">
-                <a href="loesungen.html" data-i18n="solutions">
+
+            <nav class="nav-right">
+
+                <a
+                    href="loesungen.html"
+                    data-nav="loesungen"
+                    data-i18n="solutions"
+                >
                     Lösungen
                 </a>
 
-                <a href="ueber-uns.html" data-i18n="about">
+                <a
+                    href="ueber-uns.html"
+                    data-nav="ueber-uns"
+                    data-i18n="about"
+                >
                     Über uns
                 </a>
 
-                <a href="kontakt.html" data-i18n="contact">
+                <a
+                    href="kontakt.html"
+                    data-nav="kontakt"
+                    data-i18n="contact"
+                >
                     Kontakt
                 </a>
-            </nav>
 
-            <div class="nav-right">
-
-                <a href="login.html" class="login-link" data-i18n="login">
-                    Login
-                </a>
 
                 <div class="language-switcher">
 
                     <button
-                        type="button"
                         class="lang-btn active"
                         data-lang="de"
+                        type="button"
                         aria-label="Deutsch"
                     >
                         🇩🇪
                     </button>
 
                     <button
-                        type="button"
                         class="lang-btn"
                         data-lang="en"
+                        type="button"
                         aria-label="English"
                     >
                         🇬🇧
                     </button>
 
                     <button
-                        type="button"
                         class="lang-btn"
                         data-lang="fr"
+                        type="button"
                         aria-label="Français"
                     >
                         🇫🇷
                     </button>
 
                 </div>
+
+
+                <a
+                    href="login.html"
+                    class="nav-login"
+                    data-nav="login"
+                    data-i18n="login"
+                >
+                    Login
+                </a>
+
 
                 <a
                     href="kontakt.html"
@@ -90,46 +122,146 @@
                     Starten
                 </a>
 
-                <button
-                    type="button"
-                    class="mobile-menu"
-                    aria-label="Menü öffnen"
-                >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+            </nav>
 
-            </div>
+
+            <button
+                class="mobile-menu"
+                type="button"
+                aria-label="Menü öffnen"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
         </div>
+
     </header>
 
 
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
     <main>
 
-        <!-- =========================
-             PAGE HERO
-        ========================== -->
-        <section class="page-hero">
 
-            <div class="container">
+        <!-- =================================================
+             HERO
+        ================================================== -->
 
-                <div class="page-hero-content">
+        <section class="hero solutions-hero">
 
-                    <span class="eyebrow">
-                        KERVAQ / SOLUTIONS
-                    </span>
+            <div class="hero-layout">
+
+                <div class="hero-content">
+
+                    <div class="hero-badge">
+
+                        <span class="pulse-dot"></span>
+
+                        KERVAQ SOLUTIONS
+
+                    </div>
+
 
                     <h1 data-i18n="solutionsPageTitle">
                         Lösungen, die Arbeit abnehmen.
                     </h1>
 
-                    <p data-i18n="solutionsPageText">
-                        KERVAQ entwickelt Software, die Unternehmen dabei
-                        unterstützt, Prozesse zu automatisieren, effizienter
-                        zu arbeiten und wertvolle Zeit zurückzugewinnen.
+
+                    <p
+                        class="hero-text"
+                        data-i18n="solutionsPageText"
+                    >
+                        KERVAQ entwickelt intelligente Softwarelösungen,
+                        die Unternehmen dabei unterstützen, Prozesse zu
+                        automatisieren, effizienter zu arbeiten und
+                        wertvolle Zeit zurückzugewinnen.
                     </p>
+
+
+                    <div class="hero-actions">
+
+                        <a
+                            href="kontakt.html"
+                            class="btn btn-primary"
+                            data-i18n="heroPrimary"
+                        >
+                            Kontakt aufnehmen
+                        </a>
+
+                        <a
+                            href="#solutions-overview"
+                            class="btn btn-secondary"
+                            data-i18n="heroSecondary"
+                        >
+                            Lösungen entdecken
+                        </a>
+
+                    </div>
+
+
+                    <div class="hero-meta">
+
+                        <span>
+                            AUTOMATION
+                        </span>
+
+                        <span>
+                            INTELLIGENCE
+                        </span>
+
+                        <span>
+                            EFFICIENCY
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =============================================
+                     VISUAL
+                ============================================== -->
+
+                <div class="hero-visual">
+
+                    <div class="tech-core">
+
+                        <div class="system-grid"></div>
+
+                        <div class="core-glow"></div>
+
+                        <div class="ring ring-one"></div>
+
+                        <div class="ring ring-two"></div>
+
+                        <div class="ring ring-three"></div>
+
+
+                        <div class="core">
+
+                            <div class="core-inner">
+                                K
+                            </div>
+
+                        </div>
+
+
+                        <div class="orbit-dot dot-one"></div>
+                        <div class="orbit-dot dot-two"></div>
+                        <div class="orbit-dot dot-three"></div>
+                        <div class="orbit-dot dot-four"></div>
+                        <div class="orbit-dot dot-five"></div>
+
+
+                        <div class="core-label">
+                            KERVAQ TECHNOLOGY CORE
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -138,328 +270,503 @@
         </section>
 
 
-        <!-- =========================
-             SOLUTIONS
-        ========================== -->
+        <!-- =================================================
+             INTRO
+        ================================================== -->
+
+        <section
+            class="section"
+            id="solutions-overview"
+        >
+
+            <div class="section-heading">
+
+                <div class="eyebrow">
+                    KERVAQ / SOLUTIONS
+                </div>
+
+
+                <h2>
+                    Technologie für bessere Abläufe.
+                </h2>
+
+
+                <p>
+                    KERVAQ konzentriert sich auf drei Bereiche:
+                    Automatisierung, intelligente Systeme und
+                    effizientere Prozesse.
+                </p>
+
+            </div>
+
+
+            <!-- =============================================
+                 SOLUTION GRID
+            ============================================== -->
+
+            <div class="solution-page-grid">
+
+
+                <!-- =========================================
+                     AUTOMATION
+                ========================================== -->
+
+                <article class="solution-card">
+
+                    <div class="solution-card-top">
+
+                        <span class="solution-card-number">
+                            01
+                        </span>
+
+                        <span class="solution-card-line"></span>
+
+                    </div>
+
+
+                    <div class="solution-card-icon">
+                        ◇
+                    </div>
+
+
+                    <h3 data-i18n="automationTitle">
+                        Automatisierung
+                    </h3>
+
+
+                    <p data-i18n="automationText">
+                        Wiederkehrende Aufgaben müssen nicht
+                        dauerhaft manuell erledigt werden.
+                        KERVAQ hilft dabei, Prozesse sinnvoll
+                        zu automatisieren.
+                    </p>
+
+
+                    <div class="solution-feature-list">
+
+                        <div class="solution-feature">
+
+                            <span>
+                                01
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Prozesse automatisieren
+                                </strong>
+
+                                <p>
+                                    Routineaufgaben können durch
+                                    digitale Workflows automatisch
+                                    ausgeführt werden.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="solution-feature">
+
+                            <span>
+                                02
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Zeit zurückgewinnen
+                                </strong>
+
+                                <p>
+                                    Mitarbeiter können sich stärker
+                                    auf wertschöpfende Aufgaben
+                                    konzentrieren.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="solution-feature">
+
+                            <span>
+                                03
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Fehler reduzieren
+                                </strong>
+
+                                <p>
+                                    Standardisierte Abläufe können
+                                    manuelle Fehler und unnötige
+                                    Arbeitsschritte reduzieren.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =========================================
+                     INTELLIGENCE
+                ========================================== -->
+
+                <article class="solution-card">
+
+                    <div class="solution-card-top">
+
+                        <span class="solution-card-number">
+                            02
+                        </span>
+
+                        <span class="solution-card-line"></span>
+
+                    </div>
+
+
+                    <div class="solution-card-icon">
+                        ◉
+                    </div>
+
+
+                    <h3 data-i18n="intelligenceTitle">
+                        Intelligente Systeme
+                    </h3>
+
+
+                    <p data-i18n="intelligenceText">
+                        Moderne Software kann Informationen
+                        verarbeiten, Zusammenhänge erkennen und
+                        Unternehmen bei täglichen Abläufen
+                        unterstützen.
+                    </p>
+
+
+                    <div class="solution-feature-list">
+
+                        <div class="solution-feature">
+
+                            <span>
+                                01
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Informationen verbinden
+                                </strong>
+
+                                <p>
+                                    Relevante Daten und Prozesse
+                                    können zentral zusammengeführt
+                                    werden.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="solution-feature">
+
+                            <span>
+                                02
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Smarter arbeiten
+                                </strong>
+
+                                <p>
+                                    Intelligente Systeme unterstützen
+                                    Mitarbeiter bei wiederkehrenden
+                                    Aufgaben.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="solution-feature">
+
+                            <span>
+                                03
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Skalierbare Technologie
+                                </strong>
+
+                                <p>
+                                    Digitale Systeme können mit den
+                                    Anforderungen eines Unternehmens
+                                    mitwachsen.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =========================================
+                     EFFICIENCY
+                ========================================== -->
+
+                <article class="solution-card">
+
+                    <div class="solution-card-top">
+
+                        <span class="solution-card-number">
+                            03
+                        </span>
+
+                        <span class="solution-card-line"></span>
+
+                    </div>
+
+
+                    <div class="solution-card-icon">
+                        ↗
+                    </div>
+
+
+                    <h3 data-i18n="efficiencyTitle">
+                        Mehr Effizienz
+                    </h3>
+
+
+                    <p data-i18n="efficiencyText">
+                        Das Ziel ist nicht einfach mehr Software.
+                        Das Ziel sind bessere Abläufe, weniger
+                        unnötiger Aufwand und mehr Zeit.
+                    </p>
+
+
+                    <div class="solution-feature-list">
+
+                        <div class="solution-feature">
+
+                            <span>
+                                01
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Weniger Aufwand
+                                </strong>
+
+                                <p>
+                                    Überflüssige manuelle Schritte
+                                    können identifiziert und
+                                    vereinfacht werden.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="solution-feature">
+
+                            <span>
+                                02
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Klare Prozesse
+                                </strong>
+
+                                <p>
+                                    Strukturierte digitale Abläufe
+                                    schaffen mehr Übersicht im
+                                    Arbeitsalltag.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="solution-feature">
+
+                            <span>
+                                03
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Mehr Fokus auf Wachstum
+                                </strong>
+
+                                <p>
+                                    Gesparte Zeit kann dort eingesetzt
+                                    werden, wo sie für das Unternehmen
+                                    den größten Nutzen bringt.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             BENEFITS
+        ================================================== -->
+
         <section class="section">
 
-            <div class="container">
+            <div class="section-heading">
 
-                <div class="solutions-list">
-
-                    <!-- =====================
-                         AUTOMATISIERUNG
-                    ====================== -->
-                    <article class="solution-block">
-
-                        <div class="solution-number">
-                            01
-                        </div>
-
-                        <div class="solution-content">
-
-                            <div class="solution-icon">
-                                ↗
-                            </div>
-
-                            <h2 data-i18n="automationTitle">
-                                Automatisierung
-                            </h2>
-
-                            <p data-i18n="automationText">
-                                Wiederkehrende Aufgaben müssen nicht
-                                dauerhaft manuell erledigt werden.
-                                KERVAQ hilft dabei, Prozesse zu erkennen
-                                und sinnvoll zu automatisieren.
-                            </p>
-
-                            <div class="solution-details">
-
-                                <div class="solution-detail">
-
-                                    <span>01</span>
-
-                                    <div>
-                                        <h3>
-                                            Prozesse automatisieren
-                                        </h3>
-
-                                        <p>
-                                            Routineaufgaben können durch
-                                            digitale Workflows automatisch
-                                            ausgeführt werden.
-                                        </p>
-                                    </div>
-
-                                </div>
-
-
-                                <div class="solution-detail">
-
-                                    <span>02</span>
-
-                                    <div>
-                                        <h3>
-                                            Zeit zurückgewinnen
-                                        </h3>
-
-                                        <p>
-                                            Mitarbeiter können sich stärker
-                                            auf wertschöpfende Aufgaben
-                                            konzentrieren.
-                                        </p>
-                                    </div>
-
-                                </div>
-
-
-                                <div class="solution-detail">
-
-                                    <span>03</span>
-
-                                    <div>
-                                        <h3>
-                                            Fehler reduzieren
-                                        </h3>
-
-                                        <p>
-                                            Standardisierte Abläufe können
-                                            manuelle Fehler und unnötige
-                                            Arbeitsschritte reduzieren.
-                                        </p>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- =====================
-                         INTELLIGENZ
-                    ====================== -->
-                    <article class="solution-block">
-
-                        <div class="solution-number">
-                            02
-                        </div>
-
-                        <div class="solution-content">
-
-                            <div class="solution-icon">
-                                ◇
-                            </div>
-
-                            <h2 data-i18n="intelligenceTitle">
-                                Intelligente Systeme
-                            </h2>
-
-                            <p data-i18n="intelligenceText">
-                                Moderne Software kann Informationen
-                                verarbeiten, Zusammenhänge erkennen und
-                                Unternehmen bei täglichen Abläufen unterstützen.
-                            </p>
-
-                            <div class="solution-details">
-
-                                <div class="solution-detail">
-
-                                    <span>01</span>
-
-                                    <div>
-                                        <h3>
-                                            Informationen verbinden
-                                        </h3>
-
-                                        <p>
-                                            Relevante Daten und Prozesse
-                                            können zentral zusammengeführt
-                                            werden.
-                                        </p>
-                                    </div>
-
-                                </div>
-
-
-                                <div class="solution-detail">
-
-                                    <span>02</span>
-
-                                    <div>
-                                        <h3>
-                                            Smarter arbeiten
-                                        </h3>
-
-                                        <p>
-                                            Intelligente Systeme unterstützen
-                                            Mitarbeiter bei wiederkehrenden
-                                            Entscheidungen und Aufgaben.
-                                        </p>
-                                    </div>
-
-                                </div>
-
-
-                                <div class="solution-detail">
-
-                                    <span>03</span>
-
-                                    <div>
-                                        <h3>
-                                            Skalierbare Technologie
-                                        </h3>
-
-                                        <p>
-                                            Digitale Systeme können mit den
-                                            Anforderungen eines Unternehmens
-                                            mitwachsen.
-                                        </p>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- =====================
-                         EFFIZIENZ
-                    ====================== -->
-                    <article class="solution-block">
-
-                        <div class="solution-number">
-                            03
-                        </div>
-
-                        <div class="solution-content">
-
-                            <div class="solution-icon">
-                                ∞
-                            </div>
-
-                            <h2 data-i18n="efficiencyTitle">
-                                Mehr Effizienz
-                            </h2>
-
-                            <p data-i18n="efficiencyText">
-                                Das Ziel ist nicht einfach mehr Software.
-                                Das Ziel sind bessere Abläufe, weniger
-                                unnötiger Aufwand und mehr Zeit.
-                            </p>
-
-                            <div class="solution-details">
-
-                                <div class="solution-detail">
-
-                                    <span>01</span>
-
-                                    <div>
-                                        <h3>
-                                            Weniger Aufwand
-                                        </h3>
-
-                                        <p>
-                                            Überflüssige manuelle Schritte
-                                            können identifiziert und
-                                            vereinfacht werden.
-                                        </p>
-                                    </div>
-
-                                </div>
-
-
-                                <div class="solution-detail">
-
-                                    <span>02</span>
-
-                                    <div>
-                                        <h3>
-                                            Klare Prozesse
-                                        </h3>
-
-                                        <p>
-                                            Strukturierte digitale Abläufe
-                                            schaffen mehr Übersicht im
-                                            Arbeitsalltag.
-                                        </p>
-                                    </div>
-
-                                </div>
-
-
-                                <div class="solution-detail">
-
-                                    <span>03</span>
-
-                                    <div>
-                                        <h3>
-                                            Mehr Fokus auf Wachstum
-                                        </h3>
-
-                                        <p>
-                                            Gesparte Zeit kann dort eingesetzt
-                                            werden, wo sie für das Unternehmen
-                                            den größten Nutzen bringt.
-                                        </p>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
+                <div class="eyebrow">
+                    DER KERVAQ ANSATZ
                 </div>
+
+
+                <h2>
+                    Weniger manuelle Arbeit.
+                    Mehr Möglichkeiten.
+                </h2>
+
+
+                <p>
+                    Technologie soll nicht komplizierter machen.
+                    Sie soll Unternehmen Arbeit abnehmen und
+                    Freiraum schaffen.
+                </p>
+
+            </div>
+
+
+            <div class="features-grid">
+
+                <article class="feature">
+
+                    <span class="feature-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Mehr Zeit
+                    </h3>
+
+                    <p>
+                        Wiederkehrende Aufgaben können automatisiert
+                        werden, sodass mehr Zeit für wichtige
+                        Tätigkeiten bleibt.
+                    </p>
+
+                </article>
+
+
+                <article class="feature">
+
+                    <span class="feature-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Weniger Aufwand
+                    </h3>
+
+                    <p>
+                        Klare digitale Prozesse können unnötige
+                        Arbeitsschritte reduzieren und Abläufe
+                        vereinfachen.
+                    </p>
+
+                </article>
+
+
+                <article class="feature">
+
+                    <span class="feature-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Mehr Wachstum
+                    </h3>
+
+                    <p>
+                        Freigewordene Ressourcen können dort
+                        eingesetzt werden, wo sie für das
+                        Unternehmen den größten Nutzen bringen.
+                    </p>
+
+                </article>
 
             </div>
 
         </section>
 
 
-        <!-- =========================
+        <!-- =================================================
              CTA
-        ========================== -->
-        <section class="cta-section">
+        ================================================== -->
 
-            <div class="container">
+        <section class="section cta-section">
 
-                <div class="cta-box">
+            <div class="cta-box">
 
-                    <span
-                        class="eyebrow"
-                        data-i18n="ctaEyebrow"
-                    >
-                        BEREIT FÜR DEN NÄCHSTEN SCHRITT?
-                    </span>
-
-                    <h2 data-i18n="ctaTitle">
-                        Lassen Sie uns Ihr Unternehmen
-                        voranbringen.
-                    </h2>
-
-                    <p data-i18n="ctaText">
-                        Erzählen Sie uns von Ihrem Unternehmen und Ihren
-                        Herausforderungen. Gemeinsam finden wir heraus,
-                        was sich automatisieren und verbessern lässt.
-                    </p>
-
-                    <a
-                        href="kontakt.html"
-                        class="btn btn-primary"
-                        data-i18n="ctaButton"
-                    >
-                        Kontakt aufnehmen
-                    </a>
-
+                <div
+                    class="eyebrow"
+                    data-i18n="ctaEyebrow"
+                >
+                    BEREIT FÜR DEN NÄCHSTEN SCHRITT?
                 </div>
+
+
+                <h2 data-i18n="ctaTitle">
+                    Lassen Sie uns Ihr Unternehmen
+                    voranbringen.
+                </h2>
+
+
+                <p data-i18n="ctaText">
+                    Erzählen Sie uns von Ihrem Unternehmen und Ihren
+                    Herausforderungen. Gemeinsam finden wir heraus,
+                    was sich automatisieren und verbessern lässt.
+                </p>
+
+
+                <a
+                    href="kontakt.html"
+                    class="btn btn-primary"
+                    data-i18n="ctaButton"
+                >
+                    Kontakt aufnehmen
+                </a>
 
             </div>
 
@@ -468,36 +775,45 @@
     </main>
 
 
-    <!-- =========================
-         AI CHAT
-    ========================== -->
+    <!-- =====================================================
+         AI BUTTON
+    ====================================================== -->
+
     <button
-        type="button"
         class="ai-open"
+        type="button"
         aria-label="KERVAQ AI öffnen"
     >
-        <span class="ai-pulse"></span>
-        K
+
+        <span class="ai-dot"></span>
+
+        KERVAQ AI
+
     </button>
 
 
+    <!-- =====================================================
+         AI CHAT
+    ====================================================== -->
+
     <div class="ai-chat">
 
-        <div class="ai-chat-header">
+        <div class="ai-header">
 
             <div>
+
+                <span class="ai-status"></span>
+
                 <strong data-i18n="aiTitle">
                     KERVAQ AI
                 </strong>
 
-                <span>
-                    Online
-                </span>
             </div>
 
+
             <button
-                type="button"
                 class="ai-close"
+                type="button"
                 aria-label="Chat schließen"
             >
                 ×
@@ -508,12 +824,13 @@
 
         <div class="ai-messages">
 
-            <div
-                class="ai-welcome"
-                data-i18n="aiWelcome"
-            >
-                Hallo! Ich bin die KERVAQ AI.
-                Wie kann ich Ihnen helfen?
+            <div class="ai-message ai-message-bot">
+
+                <p data-i18n="aiWelcome">
+                    Hallo! Ich bin die KERVAQ AI.
+                    Frag mich gerne etwas über KERVAQ.
+                </p>
+
             </div>
 
         </div>
@@ -524,9 +841,10 @@
             <input
                 type="text"
                 data-i18n-placeholder="aiPlaceholder"
-                placeholder="Frage über KERVAQ..."
+                placeholder="Frage zu KERVAQ..."
                 autocomplete="off"
             >
+
 
             <button
                 type="submit"
@@ -540,126 +858,136 @@
     </div>
 
 
-    <!-- =========================
+    <!-- =====================================================
          FOOTER
-    ========================== -->
+    ====================================================== -->
+
     <footer class="footer">
 
-        <div class="container">
-
-            <div class="footer-grid">
-
-                <div class="footer-brand">
-
-                    <a href="index.html" class="brand">
-
-                        <div class="brand-mark">
-                            K
-                        </div>
-
-                        <div class="brand-text">
-
-                            <span class="brand-name">
-                                KERVAQ
-                            </span>
-
-                            <span class="brand-tagline">
-                                Move Business Forward.
-                            </span>
-
-                        </div>
-
-                    </a>
-
-                    <p>
-                        Software. Automation. Intelligence.
-                    </p>
-
-                </div>
+        <div class="footer-container">
 
 
-                <div class="footer-column">
+            <div class="footer-brand">
 
-                    <h4 data-i18n="footerSolutions">
-                        Lösungen
-                    </h4>
+                <a
+                    href="index.html"
+                    class="brand"
+                >
 
-                    <a
-                        href="loesungen.html"
-                        data-i18n="solutions"
-                    >
-                        Lösungen
-                    </a>
-
-                </div>
+                    <div class="brand-logo">
+                        K
+                    </div>
 
 
-                <div class="footer-column">
+                    <div class="brand-text">
 
-                    <h4 data-i18n="footerAbout">
-                        Unternehmen
-                    </h4>
+                        <span class="brand-name">
+                            KERVAQ
+                        </span>
 
-                    <a
-                        href="ueber-uns.html"
-                        data-i18n="about"
-                    >
-                        Über uns
-                    </a>
+                        <span class="brand-tagline">
+                            Move Business Forward.
+                        </span>
 
-                    <a
-                        href="kontakt.html"
-                        data-i18n="contact"
-                    >
-                        Kontakt
-                    </a>
+                    </div>
 
-                    <a
-                        href="login.html"
-                        data-i18n="login"
-                    >
-                        Login
-                    </a>
-
-                </div>
+                </a>
 
 
-                <div class="footer-column">
-
-                    <h4 data-i18n="footerContact">
-                        Rechtliches
-                    </h4>
-
-                    <a
-                        href="datenschutz.html"
-                        data-i18n="footerPrivacy"
-                    >
-                        Datenschutz
-                    </a>
-
-                    <a
-                        href="impressum.html"
-                        data-i18n="footerImprint"
-                    >
-                        Impressum
-                    </a>
-
-                </div>
+                <p>
+                    Software und Technologie für Unternehmen,
+                    die schneller, einfacher und effizienter
+                    arbeiten wollen.
+                </p>
 
             </div>
 
 
-            <div class="footer-bottom">
+            <div class="footer-column">
 
-                <span>
-                    © 2026 KERVAQ
-                </span>
+                <h3 data-i18n="footerSolutions">
+                    Lösungen
+                </h3>
 
-                <span>
-                    Move Business Forward.
-                </span>
+                <a href="loesungen.html">
+                    Automation
+                </a>
+
+                <a href="loesungen.html">
+                    Intelligence
+                </a>
+
+                <a href="loesungen.html">
+                    Efficiency
+                </a>
 
             </div>
+
+
+            <div class="footer-column">
+
+                <h3 data-i18n="footerAbout">
+                    KERVAQ
+                </h3>
+
+                <a
+                    href="ueber-uns.html"
+                    data-i18n="about"
+                >
+                    Über uns
+                </a>
+
+                <a
+                    href="kontakt.html"
+                    data-i18n="contact"
+                >
+                    Kontakt
+                </a>
+
+                <a
+                    href="login.html"
+                    data-i18n="login"
+                >
+                    Login
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Legal
+                </h3>
+
+                <a
+                    href="datenschutz.html"
+                    data-i18n="footerPrivacy"
+                >
+                    Datenschutz
+                </a>
+
+                <a
+                    href="impressum.html"
+                    data-i18n="footerImprint"
+                >
+                    Impressum
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © KERVAQ
+            </span>
+
+            <span>
+                Move Business Forward.
+            </span>
 
         </div>
 

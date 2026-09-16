@@ -3,285 +3,615 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="KERVAQ Dashboard">
-    <title>Dashboard — KERVAQ</title>
+
+    <meta
+        name="description"
+        content="KERVAQ Dashboard — Ihr zentraler Bereich für Projekte, Automatisierung und Effizienz."
+    >
+
+    <title>KERVAQ — Dashboard</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="dashboard-page">
 
-<div class="dashboard-layout">
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+    <header class="navbar">
+        <div class="container nav-container">
 
+            <a href="index.html" class="brand">
 
-    <!-- SIDEBAR -->
-    <aside class="dashboard-sidebar">
+                <div class="brand-mark">
+                    K
+                </div>
 
-        <a href="index.html" class="logo">
-            <span class="logo-mark">K</span>
-            <span class="logo-text">
-                KERVAQ
-                <small>Move Business Forward.</small>
-            </span>
-        </a>
+                <div class="brand-text">
 
+                    <span class="brand-name">
+                        KERVAQ
+                    </span>
 
-        <nav class="dashboard-nav">
+                    <span class="brand-tagline">
+                        Move Business Forward.
+                    </span>
 
-            <a href="dashboard.html" class="active">
-                <span>⌂</span>
-                <span>Übersicht</span>
+                </div>
+
             </a>
 
-            <a href="#">
-                <span>↗</span>
-                <span>Automatisierungen</span>
-            </a>
 
-            <a href="#">
-                <span>◇</span>
-                <span>Prozesse</span>
-            </a>
+            <nav class="nav-links">
 
-            <a href="#">
-                <span>✦</span>
-                <span>KI</span>
-            </a>
+                <a
+                    href="loesungen.html"
+                    data-i18n="solutions"
+                >
+                    Lösungen
+                </a>
 
-            <a href="#">
-                <span>⚙</span>
-                <span>Einstellungen</span>
-            </a>
+                <a
+                    href="ueber-uns.html"
+                    data-i18n="about"
+                >
+                    Über uns
+                </a>
 
-        </nav>
+                <a
+                    href="kontakt.html"
+                    data-i18n="contact"
+                >
+                    Kontakt
+                </a>
+
+            </nav>
 
 
-        <div class="dashboard-sidebar-bottom">
+            <div class="nav-right">
 
-            <button class="logout-btn">
-                <span>↪</span>
-                <span data-i18n="logout">Abmelden</span>
+                <div class="language-switcher">
+
+                    <button
+                        type="button"
+                        class="lang-btn active"
+                        data-lang="de"
+                        aria-label="Deutsch"
+                    >
+                        🇩🇪
+                    </button>
+
+                    <button
+                        type="button"
+                        class="lang-btn"
+                        data-lang="en"
+                        aria-label="English"
+                    >
+                        🇬🇧
+                    </button>
+
+                    <button
+                        type="button"
+                        class="lang-btn"
+                        data-lang="fr"
+                        aria-label="Français"
+                    >
+                        🇫🇷
+                    </button>
+
+                </div>
+
+
+                <div class="user-menu">
+
+                    <div class="user-avatar">
+                        K
+                    </div>
+
+                    <span class="user-email">
+                        —
+                    </span>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="logout-btn"
+                    data-i18n="logout"
+                >
+                    Abmelden
+                </button>
+
+
+                <button
+                    type="button"
+                    class="mobile-menu"
+                    aria-label="Menü öffnen"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             DASHBOARD
+        ========================== -->
+        <section class="dashboard">
+
+            <div class="container">
+
+                <!-- HEADER -->
+                <div class="dashboard-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            KERVAQ / DASHBOARD
+                        </span>
+
+                        <h1 data-i18n="dashboardTitle">
+                            Ihr KERVAQ Bereich.
+                        </h1>
+
+                        <p data-i18n="dashboardWelcome">
+                            Willkommen zurück.
+                        </p>
+
+                    </div>
+
+
+                    <div class="dashboard-status">
+
+                        <span class="status-dot"></span>
+
+                        <span>
+                            SYSTEM ONLINE
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- WELCOME -->
+                <div class="dashboard-welcome">
+
+                    <div>
+
+                        <span class="card-number">
+                            KERVAQ
+                        </span>
+
+                        <h2 data-i18n="dashboardWelcomeText">
+                            Ihre Prozesse. Ihre Daten. Ihr Fortschritt.
+                        </h2>
+
+                    </div>
+
+                    <div class="dashboard-welcome-core">
+                        K
+                    </div>
+
+                </div>
+
+
+                <!-- STATS -->
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+
+                        <span class="stat-label">
+                            <span data-i18n="statProjects">
+                                Projekte
+                            </span>
+                        </span>
+
+                        <strong>
+                            0
+                        </strong>
+
+                        <span class="stat-status">
+                            CURRENT
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <span class="stat-label">
+                            <span data-i18n="statAutomation">
+                                Automatisierungen
+                            </span>
+                        </span>
+
+                        <strong>
+                            0
+                        </strong>
+
+                        <span class="stat-status">
+                            ACTIVE
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <span class="stat-label">
+                            <span data-i18n="statTime">
+                                Zeit eingespart
+                            </span>
+                        </span>
+
+                        <strong>
+                            0h
+                        </strong>
+
+                        <span class="stat-status">
+                            THIS MONTH
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <span class="stat-label">
+                            <span data-i18n="statEfficiency">
+                                Effizienz
+                            </span>
+                        </span>
+
+                        <strong>
+                            —
+                        </strong>
+
+                        <span class="stat-status">
+                            ANALYSIS
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONTENT GRID -->
+                <div class="dashboard-grid">
+
+                    <!-- AKTIVITÄT -->
+                    <div class="dashboard-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <span class="eyebrow">
+                                    ACTIVITY
+                                </span>
+
+                                <h2 data-i18n="activityTitle">
+                                    Aktivitäten
+                                </h2>
+
+                            </div>
+
+                            <span class="panel-live">
+                                LIVE
+                            </span>
+
+                        </div>
+
+
+                        <div class="activity-list">
+
+                            <div class="activity-item">
+
+                                <div class="activity-indicator"></div>
+
+                                <div>
+
+                                    <strong>
+                                        KERVAQ Workspace
+                                    </strong>
+
+                                    <p data-i18n="activityToday">
+                                        Heute
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="activity-empty">
+
+                                <div class="empty-icon">
+                                    ◇
+                                </div>
+
+                                <p>
+                                    Noch keine Aktivitäten vorhanden.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- AI -->
+                    <div class="dashboard-panel dashboard-ai-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <span class="eyebrow">
+                                    KERVAQ AI
+                                </span>
+
+                                <h2 data-i18n="dashboardAI">
+                                    Intelligenz für Ihr Unternehmen
+                                </h2>
+
+                            </div>
+
+                            <div class="mini-core">
+                                K
+                            </div>
+
+                        </div>
+
+
+                        <p data-i18n="dashboardAIText">
+                            Die KERVAQ AI unterstützt Sie dabei,
+                            Informationen zu verstehen und Ihre
+                            nächsten Schritte zu planen.
+                        </p>
+
+
+                        <div class="coming-soon">
+
+                            <span class="coming-dot"></span>
+
+                            <span data-i18n="comingSoon">
+                                Coming Soon
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FUTURE AREA -->
+                <div class="dashboard-future">
+
+                    <div class="future-line"></div>
+
+                    <span>
+                        KERVAQ TECHNOLOGY CORE
+                    </span>
+
+                    <div class="future-line"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         AI CHAT
+    ========================== -->
+    <button
+        type="button"
+        class="ai-open"
+        aria-label="KERVAQ AI öffnen"
+    >
+        <span class="ai-pulse"></span>
+        K
+    </button>
+
+
+    <div class="ai-chat">
+
+        <div class="ai-chat-header">
+
+            <div>
+
+                <strong data-i18n="aiTitle">
+                    KERVAQ AI
+                </strong>
+
+                <span>
+                    Online
+                </span>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="ai-close"
+                aria-label="Chat schließen"
+            >
+                ×
             </button>
 
         </div>
 
-    </aside>
 
+        <div class="ai-messages">
 
-    <!-- MAIN -->
-    <main class="dashboard-main">
-
-
-        <!-- TOPBAR -->
-        <header class="dashboard-topbar">
-
-            <div>
-                <span class="eyebrow">KERVAQ</span>
-
-                <h1 data-i18n="dashboardTitle">
-                    Dashboard
-                </h1>
+            <div
+                class="ai-welcome"
+                data-i18n="aiWelcome"
+            >
+                Hallo! Ich bin die KERVAQ AI.
+                Wie kann ich Ihnen helfen?
             </div>
 
-
-            <div class="dashboard-user">
-
-                <div class="dashboard-avatar">
-                    K
-                </div>
-
-                <div>
-                    <strong class="dashboard-user-email">
-                        Benutzer
-                    </strong>
-
-                    <span>
-                        KERVAQ Account
-                    </span>
-                </div>
-
-            </div>
-
-        </header>
+        </div>
 
 
-        <div class="dashboard-content">
+        <form class="ai-form">
 
-            <div class="dashboard-welcome">
+            <input
+                type="text"
+                data-i18n-placeholder="aiPlaceholder"
+                placeholder="Frage über KERVAQ..."
+                autocomplete="off"
+            >
 
-                <h2 data-i18n="dashboardWelcome">
-                    Willkommen zurück.
-                </h2>
+            <button
+                type="submit"
+                aria-label="Nachricht senden"
+            >
+                →
+            </button>
 
-                <p data-i18n="dashboardSubtitle">
-                    Hier entsteht Ihr persönlicher KERVAQ Arbeitsbereich.
-                </p>
+        </form>
 
-            </div>
-
-
-            <!-- STATS -->
-            <div class="dashboard-stats">
-
-                <div class="stat-card">
-
-                    <span data-i18n="statProcesses">
-                        Prozesse
-                    </span>
-
-                    <strong>0</strong>
-
-                    <small>
-                        Noch keine Prozesse
-                    </small>
-
-                </div>
+    </div>
 
 
-                <div class="stat-card">
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="footer">
 
-                    <span data-i18n="statTime">
-                        Zeit gespart
-                    </span>
+        <div class="container">
 
-                    <strong>0h</strong>
+            <div class="footer-grid">
 
-                    <small>
-                        Noch keine Daten
-                    </small>
+                <div class="footer-brand">
 
-                </div>
+                    <a href="index.html" class="brand">
 
+                        <div class="brand-mark">
+                            K
+                        </div>
 
-                <div class="stat-card">
+                        <div class="brand-text">
 
-                    <span data-i18n="statEfficiency">
-                        Effizienz
-                    </span>
-
-                    <strong>—</strong>
-
-                    <small>
-                        Wird berechnet
-                    </small>
-
-                </div>
-
-
-                <div class="stat-card">
-
-                    <span data-i18n="statTasks">
-                        Aufgaben
-                    </span>
-
-                    <strong>0</strong>
-
-                    <small>
-                        Noch keine Aufgaben
-                    </small>
-
-                </div>
-
-            </div>
-
-
-            <!-- PANELS -->
-            <div class="dashboard-grid">
-
-
-                <section class="dashboard-panel">
-
-                    <div class="panel-header">
-
-                        <div>
-                            <span class="eyebrow" data-i18n="recent">
-                                Aktivität
+                            <span class="brand-name">
+                                KERVAQ
                             </span>
 
-                            <h3>
-                                Letzte Aktivitäten
-                            </h3>
-                        </div>
-
-                    </div>
-
-
-                    <div class="empty-state">
-
-                        <div class="empty-icon">
-                            ◇
-                        </div>
-
-                        <h3>
-                            Noch keine Aktivitäten
-                        </h3>
-
-                        <p>
-                            Sobald Ihr KERVAQ Bereich eingerichtet ist,
-                            erscheinen hier Ihre Prozesse und Aktivitäten.
-                        </p>
-
-                    </div>
-
-                </section>
-
-
-                <section class="dashboard-panel dashboard-ai-panel">
-
-                    <div class="panel-header">
-
-                        <div>
-                            <span class="eyebrow">
-                                KERVAQ AI
+                            <span class="brand-tagline">
+                                Move Business Forward.
                             </span>
 
-                            <h3 data-i18n="aiDashboard">
-                                KI-Assistent
-                            </h3>
                         </div>
 
-                        <span class="status-badge">
-                            <span></span>
-                            <span data-i18n="comingSoon">
-                                Coming soon
-                            </span>
-                        </span>
+                    </a>
 
-                    </div>
+                    <p>
+                        Software. Automation. Intelligence.
+                    </p>
+
+                </div>
 
 
-                    <div class="ai-dashboard-content">
+                <div class="footer-column">
 
-                        <div class="solution-icon">
-                            ✦
-                        </div>
+                    <h4 data-i18n="footerSolutions">
+                        Lösungen
+                    </h4>
 
-                        <h3>
-                            KERVAQ AI
-                        </h3>
+                    <a
+                        href="loesungen.html"
+                        data-i18n="solutions"
+                    >
+                        Lösungen
+                    </a>
 
-                        <p data-i18n="aiDashboardText">
-                            Ihr persönlicher KI-Assistent für Prozesse,
-                            Automatisierungen und Ihren KERVAQ Arbeitsbereich.
-                        </p>
+                </div>
 
-                        <span class="coming-soon-text" data-i18n="comingSoon">
-                            Coming soon
-                        </span>
 
-                    </div>
+                <div class="footer-column">
 
-                </section>
+                    <h4 data-i18n="footerAbout">
+                        Unternehmen
+                    </h4>
+
+                    <a
+                        href="ueber-uns.html"
+                        data-i18n="about"
+                    >
+                        Über uns
+                    </a>
+
+                    <a
+                        href="kontakt.html"
+                        data-i18n="contact"
+                    >
+                        Kontakt
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4 data-i18n="footerContact">
+                        Rechtliches
+                    </h4>
+
+                    <a
+                        href="datenschutz.html"
+                        data-i18n="footerPrivacy"
+                    >
+                        Datenschutz
+                    </a>
+
+                    <a
+                        href="impressum.html"
+                        data-i18n="footerImprint"
+                    >
+                        Impressum
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 KERVAQ
+                </span>
+
+                <span>
+                    Move Business Forward.
+                </span>
 
             </div>
 
         </div>
 
-    </main>
-
-</div>
+    </footer>
 
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>

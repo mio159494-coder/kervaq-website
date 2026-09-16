@@ -3,7 +3,8 @@
 ========================= */
 
 
-const cards = document.querySelectorAll(".feature-card");
+const cards =
+    document.querySelectorAll(".feature-card");
 
 
 cards.forEach(card => {
@@ -21,7 +22,6 @@ cards.forEach(card => {
 
 
         cards.forEach(otherCard => {
-
 
             if (otherCard !== card) {
 
@@ -61,18 +61,15 @@ cards.forEach(card => {
 
 
             const rotateX =
-                (y / rect.height - 0.5) * -8;
+                (y / rect.height - 0.5) * -6;
 
 
             const rotateY =
-                (x / rect.width - 0.5) * 8;
+                (x / rect.width - 0.5) * 6;
 
 
             card.style.transform =
-                `perspective(600px)
-                 rotateX(${rotateX}deg)
-                 rotateY(${rotateY}deg)
-                 translateY(-5px)`;
+                `perspective(700px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
 
 
         }
@@ -90,10 +87,7 @@ cards.forEach(card => {
 
 
             card.style.transform =
-                "perspective(600px)
-                 rotateX(0)
-                 rotateY(0)
-                 translateY(0)";
+                "perspective(700px) rotateX(0deg) rotateY(0deg) translateY(0px)";
 
 
         }
